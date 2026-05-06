@@ -1,0 +1,164 @@
+{
+  "api_health": {
+    "ok": true,
+    "http": 200,
+    "text": "{\"status\":\"ok\",\"service\":\"landfillsentry-api\"}"
+  },
+  "simsat_health": {
+    "ok": true,
+    "http": 200,
+    "text": "{\"message\":\"Simulation API is online\"}"
+  },
+  "sites_check": {
+    "http": 200,
+    "required": [
+      "LF_REAL_001",
+      "LF_REAL_002",
+      "LF_REAL_003",
+      "LF_REAL_004",
+      "LF_REAL_005",
+      "LF_REAL_006",
+      "LF_REAL_007",
+      "LF_REAL_008",
+      "LF_REAL_009",
+      "LF_REAL_010"
+    ],
+    "missing": []
+  },
+  "rows": [
+    {
+      "site_id": "LF_REAL_001",
+      "scan_http": 200,
+      "scan_id": "scan_014",
+      "incident_id": "inc_014",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_002",
+      "scan_http": 200,
+      "scan_id": "scan_015",
+      "incident_id": "inc_015",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_003",
+      "scan_http": 200,
+      "scan_id": "scan_016",
+      "incident_id": "inc_016",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_004",
+      "scan_http": 200,
+      "scan_id": "scan_017",
+      "incident_id": "inc_017",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_005",
+      "scan_http": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "scan_status": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "review_http": null,
+      "export_http": null,
+      "result": "fail",
+      "error_excerpt": "{'detail': {'error': 'live_imagery_required', 'message': 'Strict live mode is enabled and live imagery was unavailable for this scan. No fallback scan was created.', 'site_id': 'LF_REAL_005', 'live_fe..."
+    },
+    {
+      "site_id": "LF_REAL_006",
+      "scan_http": 200,
+      "scan_id": "scan_018",
+      "incident_id": "inc_018",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_007",
+      "scan_http": 200,
+      "scan_id": "scan_019",
+      "incident_id": "inc_019",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_008",
+      "scan_http": 200,
+      "scan_id": "scan_020",
+      "incident_id": "inc_020",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_009",
+      "scan_http": 200,
+      "scan_id": "scan_021",
+      "incident_id": "inc_021",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    },
+    {
+      "site_id": "LF_REAL_010",
+      "scan_http": 200,
+      "scan_id": "scan_022",
+      "incident_id": "inc_022",
+      "scan_status": "live",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "review_http": 422,
+      "export_http": 200,
+      "result": "fail",
+      "error_excerpt": "{'detail': [{'type': 'missing', 'loc': ['body', 'incident_id'], 'msg': 'Field required', 'input': {'review_status': 'published', 'feedback_status': 'confirmed', 'review_comment': 'pipeline run europe'..."
+    }
+  ],
+  "totals": {
+    "success": 0,
+    "fail": 10
+  }
+}

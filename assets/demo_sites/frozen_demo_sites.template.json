@@ -1,0 +1,46 @@
+{
+  "version": "phase1-template",
+  "frozen_at": "2026-04-19",
+  "sites": [
+    {
+      "site_id": "LF_DEMO_001",
+      "name": "Example Demo Site 1",
+      "country": "TBD",
+      "lat": 0.0,
+      "lon": 0.0,
+      "fixture_class": "positive",
+      "watchlist_enabled": true,
+      "notes": "Replace with real frozen site."
+    },
+    {
+      "site_id": "LF_DEMO_002",
+      "name": "Example Demo Site 2",
+      "country": "TBD",
+      "lat": 0.0,
+      "lon": 0.0,
+      "fixture_class": "negative",
+      "watchlist_enabled": true,
+      "notes": "Replace with real frozen site."
+    },
+    {
+      "site_id": "LF_DEMO_003",
+      "name": "Example Demo Site 3",
+      "country": "TBD",
+      "lat": 0.0,
+      "lon": 0.0,
+      "fixture_class": "cloudy",
+      "watchlist_enabled": true,
+      "notes": "Replace with real frozen site."
+    },
+    {
+      "site_id": "LF_DEMO_004",
+      "name": "Example Demo Site 4",
+      "country": "TBD",
+      "lat": 0.0,
+      "lon": 0.0,
+      "fixture_class": "missing_data",
+      "watchlist_enabled": true,
+      "notes": "Replace with real frozen site."
+    }
+  ]
+}

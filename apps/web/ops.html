@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LandfillSentry Ops Console</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/ui/ops.css?v=20260425-02" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">LS</span>
+        <div>
+          <strong>LandfillSentry Ops Console</strong>
+          <span>Watchlist triage and evidence review</span>
+        </div>
+        <span class="environment-pill">Live Ops</span>
+      </div>
+      <div class="top-actions">
+        <label class="search">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Site, country, operator" />
+        </label>
+        <button id="refreshBtn" class="icon-button" title="Refresh watchlist">Refresh</button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <nav class="sidenav" aria-label="Primary">
+        <div class="nav-section">
+          <span class="section-label">OPS_COMMAND</span>
+          <button class="nav-item active" data-view="watchlist" data-icon="W">Watchlist</button>
+          <button class="nav-item" data-view="executive" data-icon="X">Executive Summary</button>
+          <button class="nav-item" data-view="map" data-icon="M">Methane Map</button>
+          <button class="nav-item" data-view="analysis" data-icon="A">Site Analysis</button>
+          <button class="nav-item" data-view="triage" data-icon="T">Incident Triage</button>
+          <button class="nav-item" data-view="evidence" data-icon="E">Evidence Packs</button>
+        </div>
+        <div class="nav-footer">
+          <span id="healthBadge" class="health">Checking API</span>
+        </div>
+      </nav>
+
+      <main class="workspace">
+        <section class="metric-grid" aria-label="Watchlist summary">
+          <article class="metric">
+            <span>Total Sites</span>
+            <strong id="metricSites">0</strong>
+          </article>
+          <article class="metric danger">
+            <span>High Priority</span>
+            <strong id="metricAlerts">0</strong>
+          </article>
+          <article class="metric">
+            <span>Needs Review</span>
+            <strong id="metricReview">0</strong>
+          </article>
+          <article class="metric success">
+            <span>Scan Success</span>
+            <strong id="metricSuccess">0%</strong>
+          </article>
+        </section>
+
+        <section class="toolbar view-panel active" data-panel="watchlist">
+          <div>
+            <h1>Watchlist Dashboard</h1>
+            <p id="lastUpdated">Loading backend data...</p>
+          </div>
+          <div class="toolbar-actions">
+            <select id="priorityFilter" aria-label="Priority filter">
+              <option value="">All priorities</option>
+              <option value="urgent">Urgent</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <button id="scanBtn" class="primary-button">Scan Watchlist</button>
+          </div>
+        </section>
+
+        <section class="content-grid view-panel active" data-panel="watchlist">
+          <div class="panel watchlist-panel">
+            <div class="panel-title">
+              <h2>Sites</h2>
+              <span id="siteCount">0 loaded</span>
+            </div>
+            <div id="watchlist" class="site-list" aria-live="polite"></div>
+          </div>
+
+          <aside class="panel detail-panel">
+            <div class="panel-title">
+              <h2>Selected Site</h2>
+              <span id="selectedStatus">No selection</span>
+            </div>
+            <div id="siteDetail" class="detail-empty">
+              Select a site to inspect latest evidence, incident status, and export options.
+            </div>
+          </aside>
+        </section>
+
+        <section class="view-panel" data-panel="executive">
+          <div class="toolbar">
+            <div>
+              <h1>Executive Summary</h1>
+              <p>Live operational rollup from current watchlist, incident, and scan records.</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="summaryRefreshBtn" class="icon-button">Refresh Summary</button>
+            </div>
+          </div>
+          <div id="executiveView" class="executive-grid"></div>
+        </section>
+
+        <section class="view-panel" data-panel="map">
+          <div class="toolbar">
+            <div>
+              <h1>Methane Map</h1>
+              <p>Spatial watchlist view using site coordinates and current alert state.</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="fitMapBtn" class="icon-button">Fit Sites</button>
+              <button id="scanMapBtn" class="primary-button">Scan Visible</button>
+            </div>
+          </div>
+          <div class="map-layout">
+            <div class="panel map-panel">
+              <div id="mapCanvas" class="map-canvas" aria-label="Methane site map"></div>
+            </div>
+            <aside class="panel">
+              <div class="panel-title">
+                <h2>Map Selection</h2>
+                <span id="mapCount">0 sites</span>
+              </div>
+              <div id="mapSelection" class="detail-empty">Select a marker to inspect its active alert.</div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view-panel" data-panel="analysis">
+          <div class="toolbar">
+            <div>
+              <h1>Site Analysis</h1>
+              <p>Detailed scan history, panel previews, dongle corroboration, and watchlist settings.</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="analysisScanBtn" class="primary-button">Scan Selected Site</button>
+            </div>
+          </div>
+          <div id="analysisView" class="analysis-grid"></div>
+        </section>
+
+        <section class="view-panel" data-panel="triage">
+          <div class="toolbar">
+            <div>
+              <h1>Incident Triage</h1>
+              <p>Prioritized review queue with publish, dismiss, assign, and comment workflows.</p>
+            </div>
+            <div class="toolbar-actions">
+              <select id="triageStatus" aria-label="Triage status filter">
+                <option value="">All states</option>
+                <option value="proposed">Proposed</option>
+                <option value="needs_review">Needs review</option>
+                <option value="published">Published</option>
+                <option value="dismissed">Dismissed</option>
+              </select>
+              <select id="triagePriority" aria-label="Triage priority filter">
+                <option value="">All priorities</option>
+                <option value="urgent">Urgent</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="triage-layout">
+            <div class="panel">
+              <div class="panel-title">
+                <h2>Queue</h2>
+                <span id="triageCount">0 incidents</span>
+              </div>
+              <div id="triageQueue" class="queue-list"></div>
+            </div>
+            <aside class="panel">
+              <div class="panel-title">
+                <h2>Incident Detail</h2>
+                <span id="incidentStatus">No selection</span>
+              </div>
+              <div id="incidentDetail" class="detail-empty">Select an incident from the queue.</div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view-panel" data-panel="evidence">
+          <div class="toolbar">
+            <div>
+              <h1>Evidence Pack Export</h1>
+              <p>Archive of generated evidence panels with previews and export links.</p>
+            </div>
+            <div class="toolbar-actions">
+              <select id="evidenceQuality" aria-label="Evidence readiness filter">
+                <option value="">All readiness</option>
+                <option value="ready">Ready</option>
+                <option value="partial">Partial</option>
+                <option value="missing">Missing</option>
+              </select>
+            </div>
+          </div>
+          <div class="evidence-layout">
+            <div class="panel">
+              <div class="panel-title">
+                <h2>Packs</h2>
+                <span id="evidenceCount">0 packs</span>
+              </div>
+              <div id="evidencePacks" class="pack-grid"></div>
+            </div>
+            <aside class="panel">
+              <div class="panel-title">
+                <h2>Pack Detail</h2>
+                <span id="packStatus">No selection</span>
+              </div>
+              <div id="packDetail" class="detail-empty">Select an evidence pack.</div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="siteCardTemplate">
+      <button class="site-card">
+        <div class="site-card-head">
+          <div>
+            <strong class="site-name"></strong>
+            <span class="site-meta"></span>
+          </div>
+          <span class="priority-chip"></span>
+        </div>
+        <p class="site-summary"></p>
+        <div class="site-card-foot">
+          <span class="confidence"></span>
+          <span class="review"></span>
+          <span class="mode"></span>
+        </div>
+      </button>
+    </template>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="/ui/ops.js?v=20260425-02" defer></script>
+  </body>
+</html>

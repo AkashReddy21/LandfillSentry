@@ -1,0 +1,38 @@
+{
+  "confidence_intervals": {
+    "base_model": {
+      "high": 1.0,
+      "low": 0.6756
+    },
+    "fine_tuned_model": {
+      "high": 0.3244,
+      "low": 0.0
+    },
+    "heuristic": {
+      "high": 0.3244,
+      "low": 0.0
+    }
+  },
+  "generated_at": "2026-04-28T16:51:55.898816+00:00",
+  "models": {
+    "base_model": {
+      "false_positive_count": 8,
+      "false_positive_rate": 1.0,
+      "model_key": "base_model",
+      "negative_sample_count": 8
+    },
+    "fine_tuned_model": {
+      "false_positive_count": 0,
+      "false_positive_rate": 0.0,
+      "model_key": "fine_tuned_model",
+      "negative_sample_count": 8
+    },
+    "heuristic": {
+      "false_positive_count": 0,
+      "false_positive_rate": 0.0,
+      "model_key": "heuristic",
+      "negative_sample_count": 8
+    }
+  },
+  "report_version": "phase7.null_scene.v2"
+}

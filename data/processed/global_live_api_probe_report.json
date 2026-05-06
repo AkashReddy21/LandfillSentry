@@ -1,0 +1,2460 @@
+{
+  "api_base_url": "http://127.0.0.1:8000",
+  "artifact_version": "global_live_collection.v1",
+  "attempts": [],
+  "csv": "C:\\Users\\ASUS\\Desktop\\Landfill\\assets\\demo_sites\\global_sites.26rows.csv",
+  "failure_count": 0,
+  "generated_at": "2026-04-28T17:02:13+00:00",
+  "probe_only": true,
+  "repeats_per_site": 8,
+  "simsat_base_url": "http://127.0.0.1:9005",
+  "sites": [
+    {
+      "country": "United States",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Puente Hills Landfill Los Angeles",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:54:04Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:53:33Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 566697,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 0.349959,
+              "datetime": "2026-04-17T18:45:02Z",
+              "footprint": [
+                -118.02792663392714,
+                34.00001695985203,
+                -117.97367336607286,
+                34.04498304014797
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2c",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "North America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_001",
+      "success_count": 0
+    },
+    {
+      "country": "United States",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Fresh Kills Landfill Staten Island",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:54:48Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:54:05Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 501713,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 1.688727,
+              "datetime": "2026-04-21T16:02:19Z",
+              "footprint": [
+                -74.2170009355822,
+                40.554016959852035,
+                -74.15779906441779,
+                40.59898304014797
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "North America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_002",
+      "success_count": 0
+    },
+    {
+      "country": "United States",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Apex Regional Landfill Las Vegas",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:55:11Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:54:48Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 276856,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 96.248251,
+              "datetime": "2026-04-19T18:34:09Z",
+              "footprint": [
+                -114.95092753809509,
+                36.36251695985203,
+                -114.89507246190492,
+                36.407483040147966
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "North America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_003",
+      "success_count": 0
+    },
+    {
+      "country": "United States",
+      "dataset_split": "validation",
+      "failure_count": 0,
+      "name": "Altamont Landfill Alameda County",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:55:40Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:55:12Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 388116,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 64.732444,
+              "datetime": "2026-04-18T19:04:02Z",
+              "footprint": [
+                -121.68543165096511,
+                37.71951695985203,
+                -121.62856834903488,
+                37.764483040147965
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "North America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_004",
+      "success_count": 0
+    },
+    {
+      "country": "United States",
+      "dataset_split": "test",
+      "failure_count": 0,
+      "name": "Seneca Meadows Landfill New York",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:56:02Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:55:41Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 3247,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 98.762685,
+              "datetime": "2026-04-17T16:11:19Z",
+              "footprint": [
+                -76.87268430891086,
+                42.86251695985203,
+                -76.81131569108913,
+                42.907483040147966
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "North America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_005",
+      "success_count": 0
+    },
+    {
+      "country": "Mexico",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Bordo Poniente Mexico City",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:56:39Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:56:03Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 480177,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 41.456288,
+              "datetime": "2026-04-20T17:18:29Z",
+              "footprint": [
+                -99.0238434507298,
+                19.425516959852033,
+                -98.9761565492702,
+                19.47048304014797
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2c",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Latin America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_006",
+      "success_count": 0
+    },
+    {
+      "country": "Brazil",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Jardim Gramacho Rio de Janeiro",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:56:48Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:56:39Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 364169,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 3.355042,
+              "datetime": "2026-04-17T13:08:33Z",
+              "footprint": [
+                -43.28338083269798,
+                -22.778483040147968,
+                -43.23461916730202,
+                -22.733516959852032
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Latin America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_007",
+      "success_count": 0
+    },
+    {
+      "country": "Chile",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Loma Los Colorados Santiago",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:57:00Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:56:49Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 331080,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 62.372202,
+              "datetime": "2026-04-17T14:52:01Z",
+              "footprint": [
+                -70.78389423850729,
+                -33.304483040147964,
+                -70.73010576149272,
+                -33.25951695985203
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Latin America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_008",
+      "success_count": 0
+    },
+    {
+      "country": "Argentina",
+      "dataset_split": "validation",
+      "failure_count": 0,
+      "name": "CEAMSE Norte Buenos Aires",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:57:25Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:57:01Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 487096,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 47.538924,
+              "datetime": "2026-04-19T14:02:33Z",
+              "footprint": [
+                -58.65728761316691,
+                -34.54248304014797,
+                -58.6027123868331,
+                -34.497516959852035
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Latin America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_009",
+      "success_count": 0
+    },
+    {
+      "country": "Colombia",
+      "dataset_split": "test",
+      "failure_count": 0,
+      "name": "Dona Juana Landfill Bogota",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:57:37Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:57:26Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 1853,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 66.403604,
+              "datetime": "2026-04-19T15:32:17Z",
+              "footprint": [
+                -74.1625525621706,
+                4.477516959852032,
+                -74.1174474378294,
+                4.522483040147968
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Latin America",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_010",
+      "success_count": 0
+    },
+    {
+      "country": "India",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Ghazipur Landfill Delhi",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:57:47Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:57:37Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 587207,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 0.127866,
+              "datetime": "2026-04-18T05:41:00Z",
+              "footprint": [
+                77.3033863003968,
+                28.602516959852032,
+                77.35461369960319,
+                28.647483040147968
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_011",
+      "success_count": 0
+    },
+    {
+      "country": "India",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Deonar Dumping Ground Mumbai",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:57:57Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:57:48Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 516153,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 34.612161,
+              "datetime": "2026-04-21T05:53:36Z",
+              "footprint": [
+                72.89921230775941,
+                19.041516959852032,
+                72.94678769224059,
+                19.086483040147968
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_012",
+      "success_count": 0
+    },
+    {
+      "country": "Indonesia",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Bantar Gebang Landfill Jakarta",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:58:10Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:57:58Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 401004,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 34.895518,
+              "datetime": "2026-04-20T03:20:12Z",
+              "footprint": [
+                106.96637856591667,
+                -6.363483040147968,
+                107.01162143408334,
+                -6.318516959852032
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_013",
+      "success_count": 0
+    },
+    {
+      "country": "South Korea",
+      "dataset_split": "validation",
+      "failure_count": 0,
+      "name": "Sudokwon Landfill Incheon",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:58:43Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:58:10Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 439834,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 97.180587,
+              "datetime": "2026-04-21T02:27:12Z",
+              "footprint": [
+                126.61463375403353,
+                37.54851695985203,
+                126.67136624596647,
+                37.593483040147966
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_014",
+      "success_count": 0
+    },
+    {
+      "country": "China",
+      "dataset_split": "test",
+      "failure_count": 0,
+      "name": "Laogang Landfill Shanghai",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:59:11Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:58:43Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 3129,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 87.021595,
+              "datetime": "2026-04-19T02:39:08Z",
+              "footprint": [
+                121.81674765637226,
+                31.06051695985203,
+                121.86925234362775,
+                31.105483040147966
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2c",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_015",
+      "success_count": 0
+    },
+    {
+      "country": "Singapore",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Semakau Landfill Singapore",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:59:29Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:59:12Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 317257,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 96.331215,
+              "datetime": "2026-04-19T03:37:43Z",
+              "footprint": [
+                103.75051200317284,
+                1.1805169598520318,
+                103.79548799682715,
+                1.2254830401479684
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_016",
+      "success_count": 0
+    },
+    {
+      "country": "Philippines",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Payatas Disposal Facility Quezon City",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:59:41Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:59:30Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 471198,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 34.747145,
+              "datetime": "2026-04-21T02:33:33Z",
+              "footprint": [
+                121.07475453861107,
+                14.692516959852032,
+                121.12124546138892,
+                14.737483040147968
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Asia",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_017",
+      "success_count": 0
+    },
+    {
+      "country": "Nigeria",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Olusosun Landfill Lagos",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T16:59:51Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:59:42Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 1834,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 99.988729,
+              "datetime": "2026-04-16T10:19:25Z",
+              "footprint": [
+                3.349367148192053,
+                6.573516959852032,
+                3.394632851807947,
+                6.618483040147968
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Africa",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_018",
+      "success_count": 0
+    },
+    {
+      "country": "Kenya",
+      "dataset_split": "validation",
+      "failure_count": 0,
+      "name": "Dandora Dumpsite Nairobi",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:00:00Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T16:59:52Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 1834,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 91.584259,
+              "datetime": "2026-04-17T08:00:22Z",
+              "footprint": [
+                36.876511625338665,
+                -1.2704830401479683,
+                36.92148837466134,
+                -1.2255169598520317
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Africa",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_019",
+      "success_count": 0
+    },
+    {
+      "country": "Ghana",
+      "dataset_split": "test",
+      "failure_count": 0,
+      "name": "Kpone Landfill Accra",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:00:18Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:00:01Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 560469,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 55.262607,
+              "datetime": "2026-04-19T10:29:46Z",
+              "footprint": [
+                -0.04259491585265188,
+                5.681516959852032,
+                0.002594915852651876,
+                5.726483040147968
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Africa",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_020",
+      "success_count": 0
+    },
+    {
+      "country": "Morocco",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Oum Azza Landfill Rabat",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:00:36Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:00:19Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 447590,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 41.591719,
+              "datetime": "2026-04-20T11:21:53Z",
+              "footprint": [
+                -6.8110825182671775,
+                33.86151695985203,
+                -6.756917481732822,
+                33.90648304014797
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Africa",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_021",
+      "success_count": 0
+    },
+    {
+      "country": "South Africa",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Mariannhill Landfill Durban",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:01:09Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:00:37Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 441745,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 73.040354,
+              "datetime": "2026-04-17T08:08:29Z",
+              "footprint": [
+                30.79107817340273,
+                -29.871483040147968,
+                30.84292182659727,
+                -29.826516959852032
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Africa",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_022",
+      "success_count": 0
+    },
+    {
+      "country": "United Arab Emirates",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Al Qusais Landfill Dubai",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:01:22Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:01:09Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 604096,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 0.327341,
+              "datetime": "2026-04-19T07:02:59Z",
+              "footprint": [
+                55.38613698188898,
+                25.251516959852033,
+                55.43586301811102,
+                25.29648304014797
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Middle East",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_023",
+      "success_count": 0
+    },
+    {
+      "country": "Israel",
+      "dataset_split": "validation",
+      "failure_count": 0,
+      "name": "Hiriya Ariel Sharon Park Tel Aviv",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:01:55Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:01:23Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 627188,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 50.460601,
+              "datetime": "2026-04-19T08:31:13Z",
+              "footprint": [
+                34.80447661797162,
+                32.01851695985203,
+                34.85752338202838,
+                32.063483040147965
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Middle East",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_024",
+      "success_count": 0
+    },
+    {
+      "country": "Australia",
+      "dataset_split": "train",
+      "failure_count": 0,
+      "name": "Eastern Creek Waste Facility Sydney",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:02:04Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:01:56Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 549720,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 4.752141,
+              "datetime": "2026-04-20T00:06:30Z",
+              "footprint": [
+                150.81994409103987,
+                -33.822483040147965,
+                150.87405590896014,
+                -33.77751695985203
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2a",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Oceania",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_025",
+      "success_count": 0
+    },
+    {
+      "country": "New Zealand",
+      "dataset_split": "test",
+      "failure_count": 0,
+      "name": "Redvale Landfill Auckland",
+      "probe": {
+        "endpoints": {
+          "mapbox_context": {
+            "bytes": 998089,
+            "endpoint": "/data/current/image/mapbox",
+            "metadata": {
+              "bearing": 0.0,
+              "elevation_degrees": 90.0,
+              "image_available": true,
+              "pitch": 0.0,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "target_visible": true,
+              "timestamp": "2026-04-28T17:02:12Z",
+              "zoom_factor": 13.405426827170244
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_current": {
+            "bytes": 441773,
+            "endpoint": "/data/current/image/sentinel",
+            "metadata": {
+              "cloud_cover": 36.941248,
+              "datetime": "2026-04-28T10:36:54Z",
+              "footprint": [
+                9.965022598741546,
+                49.97751695985203,
+                10.034977401258454,
+                50.02248304014797
+              ],
+              "image_available": true,
+              "satellite_position": [
+                10.0,
+                50.0,
+                800.0
+              ],
+              "size_km": 5.0,
+              "source": "sentinel-2b",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ],
+              "timestamp": "2026-04-28T17:02:05Z"
+            },
+            "ok": true,
+            "status": 200
+          },
+          "sentinel_historical": {
+            "bytes": 249849,
+            "endpoint": "/data/image/sentinel",
+            "metadata": {
+              "cloud_cover": 88.049674,
+              "datetime": "2026-04-17T22:26:16Z",
+              "footprint": [
+                174.64798938260893,
+                -36.63748304014797,
+                174.70401061739105,
+                -36.592516959852034
+              ],
+              "image_available": true,
+              "size_km": 5.0,
+              "source": "sentinel-2c",
+              "spectral_bands": [
+                "red",
+                "green",
+                "blue"
+              ]
+            },
+            "ok": true,
+            "status": 200
+          }
+        },
+        "ok": true
+      },
+      "probe_ok": true,
+      "region": "Oceania",
+      "registration": {
+        "message": "already_exists",
+        "ok": true,
+        "status": 409
+      },
+      "site_id": "LF_GLOBAL_026",
+      "success_count": 0
+    }
+  ],
+  "success_count": 0,
+  "target_samples": 180,
+  "unique_successful_sites": 0
+}

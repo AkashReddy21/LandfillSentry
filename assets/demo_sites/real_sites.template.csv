@@ -1,0 +1,2 @@
+site_id,name,lat,lon,country,operator,watchlist_enabled,fixture_class,metadata_json,polygon_geojson
+LF_REAL_001,Replace Name,0.0,0.0,Replace Country,Replace Operator,true,,"{""source"":""manual"",""owner"":""ops-team""}",

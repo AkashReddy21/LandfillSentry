@@ -1,0 +1,2 @@
+scan_id,split,plume_likely,bbox_norm,likely_source_zone,priority_tier,source_type,labeler,notes
+scan_058,train,true,"[0.33, 0.26, 0.54, 0.48]",perimeter_or_unknown,high,manual,operator_review,"Example correction row. Copy to manual_label_corrections.csv before use."

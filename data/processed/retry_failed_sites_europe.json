@@ -1,0 +1,44 @@
+{
+  "api_health_http": 200,
+  "api_health_error": null,
+  "scan_timeout_seconds": 180,
+  "max_attempts": 4,
+  "rows": [
+    {
+      "site_id": "LF_REAL_001",
+      "attempts_used": 1,
+      "final_status": "success",
+      "http_status": 200,
+      "scan_id": "scan_012",
+      "incident_id": "inc_012",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "site_id": "LF_REAL_002",
+      "attempts_used": 1,
+      "final_status": "success",
+      "http_status": 200,
+      "scan_id": "scan_013",
+      "incident_id": "inc_013",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "http_status": 200,
+          "error": null
+        }
+      ]
+    }
+  ]
+}

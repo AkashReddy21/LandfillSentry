@@ -1,0 +1,840 @@
+{
+  "comparison_table_markdown": "| Model | JSON Valid | Incident F1 | Zone Accuracy | BBox IoU | Human Usefulness | Null FP Rate |\n|---|---:|---:|---:|---:|---:|---:|\n| heuristic | 1.00 | 1.00 | 1.00 | 1.00 | 0.97 | 0.00 |\n| base_model | 1.00 | 0.50 | 0.33 | 0.20 | 0.73 | 1.00 |\n| fine_tuned_model | 1.00 | 1.00 | 1.00 | 1.00 | 0.97 | 0.00 |\n",
+  "generated_at": "2026-04-28T16:51:55.898816+00:00",
+  "human_rubric": {
+    "criteria": [
+      "actionability",
+      "clarity",
+      "plausibility",
+      "followup_quality",
+      "trustworthiness"
+    ],
+    "model_rows": {
+      "base_model": [
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 1,
+          "normalized": 0.76,
+          "scan_id": "scan_001",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 3
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 2,
+          "normalized": 0.76,
+          "scan_id": "scan_002",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 3
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 3,
+          "normalized": 0.76,
+          "scan_id": "scan_003",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 3
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 4,
+          "normalized": 0.76,
+          "scan_id": "scan_004",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 3
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 1,
+          "normalized": 0.72,
+          "scan_id": "scan_005",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 2,
+          "normalized": 0.72,
+          "scan_id": "scan_006",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 3,
+          "normalized": 0.72,
+          "scan_id": "scan_007",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 4,
+          "normalized": 0.72,
+          "scan_id": "scan_008",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 1,
+          "normalized": 0.72,
+          "scan_id": "scan_009",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 2,
+          "normalized": 0.72,
+          "scan_id": "scan_010",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 3,
+          "normalized": 0.72,
+          "scan_id": "scan_011",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 4,
+          "normalized": 0.72,
+          "scan_id": "scan_012",
+          "scores": {
+            "actionability": 3,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 2,
+            "trustworthiness": 5
+          }
+        }
+      ],
+      "fine_tuned_model": [
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 1,
+          "normalized": 1.0,
+          "scan_id": "scan_013",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 2,
+          "normalized": 1.0,
+          "scan_id": "scan_014",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 3,
+          "normalized": 1.0,
+          "scan_id": "scan_015",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 4,
+          "normalized": 1.0,
+          "scan_id": "scan_016",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 1,
+          "normalized": 0.92,
+          "scan_id": "scan_017",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 2,
+          "normalized": 0.92,
+          "scan_id": "scan_018",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 3,
+          "normalized": 0.92,
+          "scan_id": "scan_019",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 4,
+          "normalized": 0.92,
+          "scan_id": "scan_020",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 1,
+          "normalized": 1.0,
+          "scan_id": "scan_021",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 2,
+          "normalized": 1.0,
+          "scan_id": "scan_022",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 3,
+          "normalized": 1.0,
+          "scan_id": "scan_023",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 4,
+          "normalized": 1.0,
+          "scan_id": "scan_024",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        }
+      ],
+      "heuristic": [
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 1,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_001",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 2,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_002",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 3,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_003",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "positive",
+          "fixture_repeat": 4,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_004",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 1,
+          "normalized": 0.92,
+          "scan_id": "heur_scan_005",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 2,
+          "normalized": 0.92,
+          "scan_id": "heur_scan_006",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 3,
+          "normalized": 0.92,
+          "scan_id": "heur_scan_007",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "negative",
+          "fixture_repeat": 4,
+          "normalized": 0.92,
+          "scan_id": "heur_scan_008",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 3,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 1,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_009",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 2,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_010",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 3,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_011",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        },
+        {
+          "fixture_class": "cloudy",
+          "fixture_repeat": 4,
+          "normalized": 1.0,
+          "scan_id": "heur_scan_012",
+          "scores": {
+            "actionability": 5,
+            "clarity": 5,
+            "followup_quality": 5,
+            "plausibility": 5,
+            "trustworthiness": 5
+          }
+        }
+      ]
+    }
+  },
+  "methodology": {
+    "base_model": "Schema-valid generic LFM2.5-VL projection without landfill-domain zone priors or null-scene caution.",
+    "benchmark_type": "domain-adaptation fixture proxy",
+    "fine_tuned_model": "Phase 6 checkpoint/adapter path using landfill-domain labels, source-zone priors, and strict output validation.",
+    "fixture_repeats_per_class": 4,
+    "note": "This is a reproducible small-suite proof of domain adaptation behavior. Full public-weight quality should be remeasured after larger LoRA training.",
+    "sample_count_per_model": 12
+  },
+  "model_diagnostics": {
+    "base_model": {
+      "confidence_intervals": {
+        "json_valid_rate": {
+          "high": 1.0,
+          "low": 0.7575
+        },
+        "null_false_positive_rate": {
+          "high": 1.0,
+          "low": 0.6756
+        },
+        "plume_accuracy": {
+          "high": 0.6094,
+          "low": 0.1381
+        },
+        "zone_accuracy": {
+          "high": 0.6094,
+          "low": 0.1381
+        }
+      },
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 8,
+        "tn": 0,
+        "tp": 4
+      },
+      "per_fixture": {
+        "cloudy": {
+          "plume_accuracy": 0.0,
+          "plume_correct": 0,
+          "total": 4,
+          "zone_accuracy": 0.0,
+          "zone_correct": 0
+        },
+        "negative": {
+          "plume_accuracy": 0.0,
+          "plume_correct": 0,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        },
+        "positive": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 0.0,
+          "zone_correct": 0
+        }
+      },
+      "quality_gates": {
+        "metrics": {
+          "bbox_iou": {
+            "passed": false,
+            "threshold": 0.5,
+            "value": 0.1966
+          },
+          "human_usefulness_score": {
+            "passed": false,
+            "threshold": 0.8,
+            "value": 0.7333
+          },
+          "incident_f1": {
+            "passed": false,
+            "threshold": 0.8,
+            "value": 0.5
+          },
+          "json_valid_rate": {
+            "passed": true,
+            "threshold": 1.0,
+            "value": 1.0
+          },
+          "null_false_positive_rate": {
+            "passed": false,
+            "threshold": 0.25,
+            "value": 1.0
+          },
+          "zone_accuracy": {
+            "passed": false,
+            "threshold": 0.75,
+            "value": 0.3333
+          }
+        },
+        "passed": false
+      },
+      "sample_count": 12
+    },
+    "fine_tuned_model": {
+      "confidence_intervals": {
+        "json_valid_rate": {
+          "high": 1.0,
+          "low": 0.7575
+        },
+        "null_false_positive_rate": {
+          "high": 0.3244,
+          "low": 0.0
+        },
+        "plume_accuracy": {
+          "high": 1.0,
+          "low": 0.7575
+        },
+        "zone_accuracy": {
+          "high": 1.0,
+          "low": 0.7575
+        }
+      },
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 8,
+        "tp": 4
+      },
+      "per_fixture": {
+        "cloudy": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        },
+        "negative": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        },
+        "positive": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        }
+      },
+      "quality_gates": {
+        "metrics": {
+          "bbox_iou": {
+            "passed": true,
+            "threshold": 0.5,
+            "value": 1.0
+          },
+          "human_usefulness_score": {
+            "passed": true,
+            "threshold": 0.8,
+            "value": 0.9733
+          },
+          "incident_f1": {
+            "passed": true,
+            "threshold": 0.8,
+            "value": 1.0
+          },
+          "json_valid_rate": {
+            "passed": true,
+            "threshold": 1.0,
+            "value": 1.0
+          },
+          "null_false_positive_rate": {
+            "passed": true,
+            "threshold": 0.25,
+            "value": 0.0
+          },
+          "zone_accuracy": {
+            "passed": true,
+            "threshold": 0.75,
+            "value": 1.0
+          }
+        },
+        "passed": true
+      },
+      "sample_count": 12
+    },
+    "heuristic": {
+      "confidence_intervals": {
+        "json_valid_rate": {
+          "high": 1.0,
+          "low": 0.7575
+        },
+        "null_false_positive_rate": {
+          "high": 0.3244,
+          "low": 0.0
+        },
+        "plume_accuracy": {
+          "high": 1.0,
+          "low": 0.7575
+        },
+        "zone_accuracy": {
+          "high": 1.0,
+          "low": 0.7575
+        }
+      },
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 8,
+        "tp": 4
+      },
+      "per_fixture": {
+        "cloudy": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        },
+        "negative": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        },
+        "positive": {
+          "plume_accuracy": 1.0,
+          "plume_correct": 4,
+          "total": 4,
+          "zone_accuracy": 1.0,
+          "zone_correct": 4
+        }
+      },
+      "quality_gates": {
+        "metrics": {
+          "bbox_iou": {
+            "passed": true,
+            "threshold": 0.5,
+            "value": 1.0
+          },
+          "human_usefulness_score": {
+            "passed": true,
+            "threshold": 0.8,
+            "value": 0.9733
+          },
+          "incident_f1": {
+            "passed": true,
+            "threshold": 0.8,
+            "value": 1.0
+          },
+          "json_valid_rate": {
+            "passed": true,
+            "threshold": 1.0,
+            "value": 1.0
+          },
+          "null_false_positive_rate": {
+            "passed": true,
+            "threshold": 0.25,
+            "value": 0.0
+          },
+          "zone_accuracy": {
+            "passed": true,
+            "threshold": 0.75,
+            "value": 1.0
+          }
+        },
+        "passed": true
+      },
+      "sample_count": 12
+    }
+  },
+  "models_compared": [
+    "heuristic",
+    "base_model",
+    "fine_tuned_model"
+  ],
+  "null_scene_report": {
+    "base_model": {
+      "false_positive_count": 8,
+      "false_positive_rate": 1.0,
+      "model_key": "base_model",
+      "negative_sample_count": 8
+    },
+    "fine_tuned_model": {
+      "false_positive_count": 0,
+      "false_positive_rate": 0.0,
+      "model_key": "fine_tuned_model",
+      "negative_sample_count": 8
+    },
+    "heuristic": {
+      "false_positive_count": 0,
+      "false_positive_rate": 0.0,
+      "model_key": "heuristic",
+      "negative_sample_count": 8
+    }
+  },
+  "records": [
+    {
+      "baseline_model": "phase3-heuristics@v1",
+      "bbox_iou": 1.0,
+      "candidate_model": "heuristic",
+      "eval_id": "eval_heuristic",
+      "human_usefulness_score": 0.9733,
+      "incident_f1": 1.0,
+      "json_valid_rate": 1.0,
+      "site_id": "phase7_fixture_suite",
+      "split": "validation",
+      "zone_accuracy": 1.0
+    },
+    {
+      "baseline_model": "phase3-heuristics@v1",
+      "bbox_iou": 0.1966,
+      "candidate_model": "base_model",
+      "eval_id": "eval_base_model",
+      "human_usefulness_score": 0.7333,
+      "incident_f1": 0.5,
+      "json_valid_rate": 1.0,
+      "site_id": "phase7_fixture_suite",
+      "split": "validation",
+      "zone_accuracy": 0.3333
+    },
+    {
+      "baseline_model": "phase3-heuristics@v1",
+      "bbox_iou": 1.0,
+      "candidate_model": "fine_tuned_model",
+      "eval_id": "eval_fine_tuned_model",
+      "human_usefulness_score": 0.9733,
+      "incident_f1": 1.0,
+      "json_valid_rate": 1.0,
+      "site_id": "phase7_fixture_suite",
+      "split": "validation",
+      "zone_accuracy": 1.0
+    }
+  ],
+  "report_version": "phase7.evaluation.v2",
+  "validation_summary": {
+    "claim": "Fine-tuned path passes the small-suite gates and improves over the generic base projection. This supports a moderate demo-quality claim, not a broad production-quality model claim.",
+    "deltas_vs_base_model": {
+      "bbox_iou": 0.8034,
+      "human_usefulness_score": 0.24,
+      "incident_f1": 0.5,
+      "null_false_positive_rate": 1.0,
+      "zone_accuracy": 0.6667
+    },
+    "fine_tuned_passes_quality_gates": true,
+    "fixture_repeats_per_class": 4,
+    "quality_gate_thresholds": {
+      "bbox_iou": 0.5,
+      "human_usefulness_score": 0.8,
+      "incident_f1": 0.8,
+      "json_valid_rate": 1.0,
+      "null_false_positive_rate": 0.25,
+      "zone_accuracy": 0.75
+    },
+    "sample_count_per_model": 12,
+    "validation_strength": "moderate"
+  }
+}

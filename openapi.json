@@ -1,0 +1,3059 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "LandfillSentry Ops API",
+    "description": "LandfillSentry operations API for watchlist triage, evidence review, and export.",
+    "version": "0.8.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runtime/status": {
+      "get": {
+        "summary": "Runtime Status",
+        "operationId": "runtime_status_runtime_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Runtime Status Runtime Status Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/scan-progress/{progress_id}": {
+      "get": {
+        "summary": "Stream Scan Progress",
+        "operationId": "stream_scan_progress_scan_progress__progress_id__get",
+        "parameters": [
+          {
+            "name": "progress_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Progress Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/overlays/plumes": {
+      "get": {
+        "summary": "List Plume Overlays",
+        "operationId": "list_plume_overlays_overlays_plumes_get",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "priority",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Priority"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response List Plume Overlays Overlays Plumes Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/{incident_id}/overlay": {
+      "get": {
+        "summary": "Get Incident Overlay",
+        "operationId": "get_incident_overlay_incidents__incident_id__overlay_get",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Incident Overlay Incidents  Incident Id  Overlay Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/summary": {
+      "get": {
+        "summary": "Ops Summary",
+        "operationId": "ops_summary_ops_summary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ops Summary Ops Summary Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/global-dataset": {
+      "get": {
+        "summary": "Ops Global Dataset",
+        "operationId": "ops_global_dataset_ops_global_dataset_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ops Global Dataset Ops Global Dataset Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/current/image/sentinel": {
+      "get": {
+        "summary": "Proxy Data Current Image Sentinel",
+        "operationId": "proxy_data_current_image_sentinel_data_current_image_sentinel_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/current/image/mapbox": {
+      "get": {
+        "summary": "Proxy Data Current Image Mapbox",
+        "operationId": "proxy_data_current_image_mapbox_data_current_image_mapbox_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/image/sentinel": {
+      "get": {
+        "summary": "Proxy Data Image Sentinel",
+        "operationId": "proxy_data_image_sentinel_data_image_sentinel_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data/image/mapbox": {
+      "get": {
+        "summary": "Proxy Data Image Mapbox",
+        "operationId": "proxy_data_image_mapbox_data_image_mapbox_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites": {
+      "get": {
+        "summary": "List Sites",
+        "operationId": "list_sites_sites_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Site"
+                  },
+                  "type": "array",
+                  "title": "Response List Sites Sites Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Register Site",
+        "operationId": "register_site_sites_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Site"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Site"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/watchlist/summary": {
+      "get": {
+        "summary": "Get Watchlist Summary",
+        "operationId": "get_watchlist_summary_watchlist_summary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WatchlistSummary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/watchlist": {
+      "get": {
+        "summary": "Get Watchlist",
+        "operationId": "get_watchlist_watchlist_get",
+        "parameters": [
+          {
+            "name": "priority",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Priority"
+            }
+          },
+          {
+            "name": "review_status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Review Status"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "title": "Page Size"
+            }
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "priority",
+              "title": "Sort By"
+            }
+          },
+          {
+            "name": "selected_site_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Selected Site Id"
+            }
+          },
+          {
+            "name": "include_summary",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Include Summary"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Watchlist Watchlist Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site_id}": {
+      "get": {
+        "summary": "Get Site",
+        "operationId": "get_site_sites__site_id__get",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Site"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site_id}/settings": {
+      "get": {
+        "summary": "Get Site Settings",
+        "operationId": "get_site_settings_sites__site_id__settings_get",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteWatchlistSettings"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Patch Site Settings",
+        "operationId": "patch_site_settings_sites__site_id__settings_patch",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SiteWatchlistSettingsPatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteWatchlistSettings"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site_id}/dongle-readings": {
+      "post": {
+        "summary": "Ingest Dongle Reading",
+        "operationId": "ingest_dongle_reading_sites__site_id__dongle_readings_post",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DongleReadingCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DongleReading"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "List Dongle Readings",
+        "operationId": "list_dongle_readings_sites__site_id__dongle_readings_get",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DongleReading"
+                  },
+                  "title": "Response List Dongle Readings Sites  Site Id  Dongle Readings Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site_id}/detail": {
+      "get": {
+        "summary": "Get Site Detail",
+        "operationId": "get_site_detail_sites__site_id__detail_get",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SiteDetailResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sites/{site_id}/scan": {
+      "post": {
+        "summary": "Scan Site",
+        "operationId": "scan_site_sites__site_id__scan_post",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Site Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScanRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/scans/{scan_id}": {
+      "get": {
+        "summary": "Get Scan Result",
+        "operationId": "get_scan_result_scans__scan_id__get",
+        "parameters": [
+          {
+            "name": "scan_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scan Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScanResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/scans/{scan_id}/evidence": {
+      "get": {
+        "summary": "Get Scan Evidence",
+        "operationId": "get_scan_evidence_scans__scan_id__evidence_get",
+        "parameters": [
+          {
+            "name": "scan_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Scan Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Scan Evidence Scans  Scan Id  Evidence Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents": {
+      "get": {
+        "summary": "List Incidents Api",
+        "operationId": "list_incidents_api_incidents_get",
+        "parameters": [
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "State"
+            }
+          },
+          {
+            "name": "priority",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Priority"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "site_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Site Id"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 20,
+              "title": "Page Size"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response List Incidents Api Incidents Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/review-queue": {
+      "get": {
+        "summary": "Get Review Queue",
+        "operationId": "get_review_queue_review_queue_get",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "assignee",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Assignee"
+            }
+          },
+          {
+            "name": "priority",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Priority"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 20,
+              "title": "Page Size"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Review Queue Review Queue Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/evidence-packs": {
+      "get": {
+        "summary": "List Evidence Packs",
+        "operationId": "list_evidence_packs_evidence_packs_get",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "quality",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Quality"
+            }
+          },
+          {
+            "name": "site_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Site Id"
+            }
+          },
+          {
+            "name": "from_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "From Date"
+            }
+          },
+          {
+            "name": "to_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "To Date"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 20,
+              "title": "Page Size"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response List Evidence Packs Evidence Packs Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/evidence-packs/{panel_id}": {
+      "get": {
+        "summary": "Get Evidence Pack Detail",
+        "operationId": "get_evidence_pack_detail_evidence_packs__panel_id__get",
+        "parameters": [
+          {
+            "name": "panel_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Panel Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvidencePackDetailResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/watchlist/scan": {
+      "post": {
+        "summary": "Scan Watchlist",
+        "operationId": "scan_watchlist_watchlist_scan_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WatchlistScanRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Scan Watchlist Watchlist Scan Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/{incident_id}/review": {
+      "post": {
+        "summary": "Review Incident",
+        "operationId": "review_incident_incidents__incident_id__review_post",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewAction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Incident"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/{incident_id}/comments": {
+      "get": {
+        "summary": "Get Incident Comments",
+        "operationId": "get_incident_comments_incidents__incident_id__comments_get",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IncidentComment"
+                  },
+                  "title": "Response Get Incident Comments Incidents  Incident Id  Comments Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Post Incident Comment",
+        "operationId": "post_incident_comment_incidents__incident_id__comments_post",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentCommentCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncidentComment"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/{incident_id}/assign": {
+      "post": {
+        "summary": "Assign Incident",
+        "operationId": "assign_incident_incidents__incident_id__assign_post",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentAssignRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncidentAssignment"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/export": {
+      "get": {
+        "summary": "Export Incidents",
+        "operationId": "export_incidents_incidents_export_get",
+        "parameters": [
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "json",
+              "title": "Format"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/{incident_id}": {
+      "get": {
+        "summary": "Get Incident Detail",
+        "operationId": "get_incident_detail_incidents__incident_id__get",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IncidentDetailResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/incidents/{incident_id}/export": {
+      "get": {
+        "summary": "Export Incident Evidence",
+        "operationId": "export_incident_evidence_incidents__incident_id__export_get",
+        "parameters": [
+          {
+            "name": "incident_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Incident Id"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "markdown",
+              "title": "Format"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops": {
+      "get": {
+        "summary": "Ops Console",
+        "operationId": "ops_console_ops_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/design": {
+      "get": {
+        "summary": "Ops Design Index",
+        "operationId": "ops_design_index_ops_design_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/design/orbital-precision": {
+      "get": {
+        "summary": "Orbital Precision Design",
+        "operationId": "orbital_precision_design_ops_design_orbital_precision_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ops/design/{page_slug}": {
+      "get": {
+        "summary": "Ops Design Page",
+        "operationId": "ops_design_page_ops_design__page_slug__get",
+        "parameters": [
+          {
+            "name": "page_slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Page Slug"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DongleReading": {
+        "properties": {
+          "reading_id": {
+            "type": "string",
+            "title": "Reading Id"
+          },
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "incident_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident Id"
+          },
+          "methane_ppm": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Methane Ppm"
+          },
+          "captured_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Captured At"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon"
+          },
+          "device_id": {
+            "type": "string",
+            "title": "Device Id"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reading_id",
+          "site_id",
+          "methane_ppm",
+          "captured_at",
+          "lat",
+          "lon",
+          "device_id",
+          "source"
+        ],
+        "title": "DongleReading"
+      },
+      "DongleReadingCreate": {
+        "properties": {
+          "methane_ppm": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Methane Ppm"
+          },
+          "captured_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Captured At"
+          },
+          "lat": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lat"
+          },
+          "lon": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lon"
+          },
+          "device_id": {
+            "type": "string",
+            "title": "Device Id",
+            "default": "dongle-v1"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "default": "field_dongle"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notes"
+          },
+          "incident_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Incident Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "methane_ppm"
+        ],
+        "title": "DongleReadingCreate"
+      },
+      "EvidencePackDetailResponse": {
+        "properties": {
+          "panel_metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Panel Metadata"
+          },
+          "current_image_preview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current Image Preview"
+          },
+          "temporal_comparison_preview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Temporal Comparison Preview"
+          },
+          "map_preview": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Map Preview"
+          },
+          "metadata_panel": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata Panel"
+          },
+          "linked_incident": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Incident"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "linked_scan": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Linked Scan"
+          },
+          "export_options": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Export Options"
+          }
+        },
+        "type": "object",
+        "title": "EvidencePackDetailResponse"
+      },
+      "ExportResponse": {
+        "properties": {
+          "format": {
+            "type": "string",
+            "title": "Format"
+          },
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Generated At"
+          },
+          "incident_count": {
+            "type": "integer",
+            "title": "Incident Count"
+          },
+          "incidents": {
+            "items": {
+              "$ref": "#/components/schemas/Incident"
+            },
+            "type": "array",
+            "title": "Incidents"
+          }
+        },
+        "type": "object",
+        "required": [
+          "format",
+          "generated_at",
+          "incident_count",
+          "incidents"
+        ],
+        "title": "ExportResponse"
+      },
+      "FeedbackStatus": {
+        "type": "string",
+        "enum": [
+          "confirmed",
+          "dismissed",
+          "needs_review",
+          "unresolved"
+        ],
+        "title": "FeedbackStatus"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Incident": {
+        "properties": {
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "job_id": {
+            "type": "string",
+            "title": "Job Id"
+          },
+          "analysis_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Analysis Time"
+          },
+          "plume_likely": {
+            "type": "boolean",
+            "title": "Plume Likely"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence"
+          },
+          "bbox_norm": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 4,
+            "title": "Bbox Norm"
+          },
+          "likely_source_zone": {
+            "$ref": "#/components/schemas/LikelySourceZone"
+          },
+          "persistence_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Persistence Score"
+          },
+          "priority_tier": {
+            "$ref": "#/components/schemas/PriorityTier"
+          },
+          "severity_tier": {
+            "$ref": "#/components/schemas/SeverityTier"
+          },
+          "review_status": {
+            "$ref": "#/components/schemas/ReviewStatus"
+          },
+          "feedback_status": {
+            "$ref": "#/components/schemas/FeedbackStatus"
+          },
+          "evidence_summary": {
+            "type": "string",
+            "title": "Evidence Summary"
+          },
+          "recommended_followup": {
+            "type": "string",
+            "title": "Recommended Followup"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "incident_id",
+          "site_id",
+          "job_id",
+          "analysis_time",
+          "plume_likely",
+          "confidence",
+          "bbox_norm",
+          "likely_source_zone",
+          "persistence_score",
+          "priority_tier",
+          "severity_tier",
+          "review_status",
+          "feedback_status",
+          "evidence_summary",
+          "recommended_followup",
+          "model_version"
+        ],
+        "title": "Incident"
+      },
+      "IncidentAssignRequest": {
+        "properties": {
+          "assignee_name": {
+            "type": "string",
+            "title": "Assignee Name"
+          },
+          "assignee_role": {
+            "type": "string",
+            "title": "Assignee Role",
+            "default": "reviewer"
+          },
+          "sla_due_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sla Due At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "assignee_name"
+        ],
+        "title": "IncidentAssignRequest"
+      },
+      "IncidentAssignment": {
+        "properties": {
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "assignee_name": {
+            "type": "string",
+            "title": "Assignee Name"
+          },
+          "assignee_role": {
+            "type": "string",
+            "title": "Assignee Role"
+          },
+          "assigned_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Assigned At"
+          },
+          "sla_due_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sla Due At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "incident_id",
+          "assignee_name",
+          "assignee_role",
+          "assigned_at"
+        ],
+        "title": "IncidentAssignment"
+      },
+      "IncidentComment": {
+        "properties": {
+          "comment_id": {
+            "type": "string",
+            "title": "Comment Id"
+          },
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "author_name": {
+            "type": "string",
+            "title": "Author Name"
+          },
+          "author_role": {
+            "type": "string",
+            "title": "Author Role"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "comment_id",
+          "incident_id",
+          "author_name",
+          "author_role",
+          "body",
+          "created_at"
+        ],
+        "title": "IncidentComment"
+      },
+      "IncidentCommentCreate": {
+        "properties": {
+          "author_name": {
+            "type": "string",
+            "title": "Author Name",
+            "default": "operator"
+          },
+          "author_role": {
+            "type": "string",
+            "title": "Author Role",
+            "default": "reviewer"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body"
+          }
+        },
+        "type": "object",
+        "required": [
+          "body"
+        ],
+        "title": "IncidentCommentCreate"
+      },
+      "IncidentDetailResponse": {
+        "properties": {
+          "incident": {
+            "$ref": "#/components/schemas/Incident"
+          },
+          "site": {
+            "$ref": "#/components/schemas/Site"
+          },
+          "scan": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scan"
+          },
+          "evidence_summary": {
+            "type": "string",
+            "title": "Evidence Summary"
+          },
+          "metadata_block": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata Block"
+          },
+          "detection_timeline": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Detection Timeline"
+          },
+          "decision_history": {
+            "items": {
+              "$ref": "#/components/schemas/IncidentHistoryEvent"
+            },
+            "type": "array",
+            "title": "Decision History"
+          },
+          "comments": {
+            "items": {
+              "$ref": "#/components/schemas/IncidentComment"
+            },
+            "type": "array",
+            "title": "Comments"
+          },
+          "panel_previews": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Panel Previews"
+          },
+          "assignment": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/IncidentAssignment"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "incident",
+          "site",
+          "evidence_summary"
+        ],
+        "title": "IncidentDetailResponse"
+      },
+      "IncidentHistoryEvent": {
+        "properties": {
+          "history_id": {
+            "type": "string",
+            "title": "History Id"
+          },
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "event_type": {
+            "type": "string",
+            "title": "Event Type"
+          },
+          "from_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "From Status"
+          },
+          "to_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "To Status"
+          },
+          "actor": {
+            "type": "string",
+            "title": "Actor",
+            "default": "system"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "history_id",
+          "incident_id",
+          "event_type",
+          "created_at"
+        ],
+        "title": "IncidentHistoryEvent"
+      },
+      "LikelySourceZone": {
+        "type": "string",
+        "enum": [
+          "active_face",
+          "gas_system",
+          "perimeter_or_unknown"
+        ],
+        "title": "LikelySourceZone"
+      },
+      "PriorityTier": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "urgent"
+        ],
+        "title": "PriorityTier"
+      },
+      "ReviewAction": {
+        "properties": {
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "review_status": {
+            "$ref": "#/components/schemas/ReviewStatus"
+          },
+          "feedback_status": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FeedbackStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "review_comment": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Review Comment"
+          }
+        },
+        "type": "object",
+        "required": [
+          "incident_id",
+          "review_status"
+        ],
+        "title": "ReviewAction"
+      },
+      "ReviewStatus": {
+        "type": "string",
+        "enum": [
+          "proposed",
+          "published",
+          "dismissed",
+          "needs_review"
+        ],
+        "title": "ReviewStatus"
+      },
+      "ScanRequest": {
+        "properties": {
+          "force_refresh": {
+            "type": "boolean",
+            "title": "Force Refresh",
+            "default": false
+          },
+          "progress_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Progress Id"
+          }
+        },
+        "type": "object",
+        "title": "ScanRequest"
+      },
+      "ScanResult": {
+        "properties": {
+          "scan_id": {
+            "type": "string",
+            "title": "Scan Id"
+          },
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scan_id",
+          "site_id",
+          "incident_id",
+          "status"
+        ],
+        "title": "ScanResult"
+      },
+      "SeverityTier": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "title": "SeverityTier"
+      },
+      "Site": {
+        "properties": {
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "operator": {
+            "type": "string",
+            "title": "Operator"
+          },
+          "watchlist_enabled": {
+            "type": "boolean",
+            "title": "Watchlist Enabled",
+            "default": true
+          },
+          "polygon_geojson": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Polygon Geojson"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "type": "object",
+        "required": [
+          "site_id",
+          "name",
+          "lat",
+          "lon",
+          "country",
+          "operator"
+        ],
+        "title": "Site"
+      },
+      "SiteDetailResponse": {
+        "properties": {
+          "site": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Site"
+          },
+          "latest_scan": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Scan"
+          },
+          "latest_incident": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Incident"
+          },
+          "evidence": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence"
+          },
+          "panel_previews": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Panel Previews"
+          },
+          "dongle_readings": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Dongle Readings"
+          },
+          "site_metrics": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Site Metrics"
+          },
+          "recent_activity": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Recent Activity"
+          },
+          "watchlist_settings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SiteWatchlistSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "latest_dongle_summary": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Latest Dongle Summary"
+          },
+          "incident_history_preview": {
+            "items": {
+              "$ref": "#/components/schemas/IncidentHistoryEvent"
+            },
+            "type": "array",
+            "title": "Incident History Preview"
+          },
+          "last_scan_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Scan At"
+          },
+          "scan_cadence_hours": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scan Cadence Hours"
+          }
+        },
+        "type": "object",
+        "required": [
+          "site"
+        ],
+        "title": "SiteDetailResponse"
+      },
+      "SiteWatchlistSettings": {
+        "properties": {
+          "site_id": {
+            "type": "string",
+            "title": "Site Id"
+          },
+          "scan_cadence_hours": {
+            "type": "integer",
+            "title": "Scan Cadence Hours",
+            "default": 24
+          },
+          "alert_threshold": {
+            "type": "number",
+            "title": "Alert Threshold",
+            "default": 0.7
+          },
+          "change_detection_enabled": {
+            "type": "boolean",
+            "title": "Change Detection Enabled",
+            "default": true
+          },
+          "fallback_mode": {
+            "type": "string",
+            "title": "Fallback Mode",
+            "default": "strict_live"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notes"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "site_id",
+          "updated_at"
+        ],
+        "title": "SiteWatchlistSettings"
+      },
+      "SiteWatchlistSettingsPatch": {
+        "properties": {
+          "scan_cadence_hours": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scan Cadence Hours"
+          },
+          "alert_threshold": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Alert Threshold"
+          },
+          "change_detection_enabled": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Change Detection Enabled"
+          },
+          "fallback_mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fallback Mode"
+          },
+          "notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notes"
+          }
+        },
+        "type": "object",
+        "title": "SiteWatchlistSettingsPatch"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WatchlistScanRequest": {
+        "properties": {
+          "site_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Site Ids"
+          },
+          "force_refresh": {
+            "type": "boolean",
+            "title": "Force Refresh",
+            "default": false
+          },
+          "progress_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Progress Id"
+          }
+        },
+        "type": "object",
+        "title": "WatchlistScanRequest"
+      },
+      "WatchlistSummary": {
+        "properties": {
+          "sites_monitored": {
+            "type": "integer",
+            "title": "Sites Monitored"
+          },
+          "high_priority_alerts": {
+            "type": "integer",
+            "title": "High Priority Alerts"
+          },
+          "needs_review": {
+            "type": "integer",
+            "title": "Needs Review"
+          },
+          "published_count": {
+            "type": "integer",
+            "title": "Published Count"
+          },
+          "dismissed_count": {
+            "type": "integer",
+            "title": "Dismissed Count"
+          },
+          "last_scan_success_rate": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Last Scan Success Rate"
+          },
+          "last_updated": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Updated"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sites_monitored",
+          "high_priority_alerts",
+          "needs_review",
+          "published_count",
+          "dismissed_count",
+          "last_scan_success_rate"
+        ],
+        "title": "WatchlistSummary"
+      },
+      "EvidencePanel": {
+        "properties": {
+          "panel_id": {
+            "title": "Panel Id",
+            "type": "string"
+          },
+          "site_id": {
+            "title": "Site Id",
+            "type": "string"
+          },
+          "candidate_id": {
+            "title": "Candidate Id",
+            "type": "string"
+          },
+          "panel_version": {
+            "title": "Panel Version",
+            "type": "string"
+          },
+          "current_rgb_path": {
+            "title": "Current Rgb Path",
+            "type": "string"
+          },
+          "spectral_composite_path": {
+            "title": "Spectral Composite Path",
+            "type": "string"
+          },
+          "temporal_diff_path": {
+            "title": "Temporal Diff Path",
+            "type": "string"
+          },
+          "mapbox_context_path": {
+            "title": "Mapbox Context Path",
+            "type": "string"
+          },
+          "metadata_json": {
+            "additionalProperties": true,
+            "title": "Metadata Json",
+            "type": "object"
+          }
+        },
+        "required": [
+          "panel_id",
+          "site_id",
+          "candidate_id",
+          "panel_version",
+          "current_rgb_path",
+          "spectral_composite_path",
+          "temporal_diff_path",
+          "mapbox_context_path"
+        ],
+        "title": "EvidencePanel",
+        "type": "object"
+      },
+      "EvidencePayload": {
+        "type": "object",
+        "title": "EvidencePayload",
+        "required": [
+          "assets",
+          "candidate",
+          "panel_paths",
+          "metadata"
+        ],
+        "properties": {
+          "assets": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "candidate": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "panel_paths": {
+            "type": "object",
+            "title": "EvidencePanelPaths",
+            "required": [
+              "current_rgb_path",
+              "spectral_composite_path",
+              "temporal_diff_path",
+              "mapbox_context_path"
+            ],
+            "properties": {
+              "current_rgb_path": {
+                "type": "string"
+              },
+              "spectral_composite_path": {
+                "type": "string"
+              },
+              "temporal_diff_path": {
+                "type": "string"
+              },
+              "mapbox_context_path": {
+                "type": "string"
+              }
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  }
+}

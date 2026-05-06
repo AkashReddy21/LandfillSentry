@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffddb8",
+                        "on-primary": "#00354a",
+                        "on-surface": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-secondary": "#003824",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "primary-fixed": "#c4e7ff",
+                        "tertiary-container": "#f59e0b",
+                        "primary-container": "#38bdf8",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-secondary-container": "#00311f",
+                        "primary": "#8ed5ff",
+                        "secondary-container": "#00a572",
+                        "inverse-surface": "#dae2fd",
+                        "secondary": "#4edea3",
+                        "on-primary-container": "#004965",
+                        "primary-fixed-dim": "#7bd0ff",
+                        "on-primary-fixed": "#001e2c",
+                        "surface-container-highest": "#2d3449",
+                        "surface-variant": "#2d3449",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary-container": "#613b00",
+                        "inverse-on-surface": "#283044",
+                        "outline-variant": "#3e484f",
+                        "on-surface-variant": "#bdc8d1",
+                        "tertiary": "#ffc174",
+                        "surface-tint": "#7bd0ff",
+                        "surface-container": "#171f33",
+                        "surface-dim": "#0b1326",
+                        "on-primary-fixed-variant": "#004c69",
+                        "surface-bright": "#31394d",
+                        "on-error": "#690005",
+                        "on-background": "#dae2fd",
+                        "error": "#ffb4ab",
+                        "outline": "#87929a",
+                        "surface-container-high": "#222a3d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#005236",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary": "#472a00",
+                        "inverse-primary": "#00668a",
+                        "surface": "#0b1326",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#060e20",
+                        "background": "#0b1326",
+                        "secondary-fixed-dim": "#4edea3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "panel-padding": "20px",
+                        "gutter": "16px",
+                        "margin": "24px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-base": ["Inter"],
+                        "data-mono": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-base": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.report-grain {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDHqnQ377m_u2I8KZoVDgwd5p1PhhLLX69kTpAs3qlbWDx99eFKX4OZ0GgmwRhUW7QR82d6B2_PE0jZlxhDgBYQnsYfZp9r2oofOlvMb_0hwd01xbhQThkMXTboX62OaOauAGopOWsyHYQzyl6LFt8O-OeWrPIwrtKZmynLP2wq3HKbreVG70ob0vJequ7myQdf1HYzOq2IDY3Wkf7fVDalXi2hJ0Ip_aJ-bePFQ2sbEyxb7uzyumSidrJntytG_CaTC_sTo7GObvE);
+    opacity: 0.03
+    }
+.plume-overlay {
+    background: radial-gradient(circle at center, rgba(78, 222, 163, 0.4) 0%, transparent 70%)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-base antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-slate-950 dark:bg-slate-950 text-sky-400 dark:text-sky-400 font-space-grotesk tracking-tight antialiased border-b border-slate-800 flex justify-between items-center px-6 h-14 w-full sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="text-lg font-black tracking-tighter text-sky-400">LandfillSentry Ops</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-slate-900 px-3 py-1 rounded border border-slate-800">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="text-label-sm uppercase tracking-widest text-slate-300">System: Optimal</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:text-sky-300 transition-all duration-200 active:scale-95"><span class="material-symbols-outlined">sensors</span></button>
+<button class="hover:text-sky-300 transition-all duration-200 active:scale-95 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="hover:text-sky-300 transition-all duration-200 active:scale-95"><span class="material-symbols-outlined">account_circle</span></button>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="bg-slate-900 dark:bg-slate-900 h-screen w-64 border-r border-slate-800 fixed left-0 top-0 flex flex-col pt-14 z-40">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center border border-slate-700">
+<span class="material-symbols-outlined text-sky-400 text-sm">settings_input_antenna</span>
+</div>
+<div>
+<h2 class="font-black text-sky-400 font-space-grotesk text-xs tracking-widest">OPS_COMMAND</h2>
+<p class="text-[10px] text-slate-500 font-mono tracking-tighter">Sector-Alpha-Grid</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">radar</span>
+<span>Live Triage</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">public</span>
+<span>Methane Map</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">router</span>
+<span>Fleet Health</span>
+</a>
+<!-- Active Item -->
+<a class="bg-slate-800 text-sky-400 border-l-4 border-sky-400 px-4 py-3 flex items-center gap-3 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Data Archives</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">settings_input_component</span>
+<span>Configuration</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-800 p-2 space-y-1">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span>Support</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 transition-colors duration-150 font-space-grotesk font-medium uppercase text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Log Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content (Evidence Pack Canvas) -->
+<main class="flex-1 ml-64 p-margin bg-surface text-on-surface">
+<!-- Header Controls -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<nav class="flex items-center gap-2 text-label-sm text-slate-500 mb-2">
+<span class="uppercase tracking-widest">Archives</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="uppercase tracking-widest text-primary">Incident #MP-9921-X</span>
+</nav>
+<h1 class="font-headline-md text-headline-md text-on-background">Incident Evidence Pack</h1>
+</div>
+<div class="flex gap-stack-md">
+<button class="flex items-center gap-2 bg-surface-container-high border border-outline-variant px-4 py-2 rounded text-label-sm uppercase tracking-widest hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+                        Share with Team
+                    </button>
+<button class="flex items-center gap-2 bg-surface-container-high border border-outline-variant px-4 py-2 rounded text-label-sm uppercase tracking-widest hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                        Export as JSON
+                    </button>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded text-label-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                        Export as PDF
+                    </button>
+</div>
+</div>
+<!-- Report Body -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Left Column: Summary & Imagery -->
+<div class="col-span-12 lg:col-span-8 space-y-gutter">
+<!-- Document Header Card -->
+<section class="bg-surface-container border border-slate-800 p-panel-padding relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">description</span>
+</div>
+<div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-stack-md">
+<div class="space-y-1">
+<p class="text-label-sm text-slate-500 uppercase tracking-widest">Site ID</p>
+<p class="font-data-mono text-data-mono text-primary uppercase">N-TX-LUBBOCK-42</p>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-slate-500 uppercase tracking-widest">Timestamp</p>
+<p class="font-data-mono text-data-mono">2023-11-24 14:22:09 UTC</p>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-slate-500 uppercase tracking-widest">Classification</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<p class="font-data-mono text-data-mono text-error">High Concentration</p>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-slate-500 uppercase tracking-widest">Confidence Score</p>
+<p class="font-data-mono text-data-mono">98.4% AI Verified</p>
+</div>
+</div>
+</section>
+<!-- Annotated Images Grid -->
+<section class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface-container border border-slate-800 p-unit group">
+<div class="relative aspect-video bg-slate-950 overflow-hidden">
+<img class="w-full h-full object-cover opacity-60 mix-blend-screen" data-alt="Satellite thermal imagery of a landfill site showing a large green-yellow methane plume overlaying the topography in Lubbock Texas" data-location="Lubbock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbcRQuOI3qyoPYn1O5Jg3uJb6kllaXxy_A-uUb-VYNW4k79v9AS8m08iqLAzKZNjLV7LiXbJP2nxQlTfijiPpTUX3geOto92E6EBoUOoRG9b4qRn3ZvQBbAfozh2qyoWNiHVVHNxVfKywzNG56l3h-Lyfnq4IzSvTGF_GkJKmvQxlfxMRQB3_pmNzzVa1Q4SvXLUzpzU-w6yyI9djTox4aVW-9WeH9xIDHDlyXO-m65Fp8N3IYSmu31dwf9yAXu17YPC3Rj8frgFM"/>
+<div class="absolute inset-0 plume-overlay pointer-events-none"></div>
+<div class="absolute top-2 left-2 bg-slate-900/80 px-2 py-1 text-[10px] border border-slate-700 font-mono">SENSOR_SAT_L7-B1</div>
+<!-- Annotation Overlays -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-2 border-dashed border-error/50 rounded-full flex items-center justify-center">
+<div class="w-1 h-1 bg-error rounded-full"></div>
+</div>
+</div>
+<div class="p-stack-sm flex justify-between items-center bg-surface-container-low">
+<span class="text-label-sm uppercase tracking-tighter text-slate-400">Infrared Plume Mapping</span>
+<span class="text-label-sm font-mono text-secondary">MAX: 850ppm</span>
+</div>
+</div>
+<div class="bg-surface-container border border-slate-800 p-unit">
+<div class="relative aspect-video bg-slate-950 overflow-hidden">
+<img class="w-full h-full object-cover opacity-50" data-alt="Standard color satellite view of a large municipal landfill site with visible dirt roads and industrial containers" data-location="Lubbock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC958M2gAy6FM9W9gjPqBEyrZ0clEGeGwXyHiB6_xD2wEVZxZhy6Eclnj1jE7oz0gd2J3rWazJH8lfGo8W4Hhqi3Q0zo4lkObjDV_TmxMEzoz5RxHwTyyDg4dhJnXkJFN0E4R5TJIsdy0bUaC70_rnFGNVKFT-T2Bx_Hr9b3X4KaVCwuhFRW5heRX3qaivDkNzwwxFE9HepSEUFwX-eEqb5-KvUEOfo9mmyosO8mwCRUg1Akf9QySq6hl79B6kIEEGdUK5bZRWySeQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+<span class="text-[10px] font-mono">33.5779° N, 101.8552° W</span>
+</div>
+</div>
+<div class="p-stack-sm flex justify-between items-center bg-surface-container-low">
+<span class="text-label-sm uppercase tracking-tighter text-slate-400">Contextual Site Imagery</span>
+<span class="text-label-sm font-mono text-slate-300">Res: 0.3m/px</span>
+</div>
+</div>
+</section>
+<!-- AI Evidence Summary -->
+<section class="bg-surface-container-high border border-slate-800 p-panel-padding">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="font-headline-md text-body-base uppercase tracking-widest text-primary">AI Diagnostic Summary</h3>
+</div>
+<div class="space-y-4 border-l-2 border-slate-700 pl-6 ml-2">
+<p class="text-body-base leading-relaxed text-slate-300 italic">
+                                "The spectral signature identified at coordinates 33.5779, -101.8552 matches the profile of a subsurface landfill fire or significant biological decay acceleration. Plume movement indicates a steady release rate of 12.4kg/hr, likely originating from a breach in the HDPE geomembrane layer 4. No seismic correlations detected. Recommendation: Immediate thermal imaging drone sweep."
+                            </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-label-sm text-slate-400">#MethaneLeak</span>
+<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-label-sm text-slate-400">#Layer4Breach</span>
+<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-label-sm text-slate-400">#Urgent_Action</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Inspector Details & Actions -->
+<div class="col-span-12 lg:col-span-4 space-y-gutter">
+<!-- Inspector Recommendation -->
+<section class="bg-surface-container border-l-4 border-l-primary p-panel-padding">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-slate-700">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a safety inspector wearing high-visibility gear and a hard hat for an industrial environment profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIwW8QikF1uW8-c_9SeivSS2kknHJiLoinnKJVy63HUjxmdExH74CUeHTmtLuxTcmFAmABEUDCVL7vIvD3mmbeXPeNNM2ATkBygMlEL7F1tR6SRNwME-o1pzY594xyjxpxKmYKPOMn0_f9VZIJ5yUiZW5kKjSj96W7l3Axy_VxMtSAHnRDtt4XufwbgXaWqQfTv427eyETqTrWf24Ucnie4FLtgvgTAaM6TYAt5SimqTcRtGBHveclBt5wouEmQ5ezvyOXViCOlM"/>
+</div>
+<div>
+<p class="text-label-sm font-bold">Inspector R. Vance</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Senior Ops Lead</p>
+</div>
+</div>
+<h4 class="text-label-sm font-black uppercase tracking-widest text-slate-400 mb-2">Recommendation</h4>
+<div class="bg-slate-900/50 p-4 border border-slate-800 rounded mb-4">
+<p class="text-label-sm leading-relaxed text-slate-300">
+                                Deploy Tier-1 containment team to Sector-Alpha immediately. Verify pressure sensors in Grid 42. Escalating to EPA compliance log.
+                            </p>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-mono text-primary bg-primary/10 px-3 py-2 rounded">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                            Decision: ESCALATE TO FIELD CREW
+                        </div>
+</section>
+<!-- Telemetry Data List -->
+<section class="bg-surface-container border border-slate-800">
+<div class="p-4 border-b border-slate-800 flex justify-between items-center">
+<h3 class="text-label-sm font-black uppercase tracking-widest">Sensor Feed</h3>
+<span class="text-[10px] font-mono text-secondary">LIVE FEED</span>
+</div>
+<div class="divide-y divide-slate-800 font-data-mono text-[12px]">
+<div class="flex justify-between p-3 bg-slate-900/20">
+<span class="text-slate-500">SN-441 (Primary)</span>
+<span class="text-error">850 ppm</span>
+</div>
+<div class="flex justify-between p-3 bg-slate-900/40">
+<span class="text-slate-500">SN-442 (Secondary)</span>
+<span class="text-secondary">412 ppm</span>
+</div>
+<div class="flex justify-between p-3 bg-slate-900/20">
+<span class="text-slate-500">Wind Velocity</span>
+<span class="text-slate-300">14.2 km/h NW</span>
+</div>
+<div class="flex justify-between p-3 bg-slate-900/40">
+<span class="text-slate-500">Ambient Temp</span>
+<span class="text-slate-300">22.4°C</span>
+</div>
+<div class="flex justify-between p-3 bg-slate-900/20">
+<span class="text-slate-500">Ground Humidity</span>
+<span class="text-slate-300">12.1%</span>
+</div>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="bg-surface-container border border-slate-800 p-panel-padding">
+<h3 class="text-label-sm font-black uppercase tracking-widest mb-4">Event History</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="w-px h-full bg-slate-800 mt-2"></div>
+</div>
+<div class="pb-4">
+<p class="text-label-sm font-bold">Pack Generated</p>
+<p class="text-[10px] text-slate-500">Today, 15:45</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+<div class="w-px h-full bg-slate-800 mt-2"></div>
+</div>
+<div class="pb-4">
+<p class="text-label-sm font-bold">Inspector Assigned</p>
+<p class="text-[10px] text-slate-500">Today, 14:50</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+</div>
+<div>
+<p class="text-label-sm font-bold">Anomaly Detected</p>
+<p class="text-[10px] text-slate-500">Today, 14:22</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer Compliance Note -->
+<footer class="mt-12 border-t border-slate-800 pt-6 flex justify-between items-center opacity-50">
+<div class="text-[10px] font-mono space-y-1">
+<p>OFFICIAL SENTRY_OPS RECORD | CLEARANCE LEVEL 4 REQUIRED</p>
+<p>© 2023 LANDFILLSENTRY OPERATIONS | LUBBOCK SECTOR GRID</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

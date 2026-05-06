@@ -1,0 +1,97 @@
+{
+  "api_health_status": 200,
+  "success_count": 0,
+  "fail_count": 10,
+  "rows": [
+    {
+      "site_id": "LF_REAL_001",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_002",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_003",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_004",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_005",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_006",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_007",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_008",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_009",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    },
+    {
+      "site_id": "LF_REAL_010",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http"
+    }
+  ]
+}

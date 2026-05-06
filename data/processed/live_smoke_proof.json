@@ -1,0 +1,20 @@
+{
+  "api_base_url": "http://127.0.0.1:8000",
+  "artifact_version": "judge.live_smoke.v1",
+  "generated_at": "2026-05-05T06:09:00+00:00",
+  "result": {
+    "incident_id": "inc_083",
+    "inference_mode": "live",
+    "inference_tooling": "Hugging Face Transformers + PEFT",
+    "preview_keys": [
+      "current_rgb",
+      "spectral_composite",
+      "temporal_diff",
+      "mapbox_context"
+    ],
+    "scan_id": "scan_083",
+    "site_id": "LF_REAL_007"
+  },
+  "simsat_base_url": "http://127.0.0.1:9005",
+  "status": "PASS"
+}

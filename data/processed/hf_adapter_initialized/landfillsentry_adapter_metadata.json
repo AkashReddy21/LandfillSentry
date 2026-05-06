@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-05-04T17:09:28.376636+00:00",
+  "base_model": "LiquidAI/LFM2.5-VL-450M",
+  "base_revision": "main",
+  "adapter_status": "initialized_not_fine_tuned",
+  "note": "Loadable PEFT LoRA adapter initialized from base model. Replace with trained adapter weights for fine-tuned claims.",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj"
+  ]
+}

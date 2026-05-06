@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .status-chip-safe { border-left: 3px solid #4edea3; }
+        .status-chip-attention { border-left: 3px solid #f59e0b; }
+        .status-chip-critical { border-left: 3px solid #ffb4ab; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0b1326; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffddb8",
+                        "on-primary": "#00354a",
+                        "on-surface": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-secondary": "#003824",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "primary-fixed": "#c4e7ff",
+                        "tertiary-container": "#f59e0b",
+                        "primary-container": "#38bdf8",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-secondary-container": "#00311f",
+                        "primary": "#8ed5ff",
+                        "secondary-container": "#00a572",
+                        "inverse-surface": "#dae2fd",
+                        "secondary": "#4edea3",
+                        "on-primary-container": "#004965",
+                        "primary-fixed-dim": "#7bd0ff",
+                        "on-primary-fixed": "#001e2c",
+                        "surface-container-highest": "#2d3449",
+                        "surface-variant": "#2d3449",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary-container": "#613b00",
+                        "inverse-on-surface": "#283044",
+                        "outline-variant": "#3e484f",
+                        "on-surface-variant": "#bdc8d1",
+                        "tertiary": "#ffc174",
+                        "surface-tint": "#7bd0ff",
+                        "surface-container": "#171f33",
+                        "surface-dim": "#0b1326",
+                        "on-primary-fixed-variant": "#004c69",
+                        "surface-bright": "#31394d",
+                        "on-error": "#690005",
+                        "on-background": "#dae2fd",
+                        "error": "#ffb4ab",
+                        "outline": "#87929a",
+                        "surface-container-high": "#222a3d",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#005236",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary": "#472a00",
+                        "inverse-primary": "#00668a",
+                        "surface": "#0b1326",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#060e20",
+                        "background": "#0b1326",
+                        "secondary-fixed-dim": "#4edea3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "panel-padding": "20px",
+                        "gutter": "16px",
+                        "margin": "24px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-base": ["Inter"],
+                        "data-mono": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-base": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-base min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 h-14 w-full sticky top-0 z-50 bg-slate-950 border-b border-slate-800 font-space-grotesk tracking-tight antialiased">
+<div class="flex items-center gap-4">
+<span class="text-lg font-black tracking-tighter text-sky-400">LandfillSentry Ops</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-slate-900 border border-slate-700 px-3 py-1 rounded text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm mr-2">search</span>
+<span>Search sites or telemetry...</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-mono text-sky-400">System: Optimal</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-300 transition-colors" data-icon="sensors">sensors</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-300 transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-sky-300 transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Layout Container -->
+<div class="flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full flex flex-col pt-14 z-40 bg-slate-900 w-64 border-r border-slate-800 font-space-grotesk font-medium uppercase text-xs tracking-widest">
+<div class="p-6 border-b border-slate-800">
+<p class="font-black text-sky-400">OPS_COMMAND</p>
+<p class="text-[10px] text-slate-500">Sector-Alpha-Grid</p>
+</div>
+<div class="flex-1 py-4">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="radar">radar</span> Live Triage
+                </a>
+<a class="bg-slate-800 text-sky-400 border-l-4 border-sky-400 px-4 py-3 flex items-center gap-3 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span> Watchlist
+                </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="router">router</span> Fleet Health
+                </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="inventory_2">inventory_2</span> Data Archives
+                </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings_input_component">settings_input_component</span> Configuration
+                </a>
+</div>
+<div class="border-t border-slate-800 py-4">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="contact_support">contact_support</span> Support
+                </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="logout">logout</span> Log Out
+                </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 p-6 space-y-6">
+<!-- Global Stats Header -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container border border-outline-variant p-5 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Total Sites</span>
+<span class="material-symbols-outlined text-sky-400" data-icon="domain">domain</span>
+</div>
+<div class="text-display-lg font-space-grotesk text-primary">128</div>
+<div class="text-[10px] text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="trending_up">trending_up</span> +3 this month
+                    </div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-5 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Active Alerts</span>
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<div class="text-display-lg font-space-grotesk text-error">14</div>
+<div class="text-[10px] text-error mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="emergency">emergency</span> 4 Critical priority
+                    </div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-5 rounded-lg">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Persistence Rate</span>
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+</div>
+<div class="text-display-lg font-space-grotesk text-secondary">99.92%</div>
+<div class="text-[10px] text-slate-500 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="update">update</span> Last 30 days uptime
+                    </div>
+</div>
+</section>
+<!-- Dashboard Title & Filters -->
+<div class="flex items-center justify-between">
+<h2 class="text-headline-md font-space-grotesk text-on-surface">Watchlist Dashboard</h2>
+<div class="flex gap-2">
+<button class="bg-slate-800 border border-slate-700 px-4 py-2 text-xs flex items-center gap-2 hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span> Filter
+                    </button>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 text-xs font-bold flex items-center gap-2 hover:brightness-110 transition-all active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span> Add New Site
+                    </button>
+</div>
+</div>
+<!-- Site Watchlist Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1: North Side Facility -->
+<div class="bg-surface-container border border-outline-variant rounded transition-all hover:border-primary/50 group">
+<div class="p-5 border-b border-outline-variant flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-primary group-hover:text-sky-300 transition-colors">North Side Facility</h3>
+<p class="text-label-sm text-on-surface-variant font-mono">ID: OPS-8842-NS</p>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1 text-[10px] font-bold uppercase tracking-tighter text-secondary border border-secondary/20 status-chip-safe">
+                            Safe
+                        </div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Last Scan</span>
+<span class="font-mono text-on-surface">14:22:05 UTC</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Active Incidents</span>
+<span class="font-mono text-on-surface">0</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="text-[10px] uppercase text-on-surface-variant font-bold mb-2">Methane Trend (24h)</p>
+<div class="h-16 w-full flex items-end gap-1">
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[30%] rounded-t-sm" title="240 ppm"></div>
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[45%] rounded-t-sm" title="310 ppm"></div>
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[35%] rounded-t-sm" title="280 ppm"></div>
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[60%] rounded-t-sm" title="400 ppm"></div>
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[40%] rounded-t-sm" title="290 ppm"></div>
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[55%] rounded-t-sm" title="380 ppm"></div>
+<div class="bg-secondary/20 hover:bg-secondary/40 transition-colors w-full h-[30%] rounded-t-sm" title="240 ppm"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 flex justify-between gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-outline hover:bg-outline-variant transition-colors">Details</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-slate-800 text-sky-400 hover:bg-slate-700 transition-colors">Live View</button>
+</div>
+</div>
+<!-- Card 2: East Valley Waste -->
+<div class="bg-surface-container border border-outline-variant rounded transition-all hover:border-tertiary/50 group">
+<div class="p-5 border-b border-outline-variant flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-tertiary group-hover:text-tertiary-fixed transition-colors">East Valley Waste</h3>
+<p class="text-label-sm text-on-surface-variant font-mono">ID: OPS-4122-EV</p>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1 text-[10px] font-bold uppercase tracking-tighter text-tertiary border border-tertiary/20 status-chip-attention">
+                            Attention
+                        </div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Last Scan</span>
+<span class="font-mono text-on-surface">14:18:12 UTC</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Active Incidents</span>
+<span class="font-mono text-tertiary">3</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="text-[10px] uppercase text-on-surface-variant font-bold mb-2">Methane Trend (24h)</p>
+<div class="h-16 w-full flex items-end gap-1">
+<div class="bg-tertiary/20 w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-tertiary/20 w-full h-[45%] rounded-t-sm"></div>
+<div class="bg-tertiary/60 w-full h-[85%] rounded-t-sm"></div>
+<div class="bg-tertiary/60 w-full h-[95%] rounded-t-sm"></div>
+<div class="bg-tertiary/40 w-full h-[70%] rounded-t-sm"></div>
+<div class="bg-tertiary/30 w-full h-[55%] rounded-t-sm"></div>
+<div class="bg-tertiary/30 w-full h-[60%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 flex justify-between gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-outline hover:bg-outline-variant transition-colors">Details</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-slate-800 text-sky-400 hover:bg-slate-700 transition-colors">Investigate</button>
+</div>
+</div>
+<!-- Card 3: Metro Landfill -->
+<div class="bg-surface-container border border-error/50 rounded transition-all group relative overflow-hidden">
+<div class="absolute inset-0 bg-error/5 opacity-10 pointer-events-none"></div>
+<div class="p-5 border-b border-outline-variant flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-error group-hover:brightness-125 transition-colors">Metro Landfill</h3>
+<p class="text-label-sm text-on-surface-variant font-mono">ID: OPS-0031-MT</p>
+</div>
+<div class="bg-error-container/20 px-3 py-1 text-[10px] font-bold uppercase tracking-tighter text-error border border-error/40 status-chip-critical animate-pulse">
+                            Critical
+                        </div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Last Scan</span>
+<span class="font-mono text-error">14:24:58 UTC (NOW)</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Active Incidents</span>
+<span class="font-mono text-error font-bold text-sm">8</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="text-[10px] uppercase text-on-surface-variant font-bold mb-2">Methane Trend (24h)</p>
+<div class="h-16 w-full flex items-end gap-1">
+<div class="bg-error/20 w-full h-[50%] rounded-t-sm"></div>
+<div class="bg-error/30 w-full h-[65%] rounded-t-sm"></div>
+<div class="bg-error/50 w-full h-[80%] rounded-t-sm"></div>
+<div class="bg-error/80 w-full h-[100%] rounded-t-sm"></div>
+<div class="bg-error/90 w-full h-[95%] rounded-t-sm"></div>
+<div class="bg-error/90 w-full h-[100%] rounded-t-sm"></div>
+<div class="bg-error/100 w-full h-[98%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+<div class="bg-error-container/10 p-4 flex justify-between gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-error/30 text-error hover:bg-error/20 transition-colors">Details</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-error text-on-error hover:brightness-110 transition-colors">Acknowledge</button>
+</div>
+</div>
+<!-- Card 4: South Bay Ridge -->
+<div class="bg-surface-container border border-outline-variant rounded transition-all hover:border-primary/50 group">
+<div class="p-5 border-b border-outline-variant flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-primary group-hover:text-sky-300 transition-colors">South Bay Ridge</h3>
+<p class="text-label-sm text-on-surface-variant font-mono">ID: OPS-2210-SB</p>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1 text-[10px] font-bold uppercase tracking-tighter text-secondary border border-secondary/20 status-chip-safe">
+                            Safe
+                        </div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Last Scan</span>
+<span class="font-mono text-on-surface">11:05:44 UTC</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Active Incidents</span>
+<span class="font-mono text-on-surface">0</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<p class="text-[10px] uppercase text-on-surface-variant font-bold mb-2">Methane Trend (24h)</p>
+<div class="h-16 w-full flex items-end gap-1">
+<div class="bg-secondary/20 w-full h-[15%] rounded-t-sm"></div>
+<div class="bg-secondary/20 w-full h-[20%] rounded-t-sm"></div>
+<div class="bg-secondary/20 w-full h-[18%] rounded-t-sm"></div>
+<div class="bg-secondary/20 w-full h-[22%] rounded-t-sm"></div>
+<div class="bg-secondary/20 w-full h-[15%] rounded-t-sm"></div>
+<div class="bg-secondary/20 w-full h-[10%] rounded-t-sm"></div>
+<div class="bg-secondary/20 w-full h-[12%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 flex justify-between gap-3">
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest border border-outline hover:bg-outline-variant transition-colors">Details</button>
+<button class="flex-1 py-2 text-[10px] font-bold uppercase tracking-widest bg-slate-800 text-sky-400 hover:bg-slate-700 transition-colors">Live View</button>
+</div>
+</div>
+<!-- Map Widget / Bento Secondary Section -->
+<div class="bg-surface-container border border-outline-variant rounded lg:col-span-2 relative overflow-hidden min-h-[320px]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-40 mix-blend-luminosity" data-alt="top-down satellite view of a large geometric landfill facility with surrounding green buffer zone and monitoring stations" data-location="Northern California" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP9cxa4_LIAJSdpbp2y0bO89Kc5eXy7CwE8dT2J-1OSYMf7ncATV4_Sc2ciyFEZoaUV6DrcDWGIlJkpC2DCipo883Q9yktqPBaFg4JNdBN1pvNlO1olKVynCbfIDxSUrCgwF9k6UrxWOTG3FtPXDoc17ZjMrvjuD39m-M8g20UG_9RN4HmQRLx9Jp2g8VpYA9s1lucwvmqbHB6dTh2x9kOA84Xw7zdCZ6UboTildgJOGiLrPpE_5sO_V7gQQT-lFq6LFKTlxcwtqc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 p-6 flex flex-col h-full justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-error w-2 h-2 rounded-full animate-ping"></span>
+<span class="text-label-sm font-bold uppercase text-error">Critical Event Tracked</span>
+</div>
+<h3 class="text-headline-md font-space-grotesk">Global Hotspot Map</h3>
+<p class="text-body-base text-on-surface-variant max-w-md">Real-time orbital tracking of Sector-Alpha-Grid. Metro Landfill showing 85% anomaly confidence.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-slate-900/80 backdrop-blur border border-slate-700 p-4 rounded-lg flex-1">
+<span class="text-[10px] uppercase font-bold text-slate-500">Peak Sensor Output</span>
+<div class="text-xl font-mono text-sky-400">1,244 ppm</div>
+</div>
+<div class="bg-slate-900/80 backdrop-blur border border-slate-700 p-4 rounded-lg flex-1">
+<span class="text-[10px] uppercase font-bold text-slate-500">Plume Area Est.</span>
+<div class="text-xl font-mono text-sky-400">420 m²</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Incident Feed Table (Technical Precision Style) -->
+<section class="bg-surface-container border border-outline-variant rounded overflow-hidden">
+<div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-bold text-sm tracking-widest uppercase">System Event Log</h3>
+<span class="text-[10px] text-slate-500 font-mono uppercase">Sync: 1.2s ago</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-[10px] uppercase tracking-widest text-on-surface-variant border-b border-outline-variant">
+<th class="px-6 py-3 font-bold">Event ID</th>
+<th class="px-6 py-3 font-bold">Timestamp</th>
+<th class="px-6 py-3 font-bold">Location</th>
+<th class="px-6 py-3 font-bold">Type</th>
+<th class="px-6 py-3 font-bold">Reading</th>
+<th class="px-6 py-3 font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="text-xs font-mono">
+<tr class="border-b border-outline-variant/30 hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sky-400">#EV-29930</td>
+<td class="px-6 py-4 text-slate-400">14:22:55</td>
+<td class="px-6 py-4">Metro Landfill - Pylon 4</td>
+<td class="px-6 py-4 text-error">Sudden Release</td>
+<td class="px-6 py-4">1240 ppm/h</td>
+<td class="px-6 py-4 text-right">
+<button class="text-sky-400 hover:underline">Acknowledge</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/30 bg-slate-900/40 hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sky-400">#EV-29929</td>
+<td class="px-6 py-4 text-slate-400">14:21:02</td>
+<td class="px-6 py-4">East Valley - Zone B</td>
+<td class="px-6 py-4 text-tertiary">Sensor Fault</td>
+<td class="px-6 py-4">-- --</td>
+<td class="px-6 py-4 text-right">
+<button class="text-sky-400 hover:underline">Repair Ticket</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/30 hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sky-400">#EV-29928</td>
+<td class="px-6 py-4 text-slate-400">14:15:30</td>
+<td class="px-6 py-4">North Side - Perimeter</td>
+<td class="px-6 py-4 text-secondary">Calibration</td>
+<td class="px-6 py-4">Baseline</td>
+<td class="px-6 py-4 text-right">
+<button class="text-sky-400 hover:underline">View Log</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</div>
+</body></html>

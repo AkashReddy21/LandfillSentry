@@ -1,0 +1,3187 @@
+{
+  "timestamp_utc": "2026-04-24T08:05:33.003382Z",
+  "api_base": "http://127.0.0.1:8000",
+  "simsat_root": "http://127.0.0.1:9005/",
+  "health": {
+    "api_health": {
+      "status_code": 200,
+      "ok": true,
+      "body": {
+        "status": "ok",
+        "service": "landfillsentry-api"
+      }
+    },
+    "simsat_root": {
+      "status_code": 200,
+      "ok": true,
+      "body": {
+        "message": "Simulation API is online"
+      }
+    }
+  },
+  "sites": {
+    "raw": {
+      "status_code": 200,
+      "ok": true,
+      "body": [
+        {
+          "site_id": "LF_REAL_001",
+          "name": "Spillepeng Waste Facility Malmo",
+          "lat": 55.6342,
+          "lon": 13.0187,
+          "country": "Sweden",
+          "operator": "VA SYD",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_002",
+          "name": "Amager Resource Center Copenhagen",
+          "lat": 55.6507,
+          "lon": 12.6236,
+          "country": "Denmark",
+          "operator": "ARC",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_003",
+          "name": "Deponie Ihlenberg Selmsdorf",
+          "lat": 53.8732,
+          "lon": 10.8335,
+          "country": "Germany",
+          "operator": "IHU",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_004",
+          "name": "Schoteroog Landfill Haarlem",
+          "lat": 52.4106,
+          "lon": 4.6498,
+          "country": "Netherlands",
+          "operator": "Gemeente Haarlem",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_005",
+          "name": "Belvedere Landfill London",
+          "lat": 51.4916,
+          "lon": 0.1507,
+          "country": "United Kingdom",
+          "operator": "Cory",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_006",
+          "name": "Valdemingomez Landfill Madrid",
+          "lat": 40.3397,
+          "lon": -3.5859,
+          "country": "Spain",
+          "operator": "Ayuntamiento de Madrid",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_007",
+          "name": "Mont Saint Guibert Landfill",
+          "lat": 50.6284,
+          "lon": 4.6089,
+          "country": "Belgium",
+          "operator": "In BW",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_008",
+          "name": "Sisto Landfill Rome",
+          "lat": 41.7812,
+          "lon": 12.4543,
+          "country": "Italy",
+          "operator": "AMA Roma",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_009",
+          "name": "Smat Nords Landfill Stockholm",
+          "lat": 59.3828,
+          "lon": 17.8269,
+          "country": "Sweden",
+          "operator": "SMT",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        },
+        {
+          "site_id": "LF_REAL_010",
+          "name": "Sillamäe Waste Depository",
+          "lat": 59.3946,
+          "lon": 27.7635,
+          "country": "Estonia",
+          "operator": "Enefit Power",
+          "watchlist_enabled": true,
+          "polygon_geojson": null,
+          "metadata": {
+            "seeded_from": "csv_import"
+          }
+        }
+      ]
+    },
+    "expected_presence": {
+      "LF_REAL_001": true,
+      "LF_REAL_002": true,
+      "LF_REAL_003": true,
+      "LF_REAL_004": true,
+      "LF_REAL_005": true,
+      "LF_REAL_006": true,
+      "LF_REAL_007": true,
+      "LF_REAL_008": true,
+      "LF_REAL_009": true,
+      "LF_REAL_010": true
+    }
+  },
+  "scans": {
+    "LF_REAL_001": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_025",
+          "site_id": "LF_REAL_001",
+          "incident_id": "inc_025",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_025",
+        "incident_id": "inc_025",
+        "status": "live"
+      }
+    },
+    "LF_REAL_002": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_026",
+          "site_id": "LF_REAL_002",
+          "incident_id": "inc_026",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_026",
+        "incident_id": "inc_026",
+        "status": "live"
+      }
+    },
+    "LF_REAL_003": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_027",
+          "site_id": "LF_REAL_003",
+          "incident_id": "inc_027",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_027",
+        "incident_id": "inc_027",
+        "status": "live"
+      }
+    },
+    "LF_REAL_004": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_028",
+          "site_id": "LF_REAL_004",
+          "incident_id": "inc_028",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_028",
+        "incident_id": "inc_028",
+        "status": "live"
+      }
+    },
+    "LF_REAL_005": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_029",
+          "site_id": "LF_REAL_005",
+          "incident_id": "inc_029",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_029",
+        "incident_id": "inc_029",
+        "status": "live"
+      }
+    },
+    "LF_REAL_006": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_030",
+          "site_id": "LF_REAL_006",
+          "incident_id": "inc_030",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_030",
+        "incident_id": "inc_030",
+        "status": "live"
+      }
+    },
+    "LF_REAL_007": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_031",
+          "site_id": "LF_REAL_007",
+          "incident_id": "inc_031",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_031",
+        "incident_id": "inc_031",
+        "status": "live"
+      }
+    },
+    "LF_REAL_008": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_032",
+          "site_id": "LF_REAL_008",
+          "incident_id": "inc_032",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_032",
+        "incident_id": "inc_032",
+        "status": "live"
+      }
+    },
+    "LF_REAL_009": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_033",
+          "site_id": "LF_REAL_009",
+          "incident_id": "inc_033",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_033",
+        "incident_id": "inc_033",
+        "status": "live"
+      }
+    },
+    "LF_REAL_010": {
+      "request": {
+        "force_refresh": true
+      },
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_034",
+          "site_id": "LF_REAL_010",
+          "incident_id": "inc_034",
+          "status": "live"
+        }
+      },
+      "parsed": {
+        "scan_id": "scan_034",
+        "incident_id": "inc_034",
+        "status": "live"
+      }
+    }
+  },
+  "evidence": {
+    "LF_REAL_001": {
+      "scan_id": "scan_025",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_025",
+          "incident_id": "inc_025",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/96/96bcae106fc2e0cd9cfcac80fabb7be28be288518a17bf38f4b9dcb2c2e5e706.img",
+            "spectral_composite_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img",
+            "temporal_diff_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img",
+            "mapbox_context_path": "data/cache/assets/4d/4da96f28003c3fa238d96bd0dae0d258642502878bbc9004bc132d85bfd26d15.img",
+            "evidence_panel_path": "data/cache/assets/3b/3ba439acaccfa51714a17882fe09149d46b1181d0316b71e151e0aa7def501db.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:06:30.831492+00:00",
+            "mode": "live",
+            "panel_id": "panel_3ba439acaccf",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_001 (Spillepeng Waste Facility Malmo) candidate cand_scan_025: score=0.53, recurrence=0.47, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.26.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.25889117,
+            "candidate": {
+              "candidate_id": "cand_scan_025",
+              "site_id": "LF_REAL_001",
+              "job_id": "scan_025",
+              "bbox_norm": [
+                0.1,
+                0.1,
+                0.29,
+                0.26
+              ],
+              "candidate_score": 0.5327416922500001,
+              "temporal_recurrence": 0.4655705325,
+              "cloud_penalty": 0.13771787,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.5155705325000001,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.25889117,
+              "cloud_penalty": 0.13771787,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/96/96bcae106fc2e0cd9cfcac80fabb7be28be288518a17bf38f4b9dcb2c2e5e706.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T10:35:43+00:00",
+                  "cloud_cover": 0.25889117,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:05:47+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/4d/4da96f28003c3fa238d96bd0dae0d258642502878bbc9004bc132d85bfd26d15.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:06:30.834881+00:00",
+            "panel": {
+              "panel_id": "panel_3ba439acaccf",
+              "site_id": "LF_REAL_001",
+              "candidate_id": "cand_scan_025",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/96/96bcae106fc2e0cd9cfcac80fabb7be28be288518a17bf38f4b9dcb2c2e5e706.img",
+              "spectral_composite_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img",
+              "temporal_diff_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img",
+              "mapbox_context_path": "data/cache/assets/4d/4da96f28003c3fa238d96bd0dae0d258642502878bbc9004bc132d85bfd26d15.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_001 (Spillepeng Waste Facility Malmo) candidate cand_scan_025: score=0.53, recurrence=0.47, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.26.",
+                "panel_artifact_path": "data/cache/assets/3b/3ba439acaccfa51714a17882fe09149d46b1181d0316b71e151e0aa7def501db.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_002": {
+      "scan_id": "scan_026",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_026",
+          "incident_id": "inc_026",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/e2/e252191d8396b94de439380618f9fa95a7aa6db7b3891441d0269085922f4285.img",
+            "spectral_composite_path": "data/cache/assets/ef/effe9a10199ff85df31494cba0005796f72444ffac69619bee70b41156519152.img",
+            "temporal_diff_path": "data/cache/assets/ef/effe9a10199ff85df31494cba0005796f72444ffac69619bee70b41156519152.img",
+            "mapbox_context_path": "data/cache/assets/be/be3eab133f56cf39b2aaecaa4ebf29c69ffc58e42fe948887087fbb98fc4a06f.img",
+            "evidence_panel_path": "data/cache/assets/ba/babcada26270b44b9d874e0b592b941b542851b83f0d8ae5b92297466f61b247.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:08:20.522267+00:00",
+            "mode": "live",
+            "panel_id": "panel_babcada26270",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_002 (Amager Resource Center Copenhagen) candidate cand_scan_026: score=0.53, recurrence=0.47, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.26.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.25889117,
+            "candidate": {
+              "candidate_id": "cand_scan_026",
+              "site_id": "LF_REAL_002",
+              "job_id": "scan_026",
+              "bbox_norm": [
+                0.28,
+                0.12,
+                0.49,
+                0.27
+              ],
+              "candidate_score": 0.5327416922500001,
+              "temporal_recurrence": 0.4655705325,
+              "cloud_penalty": 0.13771787,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.5155705325000001,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.25889117,
+              "cloud_penalty": 0.13771787,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/e2/e252191d8396b94de439380618f9fa95a7aa6db7b3891441d0269085922f4285.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T10:35:43+00:00",
+                  "cloud_cover": 0.25889117,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/ef/effe9a10199ff85df31494cba0005796f72444ffac69619bee70b41156519152.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:06:43+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/be/be3eab133f56cf39b2aaecaa4ebf29c69ffc58e42fe948887087fbb98fc4a06f.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:08:20.524471+00:00",
+            "panel": {
+              "panel_id": "panel_babcada26270",
+              "site_id": "LF_REAL_002",
+              "candidate_id": "cand_scan_026",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/e2/e252191d8396b94de439380618f9fa95a7aa6db7b3891441d0269085922f4285.img",
+              "spectral_composite_path": "data/cache/assets/ef/effe9a10199ff85df31494cba0005796f72444ffac69619bee70b41156519152.img",
+              "temporal_diff_path": "data/cache/assets/ef/effe9a10199ff85df31494cba0005796f72444ffac69619bee70b41156519152.img",
+              "mapbox_context_path": "data/cache/assets/be/be3eab133f56cf39b2aaecaa4ebf29c69ffc58e42fe948887087fbb98fc4a06f.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_002 (Amager Resource Center Copenhagen) candidate cand_scan_026: score=0.53, recurrence=0.47, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.26.",
+                "panel_artifact_path": "data/cache/assets/ba/babcada26270b44b9d874e0b592b941b542851b83f0d8ae5b92297466f61b247.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_003": {
+      "scan_id": "scan_027",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_027",
+          "incident_id": "inc_027",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/b2/b20655c3262a7f7ef2428e444a666c51ac1579e2b9ef43eef6311690aab2775c.img",
+            "spectral_composite_path": "data/cache/assets/6f/6f045906a85dc91da654cdea3674c3d673a5bc587babeedffe7e870affa8e210.img",
+            "temporal_diff_path": "data/cache/assets/6f/6f045906a85dc91da654cdea3674c3d673a5bc587babeedffe7e870affa8e210.img",
+            "mapbox_context_path": "data/cache/assets/7b/7b185cd19ea4e7ac8f6c2446471897639f07d6fe675f8bc3bd9df6ea00df01dd.img",
+            "evidence_panel_path": "data/cache/assets/b3/b30510955d0e087ebd16f7268cd62c5751e19b07761ee7dab5487ae37efa5eda.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:09:15.281083+00:00",
+            "mode": "live",
+            "panel_id": "panel_b30510955d0e",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_003 (Deponie Ihlenberg Selmsdorf) candidate cand_scan_027: score=0.49, recurrence=0.43, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.51.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.51375717,
+            "candidate": {
+              "candidate_id": "cand_scan_027",
+              "site_id": "LF_REAL_003",
+              "job_id": "scan_027",
+              "bbox_norm": [
+                0.36,
+                0.26,
+                0.57,
+                0.42
+              ],
+              "candidate_score": 0.49132596725,
+              "temporal_recurrence": 0.4337122825,
+              "cloud_penalty": 0.26515087,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.48371228250000003,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.51375717,
+              "cloud_penalty": 0.26515087,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/b2/b20655c3262a7f7ef2428e444a666c51ac1579e2b9ef43eef6311690aab2775c.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T10:36:16+00:00",
+                  "cloud_cover": 0.51375717,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/6f/6f045906a85dc91da654cdea3674c3d673a5bc587babeedffe7e870affa8e210.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:08:35+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/7b/7b185cd19ea4e7ac8f6c2446471897639f07d6fe675f8bc3bd9df6ea00df01dd.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:09:15.283713+00:00",
+            "panel": {
+              "panel_id": "panel_b30510955d0e",
+              "site_id": "LF_REAL_003",
+              "candidate_id": "cand_scan_027",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/b2/b20655c3262a7f7ef2428e444a666c51ac1579e2b9ef43eef6311690aab2775c.img",
+              "spectral_composite_path": "data/cache/assets/6f/6f045906a85dc91da654cdea3674c3d673a5bc587babeedffe7e870affa8e210.img",
+              "temporal_diff_path": "data/cache/assets/6f/6f045906a85dc91da654cdea3674c3d673a5bc587babeedffe7e870affa8e210.img",
+              "mapbox_context_path": "data/cache/assets/7b/7b185cd19ea4e7ac8f6c2446471897639f07d6fe675f8bc3bd9df6ea00df01dd.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_003 (Deponie Ihlenberg Selmsdorf) candidate cand_scan_027: score=0.49, recurrence=0.43, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.51.",
+                "panel_artifact_path": "data/cache/assets/b3/b30510955d0e087ebd16f7268cd62c5751e19b07761ee7dab5487ae37efa5eda.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_004": {
+      "scan_id": "scan_028",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_028",
+          "incident_id": "inc_028",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/ac/ac8d3a1e2dbb354b21ab302d3905e007dabdaf7dea364bd1f9345ec8373fa05c.img",
+            "spectral_composite_path": "data/cache/assets/91/91841bfabb2518cf107fe86e8a707626a537a1ad8922cd56b23c3e64c273ca23.img",
+            "temporal_diff_path": "data/cache/assets/91/91841bfabb2518cf107fe86e8a707626a537a1ad8922cd56b23c3e64c273ca23.img",
+            "mapbox_context_path": "data/cache/assets/cb/cbda3e4eeb92409d6db70caa597793264b0b9440f4e1e30cc27dc2d1189f8969.img",
+            "evidence_panel_path": "data/cache/assets/a8/a8de1d960fc829729bc4ff75ba24c0b55fbe182c75a966f215bd91c4dd8fc979.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:10:10.558111+00:00",
+            "mode": "live",
+            "panel_id": "panel_a8de1d960fc8",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_004 (Schoteroog Landfill Haarlem) candidate cand_scan_028: score=0.43, recurrence=0.38, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=0.92.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.919798,
+            "candidate": {
+              "candidate_id": "cand_scan_028",
+              "site_id": "LF_REAL_004",
+              "job_id": "scan_028",
+              "bbox_norm": [
+                0.37,
+                0.13,
+                0.6,
+                0.35
+              ],
+              "candidate_score": 0.425344332375,
+              "temporal_recurrence": 0.38295717875,
+              "cloud_penalty": 0.468171285,
+              "likely_source_zone_prior": "perimeter_or_unknown"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.43295717875000006,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.919798,
+              "cloud_penalty": 0.468171285,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "perimeter_or_unknown"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/ac/ac8d3a1e2dbb354b21ab302d3905e007dabdaf7dea364bd1f9345ec8373fa05c.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-14T10:56:24+00:00",
+                  "cloud_cover": 0.919798,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/91/91841bfabb2518cf107fe86e8a707626a537a1ad8922cd56b23c3e64c273ca23.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:09:29+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/cb/cbda3e4eeb92409d6db70caa597793264b0b9440f4e1e30cc27dc2d1189f8969.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:10:10.560827+00:00",
+            "panel": {
+              "panel_id": "panel_a8de1d960fc8",
+              "site_id": "LF_REAL_004",
+              "candidate_id": "cand_scan_028",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/ac/ac8d3a1e2dbb354b21ab302d3905e007dabdaf7dea364bd1f9345ec8373fa05c.img",
+              "spectral_composite_path": "data/cache/assets/91/91841bfabb2518cf107fe86e8a707626a537a1ad8922cd56b23c3e64c273ca23.img",
+              "temporal_diff_path": "data/cache/assets/91/91841bfabb2518cf107fe86e8a707626a537a1ad8922cd56b23c3e64c273ca23.img",
+              "mapbox_context_path": "data/cache/assets/cb/cbda3e4eeb92409d6db70caa597793264b0b9440f4e1e30cc27dc2d1189f8969.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_004 (Schoteroog Landfill Haarlem) candidate cand_scan_028: score=0.43, recurrence=0.38, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=0.92.",
+                "panel_artifact_path": "data/cache/assets/a8/a8de1d960fc829729bc4ff75ba24c0b55fbe182c75a966f215bd91c4dd8fc979.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_005": {
+      "scan_id": "scan_029",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_029",
+          "incident_id": "inc_029",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/3b/3b73ca1119f5cbf23f0ab23e3daf974503c9ff1e56672ba223c0cb8df206fa31.img",
+            "spectral_composite_path": "data/cache/assets/a3/a344db269c3faf1065e8ab41830ba2932c1d4d419c97d5c40cf0dce5e969a95e.img",
+            "temporal_diff_path": "data/cache/assets/a3/a344db269c3faf1065e8ab41830ba2932c1d4d419c97d5c40cf0dce5e969a95e.img",
+            "mapbox_context_path": "data/cache/assets/df/dffb19314f10ba2c87cca2fbb4813b599b58e85fa6bec873c03ea9b197dea305.img",
+            "evidence_panel_path": "data/cache/assets/5a/5ac10232526df9398c18f2e4c690977b56627f169a53434dc964fcfc26f0ef47.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:11:09.486782+00:00",
+            "mode": "live",
+            "panel_id": "panel_5ac10232526d",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_005 (Belvedere Landfill London) candidate cand_scan_029: score=0.41, recurrence=0.37, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=1.00.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.9970440899999999,
+            "candidate": {
+              "candidate_id": "cand_scan_029",
+              "site_id": "LF_REAL_005",
+              "job_id": "scan_029",
+              "bbox_norm": [
+                0.23,
+                0.16,
+                0.43,
+                0.32
+              ],
+              "candidate_score": 0.41279184275,
+              "temporal_recurrence": 0.3733014175,
+              "cloud_penalty": 0.50679433,
+              "likely_source_zone_prior": "perimeter_or_unknown"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.42330141750000005,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.9970440899999999,
+              "cloud_penalty": 0.50679433,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "perimeter_or_unknown"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/3b/3b73ca1119f5cbf23f0ab23e3daf974503c9ff1e56672ba223c0cb8df206fa31.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T11:16:43+00:00",
+                  "cloud_cover": 0.9970440899999999,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/a3/a344db269c3faf1065e8ab41830ba2932c1d4d419c97d5c40cf0dce5e969a95e.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:10:27+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/df/dffb19314f10ba2c87cca2fbb4813b599b58e85fa6bec873c03ea9b197dea305.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:11:09.489426+00:00",
+            "panel": {
+              "panel_id": "panel_5ac10232526d",
+              "site_id": "LF_REAL_005",
+              "candidate_id": "cand_scan_029",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/3b/3b73ca1119f5cbf23f0ab23e3daf974503c9ff1e56672ba223c0cb8df206fa31.img",
+              "spectral_composite_path": "data/cache/assets/a3/a344db269c3faf1065e8ab41830ba2932c1d4d419c97d5c40cf0dce5e969a95e.img",
+              "temporal_diff_path": "data/cache/assets/a3/a344db269c3faf1065e8ab41830ba2932c1d4d419c97d5c40cf0dce5e969a95e.img",
+              "mapbox_context_path": "data/cache/assets/df/dffb19314f10ba2c87cca2fbb4813b599b58e85fa6bec873c03ea9b197dea305.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_005 (Belvedere Landfill London) candidate cand_scan_029: score=0.41, recurrence=0.37, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=1.00.",
+                "panel_artifact_path": "data/cache/assets/5a/5ac10232526df9398c18f2e4c690977b56627f169a53434dc964fcfc26f0ef47.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_006": {
+      "scan_id": "scan_030",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_030",
+          "incident_id": "inc_030",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/4c/4c324efca136368f7e63f65d48f7d509d26fe198981af2c8ea1ecafe86c128c4.img",
+            "spectral_composite_path": "data/cache/assets/5f/5f5ffd32ed259a7ae58567135be9965f7da1948718d7eb063c2ede400b678f46.img",
+            "temporal_diff_path": "data/cache/assets/5f/5f5ffd32ed259a7ae58567135be9965f7da1948718d7eb063c2ede400b678f46.img",
+            "mapbox_context_path": "data/cache/assets/e7/e7a7473c591308bae2a9e8a02443a064a1d46cd38ee9afb7ba52e2f0410bf424.img",
+            "evidence_panel_path": "data/cache/assets/4b/4b281c5cbe35df6711d116a901420f370e551c21c16ad3bdde8db7adbd12d704.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:12:03.469056+00:00",
+            "mode": "live",
+            "panel_id": "panel_4b281c5cbe35",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_006 (Valdemingomez Landfill Madrid) candidate cand_scan_030: score=0.57, recurrence=0.50, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.01.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.011770599999999999,
+            "candidate": {
+              "candidate_id": "cand_scan_030",
+              "site_id": "LF_REAL_006",
+              "job_id": "scan_030",
+              "bbox_norm": [
+                0.19,
+                0.19,
+                0.41,
+                0.4
+              ],
+              "candidate_score": 0.572898784875,
+              "temporal_recurrence": 0.49646060375,
+              "cloud_penalty": 0.014157585,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.54646060375,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.011770599999999999,
+              "cloud_penalty": 0.014157585,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/4c/4c324efca136368f7e63f65d48f7d509d26fe198981af2c8ea1ecafe86c128c4.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T11:20:01+00:00",
+                  "cloud_cover": 0.011770599999999999,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/5f/5f5ffd32ed259a7ae58567135be9965f7da1948718d7eb063c2ede400b678f46.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:11:25+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/e7/e7a7473c591308bae2a9e8a02443a064a1d46cd38ee9afb7ba52e2f0410bf424.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:12:03.470663+00:00",
+            "panel": {
+              "panel_id": "panel_4b281c5cbe35",
+              "site_id": "LF_REAL_006",
+              "candidate_id": "cand_scan_030",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/4c/4c324efca136368f7e63f65d48f7d509d26fe198981af2c8ea1ecafe86c128c4.img",
+              "spectral_composite_path": "data/cache/assets/5f/5f5ffd32ed259a7ae58567135be9965f7da1948718d7eb063c2ede400b678f46.img",
+              "temporal_diff_path": "data/cache/assets/5f/5f5ffd32ed259a7ae58567135be9965f7da1948718d7eb063c2ede400b678f46.img",
+              "mapbox_context_path": "data/cache/assets/e7/e7a7473c591308bae2a9e8a02443a064a1d46cd38ee9afb7ba52e2f0410bf424.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_006 (Valdemingomez Landfill Madrid) candidate cand_scan_030: score=0.57, recurrence=0.50, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.01.",
+                "panel_artifact_path": "data/cache/assets/4b/4b281c5cbe35df6711d116a901420f370e551c21c16ad3bdde8db7adbd12d704.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_007": {
+      "scan_id": "scan_031",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_031",
+          "incident_id": "inc_031",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/83/83535eb532ea4742d64e93b469ee42d264d296b7c48229272f7a546c71a95072.img",
+            "spectral_composite_path": "data/cache/assets/c0/c04c26228a3e086d2b575d6f7ffdc0a0ce55a2115ec1cf05a4f1d779dda3a2af.img",
+            "temporal_diff_path": "data/cache/assets/c0/c04c26228a3e086d2b575d6f7ffdc0a0ce55a2115ec1cf05a4f1d779dda3a2af.img",
+            "mapbox_context_path": "data/cache/assets/e7/e75506537c03f2f240f03420891530f03a7cc359ea1e5e502981a3d4a46aa80d.img",
+            "evidence_panel_path": "data/cache/assets/bc/bcf0ee7d68fed20859d5b0b3c9eb46f20852668c0210440d3e4db58971b43b5c.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:13:48.791895+00:00",
+            "mode": "live",
+            "panel_id": "panel_bcf0ee7d68fe",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_007 (Mont Saint Guibert Landfill) candidate cand_scan_031: score=0.41, recurrence=0.37, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=1.00.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.99994743,
+            "candidate": {
+              "candidate_id": "cand_scan_031",
+              "site_id": "LF_REAL_007",
+              "job_id": "scan_031",
+              "bbox_norm": [
+                0.23,
+                0.24,
+                0.47,
+                0.41
+              ],
+              "candidate_score": 0.41232005000000005,
+              "temporal_recurrence": 0.3729385,
+              "cloud_penalty": 0.508246,
+              "likely_source_zone_prior": "perimeter_or_unknown"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.42293850000000005,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.99994743,
+              "cloud_penalty": 0.508246,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "perimeter_or_unknown"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/83/83535eb532ea4742d64e93b469ee42d264d296b7c48229272f7a546c71a95072.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-16T10:46:53+00:00",
+                  "cloud_cover": 0.99994743,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/c0/c04c26228a3e086d2b575d6f7ffdc0a0ce55a2115ec1cf05a4f1d779dda3a2af.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:12:21+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/e7/e75506537c03f2f240f03420891530f03a7cc359ea1e5e502981a3d4a46aa80d.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:13:48.794502+00:00",
+            "panel": {
+              "panel_id": "panel_bcf0ee7d68fe",
+              "site_id": "LF_REAL_007",
+              "candidate_id": "cand_scan_031",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/83/83535eb532ea4742d64e93b469ee42d264d296b7c48229272f7a546c71a95072.img",
+              "spectral_composite_path": "data/cache/assets/c0/c04c26228a3e086d2b575d6f7ffdc0a0ce55a2115ec1cf05a4f1d779dda3a2af.img",
+              "temporal_diff_path": "data/cache/assets/c0/c04c26228a3e086d2b575d6f7ffdc0a0ce55a2115ec1cf05a4f1d779dda3a2af.img",
+              "mapbox_context_path": "data/cache/assets/e7/e75506537c03f2f240f03420891530f03a7cc359ea1e5e502981a3d4a46aa80d.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_007 (Mont Saint Guibert Landfill) candidate cand_scan_031: score=0.41, recurrence=0.37, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=1.00.",
+                "panel_artifact_path": "data/cache/assets/bc/bcf0ee7d68fed20859d5b0b3c9eb46f20852668c0210440d3e4db58971b43b5c.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_008": {
+      "scan_id": "scan_032",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_032",
+          "incident_id": "inc_032",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/69/69151416e41a0cf5af20bf3052fb26abb160703d5523a9241d752b51b05cfd08.img",
+            "spectral_composite_path": "data/cache/assets/56/5661f7f80d562d8e7876058d5b25b1de0c9c36b0ae3d8f98d7efab7f3644e149.img",
+            "temporal_diff_path": "data/cache/assets/56/5661f7f80d562d8e7876058d5b25b1de0c9c36b0ae3d8f98d7efab7f3644e149.img",
+            "mapbox_context_path": "data/cache/assets/08/0893f805e680077040dff85719643f44c5f3276314495494ee38126f5113e17d.img",
+            "evidence_panel_path": "data/cache/assets/9e/9e2171e6c5d69cea815bd6c56232f55ea7b2c0e2cf24051ca218f0cfcb41fab4.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:15:24.189012+00:00",
+            "mode": "live",
+            "panel_id": "panel_9e2171e6c5d6",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_008 (Sisto Landfill Rome) candidate cand_scan_032: score=0.57, recurrence=0.49, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.03.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.02831132,
+            "candidate": {
+              "candidate_id": "cand_scan_032",
+              "site_id": "LF_REAL_008",
+              "job_id": "scan_032",
+              "bbox_norm": [
+                0.38,
+                0.39,
+                0.65,
+                0.54
+              ],
+              "candidate_score": 0.5702109178750001,
+              "temporal_recurrence": 0.49439301375,
+              "cloud_penalty": 0.022427945,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.54439301375,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.02831132,
+              "cloud_penalty": 0.022427945,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/69/69151416e41a0cf5af20bf3052fb26abb160703d5523a9241d752b51b05cfd08.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-16T10:09:31+00:00",
+                  "cloud_cover": 0.02831132,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/56/5661f7f80d562d8e7876058d5b25b1de0c9c36b0ae3d8f98d7efab7f3644e149.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:14:02+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/08/0893f805e680077040dff85719643f44c5f3276314495494ee38126f5113e17d.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:15:24.192212+00:00",
+            "panel": {
+              "panel_id": "panel_9e2171e6c5d6",
+              "site_id": "LF_REAL_008",
+              "candidate_id": "cand_scan_032",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/69/69151416e41a0cf5af20bf3052fb26abb160703d5523a9241d752b51b05cfd08.img",
+              "spectral_composite_path": "data/cache/assets/56/5661f7f80d562d8e7876058d5b25b1de0c9c36b0ae3d8f98d7efab7f3644e149.img",
+              "temporal_diff_path": "data/cache/assets/56/5661f7f80d562d8e7876058d5b25b1de0c9c36b0ae3d8f98d7efab7f3644e149.img",
+              "mapbox_context_path": "data/cache/assets/08/0893f805e680077040dff85719643f44c5f3276314495494ee38126f5113e17d.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_008 (Sisto Landfill Rome) candidate cand_scan_032: score=0.57, recurrence=0.49, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.03.",
+                "panel_artifact_path": "data/cache/assets/9e/9e2171e6c5d69cea815bd6c56232f55ea7b2c0e2cf24051ca218f0cfcb41fab4.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_009": {
+      "scan_id": "scan_033",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_033",
+          "incident_id": "inc_033",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/f8/f85147ad5237fb100101a489b943a7bebd744cd65a7996329fa49ee6c7490dce.img",
+            "spectral_composite_path": "data/cache/assets/2e/2ef04755b0f21bb7eefbfce7c59f4bb00c759fbf14bce050d4fc61bfd8143673.img",
+            "temporal_diff_path": "data/cache/assets/2e/2ef04755b0f21bb7eefbfce7c59f4bb00c759fbf14bce050d4fc61bfd8143673.img",
+            "mapbox_context_path": "data/cache/assets/c0/c015dca774d5bbdc93c912ec48ac7b5b7cced1d73c5320bbe519c0242a116e3b.img",
+            "evidence_panel_path": "data/cache/assets/80/80c8ec2b43cc00a03bb7abbc95f38c53ef06d84607cf1a1e3454cf387499865c.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:16:15.452248+00:00",
+            "mode": "live",
+            "panel_id": "panel_80c8ec2b43cc",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_009 (Smat Nords Landfill Stockholm) candidate cand_scan_033: score=0.45, recurrence=0.40, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=0.79.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.79004264,
+            "candidate": {
+              "candidate_id": "cand_scan_033",
+              "site_id": "LF_REAL_009",
+              "job_id": "scan_033",
+              "bbox_norm": [
+                0.17,
+                0.23,
+                0.36,
+                0.43
+              ],
+              "candidate_score": 0.446429578375,
+              "temporal_recurrence": 0.39917659875,
+              "cloud_penalty": 0.403293605,
+              "likely_source_zone_prior": "perimeter_or_unknown"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.44917659875000004,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.79004264,
+              "cloud_penalty": 0.403293605,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "perimeter_or_unknown"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/f8/f85147ad5237fb100101a489b943a7bebd744cd65a7996329fa49ee6c7490dce.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T10:24:14+00:00",
+                  "cloud_cover": 0.79004264,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/2e/2ef04755b0f21bb7eefbfce7c59f4bb00c759fbf14bce050d4fc61bfd8143673.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:15:37+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/c0/c015dca774d5bbdc93c912ec48ac7b5b7cced1d73c5320bbe519c0242a116e3b.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:16:15.454370+00:00",
+            "panel": {
+              "panel_id": "panel_80c8ec2b43cc",
+              "site_id": "LF_REAL_009",
+              "candidate_id": "cand_scan_033",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/f8/f85147ad5237fb100101a489b943a7bebd744cd65a7996329fa49ee6c7490dce.img",
+              "spectral_composite_path": "data/cache/assets/2e/2ef04755b0f21bb7eefbfce7c59f4bb00c759fbf14bce050d4fc61bfd8143673.img",
+              "temporal_diff_path": "data/cache/assets/2e/2ef04755b0f21bb7eefbfce7c59f4bb00c759fbf14bce050d4fc61bfd8143673.img",
+              "mapbox_context_path": "data/cache/assets/c0/c015dca774d5bbdc93c912ec48ac7b5b7cced1d73c5320bbe519c0242a116e3b.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_009 (Smat Nords Landfill Stockholm) candidate cand_scan_033: score=0.45, recurrence=0.40, zone_prior=perimeter_or_unknown, cloud_current=0.02, cloud_historical=0.79.",
+                "panel_artifact_path": "data/cache/assets/80/80c8ec2b43cc00a03bb7abbc95f38c53ef06d84607cf1a1e3454cf387499865c.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    },
+    "LF_REAL_010": {
+      "scan_id": "scan_034",
+      "response": {
+        "status_code": 200,
+        "ok": true,
+        "body": {
+          "scan_id": "scan_034",
+          "incident_id": "inc_034",
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/af/af21697132991e9989e0ab9f4233861064551ac730ff606be0d94f328a8f8087.img",
+            "spectral_composite_path": "data/cache/assets/53/53085e5d1f956351fa68e1e8607e36ea737b74fd4a452222626373851a99e42d.img",
+            "temporal_diff_path": "data/cache/assets/53/53085e5d1f956351fa68e1e8607e36ea737b74fd4a452222626373851a99e42d.img",
+            "mapbox_context_path": "data/cache/assets/db/dbe48408e63bad07b3c1c4cb4e4f3d05834f27f54ad328b42ef97a495b5c779c.img",
+            "evidence_panel_path": "data/cache/assets/0a/0a52fba723e9bd6f5b7091117c67804fba6ccc9015a08bf61701a30149b3fa7d.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:17:15.602019+00:00",
+            "mode": "live",
+            "panel_id": "panel_0a52fba723e9",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_010 (Sillamäe Waste Depository) candidate cand_scan_034: score=0.47, recurrence=0.42, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.66.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.6576618000000001,
+            "candidate": {
+              "candidate_id": "cand_scan_034",
+              "site_id": "LF_REAL_010",
+              "job_id": "scan_034",
+              "bbox_norm": [
+                0.1,
+                0.27,
+                0.31,
+                0.42
+              ],
+              "candidate_score": 0.467941464875,
+              "temporal_recurrence": 0.41572420374999997,
+              "cloud_penalty": 0.337103185,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.46572420375,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.6576618000000001,
+              "cloud_penalty": 0.337103185,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/af/af21697132991e9989e0ab9f4233861064551ac730ff606be0d94f328a8f8087.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-13T09:43:56+00:00",
+                  "cloud_cover": 0.6576618000000001,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/53/53085e5d1f956351fa68e1e8607e36ea737b74fd4a452222626373851a99e42d.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:16:34+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/db/dbe48408e63bad07b3c1c4cb4e4f3d05834f27f54ad328b42ef97a495b5c779c.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            },
+            "status": "live",
+            "created_at": "2026-04-24T08:17:15.605009+00:00",
+            "panel": {
+              "panel_id": "panel_0a52fba723e9",
+              "site_id": "LF_REAL_010",
+              "candidate_id": "cand_scan_034",
+              "panel_version": "phase4.panel.v1",
+              "current_rgb_path": "data/cache/assets/af/af21697132991e9989e0ab9f4233861064551ac730ff606be0d94f328a8f8087.img",
+              "spectral_composite_path": "data/cache/assets/53/53085e5d1f956351fa68e1e8607e36ea737b74fd4a452222626373851a99e42d.img",
+              "temporal_diff_path": "data/cache/assets/53/53085e5d1f956351fa68e1e8607e36ea737b74fd4a452222626373851a99e42d.img",
+              "mapbox_context_path": "data/cache/assets/db/dbe48408e63bad07b3c1c4cb4e4f3d05834f27f54ad328b42ef97a495b5c779c.img",
+              "metadata_json": {
+                "layout_version": "phase4.layout.2x2.v1",
+                "metadata_text": "Site LF_REAL_010 (Sillamäe Waste Depository) candidate cand_scan_034: score=0.47, recurrence=0.42, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.66.",
+                "panel_artifact_path": "data/cache/assets/0a/0a52fba723e9bd6f5b7091117c67804fba6ccc9015a08bf61701a30149b3fa7d.panel.json",
+                "source_mode": "live"
+              }
+            }
+          }
+        }
+      },
+      "inference_mode": null,
+      "panel_paths_presence": {
+        "panel_before_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_after_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_overlay_path": {
+          "present": false,
+          "path": null
+        },
+        "panel_mask_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_before_path": {
+          "present": false,
+          "path": null
+        },
+        "rgb_after_path": {
+          "present": false,
+          "path": null
+        }
+      }
+    }
+  },
+  "watchlist_summary": {
+    "status_code": 200,
+    "ok": true,
+    "body": {
+      "sites_monitored": 10,
+      "high_priority_alerts": 2,
+      "needs_review": 8,
+      "published_count": 0,
+      "dismissed_count": 0,
+      "last_scan_success_rate": 1.0,
+      "last_updated": "2026-04-24T08:17:15.605009Z"
+    }
+  },
+  "watchlist": {
+    "status_code": 200,
+    "ok": true,
+    "body": {
+      "count": 10,
+      "total": 10,
+      "page": 1,
+      "page_size": 50,
+      "items": [
+        {
+          "site_id": "LF_REAL_007",
+          "name": "Mont Saint Guibert Landfill",
+          "country": "Belgium",
+          "operator": "In BW",
+          "lat": 50.6284,
+          "lon": 4.6089,
+          "watchlist_enabled": true,
+          "scan_id": "scan_031",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:13:48.794502+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_031",
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "proposed",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "perimeter_or_unknown",
+          "evidence_summary": "Multiple aerial and satellite imagery showing a plume of solid waste in the Mont Saint Guibert Landfill area. The plume is located in the central part of the site, extending towards the coastline. The plume is likely to persist for several days, as indicated by the persistence score of 0.65."
+        },
+        {
+          "site_id": "LF_REAL_003",
+          "name": "Deponie Ihlenberg Selmsdorf",
+          "country": "Germany",
+          "operator": "IHU",
+          "lat": 53.8732,
+          "lon": 10.8335,
+          "watchlist_enabled": true,
+          "scan_id": "scan_027",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:09:15.283713+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_027",
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "gas_system",
+          "evidence_summary": "Aerial scan of the depot area showing a plume of gas emissions. The plume is located in the central part of the site, near the main road intersection. The plume is relatively small and localized, with no signs of widespread contamination."
+        },
+        {
+          "site_id": "LF_REAL_010",
+          "name": "Sillamäe Waste Depository",
+          "country": "Estonia",
+          "operator": "Enefit Power",
+          "lat": 59.3946,
+          "lon": 27.7635,
+          "watchlist_enabled": true,
+          "scan_id": "scan_034",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:17:15.605009+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_034",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "confidence": 0.78,
+          "likely_source_zone": "gas_system",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is not persistent."
+        },
+        {
+          "site_id": "LF_REAL_009",
+          "name": "Smat Nords Landfill Stockholm",
+          "country": "Sweden",
+          "operator": "SMT",
+          "lat": 59.3828,
+          "lon": 17.8269,
+          "watchlist_enabled": true,
+          "scan_id": "scan_033",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:16:15.454370+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_033",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "proposed",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "perimeter_or_unknown",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the presence of a plume in the area."
+        },
+        {
+          "site_id": "LF_REAL_008",
+          "name": "Sisto Landfill Rome",
+          "country": "Italy",
+          "operator": "AMA Roma",
+          "lat": 41.7812,
+          "lon": 12.4543,
+          "watchlist_enabled": true,
+          "scan_id": "scan_032",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:15:24.192212+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_032",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "gas_system",
+          "evidence_summary": "No visible plume detected in the image."
+        },
+        {
+          "site_id": "LF_REAL_006",
+          "name": "Valdemingomez Landfill Madrid",
+          "country": "Spain",
+          "operator": "Ayuntamiento de Madrid",
+          "lat": 40.3397,
+          "lon": -3.5859,
+          "watchlist_enabled": true,
+          "scan_id": "scan_030",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:12:03.470663+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_030",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "gas_system",
+          "evidence_summary": "The plume is likely originating from the gas system, as indicated by the plume likelihood and confidence score. The persistence score suggests the plume may be relatively short-lived."
+        },
+        {
+          "site_id": "LF_REAL_005",
+          "name": "Belvedere Landfill London",
+          "country": "United Kingdom",
+          "operator": "Cory",
+          "lat": 51.4916,
+          "lon": 0.1507,
+          "watchlist_enabled": true,
+          "scan_id": "scan_029",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:11:09.489426+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_029",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "perimeter_or_unknown",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the plume's location and the surrounding urban area."
+        },
+        {
+          "site_id": "LF_REAL_004",
+          "name": "Schoteroog Landfill Haarlem",
+          "country": "Netherlands",
+          "operator": "Gemeente Haarlem",
+          "lat": 52.4106,
+          "lon": 4.6498,
+          "watchlist_enabled": true,
+          "scan_id": "scan_028",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:10:10.560827+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_028",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "confidence": 0.78,
+          "likely_source_zone": "perimeter_or_unknown",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the plume's location and the surrounding urban area."
+        },
+        {
+          "site_id": "LF_REAL_002",
+          "name": "Amager Resource Center Copenhagen",
+          "country": "Denmark",
+          "operator": "ARC",
+          "lat": 55.6507,
+          "lon": 12.6236,
+          "watchlist_enabled": true,
+          "scan_id": "scan_026",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:08:20.524471+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_026",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "confidence": 0.78,
+          "likely_source_zone": "gas_system",
+          "evidence_summary": "High-resolution satellite imagery showing a plume originating from the gas system at the Amager Resource Center Copenhagen. The plume is located in the upper central part of the city, with a cloud cover of 0.02 and a cloud historical of 0.26."
+        },
+        {
+          "site_id": "LF_REAL_001",
+          "name": "Spillepeng Waste Facility Malmo",
+          "country": "Sweden",
+          "operator": "VA SYD",
+          "lat": 55.6342,
+          "lon": 13.0187,
+          "watchlist_enabled": true,
+          "scan_id": "scan_025",
+          "scan_status": "live",
+          "scan_created_at": "2026-04-24T08:06:30.834881+00:00",
+          "generation_mode": "live",
+          "incident_id": "inc_025",
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "confidence": 0.78,
+          "likely_source_zone": "gas_system",
+          "evidence_summary": "The plume is likely originating from the gas system, with a moderate likelihood of origin and a low persistence score."
+        }
+      ]
+    }
+  },
+  "review": {
+    "incident_id": "inc_025",
+    "request": {
+      "review_status": "published",
+      "feedback_status": "confirmed",
+      "review_comment": "pipeline run"
+    },
+    "response": {
+      "status_code": 422,
+      "ok": false,
+      "body": {
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "incident_id"
+            ],
+            "msg": "Field required",
+            "input": {
+              "review_status": "published",
+              "feedback_status": "confirmed",
+              "review_comment": "pipeline run"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "incident_exports": {
+    "incident_id": "inc_025",
+    "json": {
+      "status_code": 200,
+      "ok": true,
+      "body": {
+        "incident": {
+          "incident_id": "inc_025",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_025",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.05
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a moderate likelihood of origin and a low persistence score.",
+          "recommended_followup": "Monitor for any changes in plume behavior and assess the risk to the surrounding area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        "scan": {
+          "scan_id": "scan_025",
+          "status": "live",
+          "created_at": "2026-04-24T08:06:30.834881+00:00"
+        },
+        "evidence": {
+          "panel_paths": {
+            "current_rgb_path": "data/cache/assets/96/96bcae106fc2e0cd9cfcac80fabb7be28be288518a17bf38f4b9dcb2c2e5e706.img",
+            "spectral_composite_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img",
+            "temporal_diff_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img",
+            "mapbox_context_path": "data/cache/assets/4d/4da96f28003c3fa238d96bd0dae0d258642502878bbc9004bc132d85bfd26d15.img",
+            "evidence_panel_path": "data/cache/assets/3b/3ba439acaccfa51714a17882fe09149d46b1181d0316b71e151e0aa7def501db.panel.json"
+          },
+          "metadata": {
+            "generated_at": "2026-04-24T08:06:30.831492+00:00",
+            "mode": "live",
+            "panel_id": "panel_3ba439acaccf",
+            "panel_version": "phase4.panel.v1",
+            "layout_version": "phase4.layout.2x2.v1",
+            "metadata_text": "Site LF_REAL_001 (Spillepeng Waste Facility Malmo) candidate cand_scan_025: score=0.53, recurrence=0.47, zone_prior=gas_system, cloud_current=0.02, cloud_historical=0.26.",
+            "cloud_cover_current": 0.01654457,
+            "cloud_cover_historical": 0.25889117,
+            "candidate": {
+              "candidate_id": "cand_scan_025",
+              "site_id": "LF_REAL_001",
+              "job_id": "scan_025",
+              "bbox_norm": [
+                0.1,
+                0.1,
+                0.29,
+                0.26
+              ],
+              "candidate_score": 0.5327416922500001,
+              "temporal_recurrence": 0.4655705325,
+              "cloud_penalty": 0.13771787,
+              "likely_source_zone_prior": "gas_system"
+            },
+            "candidate_diagnostics": {
+              "fixture_class": "default",
+              "anomaly_intensity": 0.5155705325000001,
+              "temporal_recurrence_raw": 0.5,
+              "current_cloud": 0.01654457,
+              "historical_cloud": 0.25889117,
+              "cloud_penalty": 0.13771787,
+              "candidate_score_formula": "0.55*anomaly + 0.35*recurrence + 0.10*(1-cloud_penalty)",
+              "zone_prior": "gas_system"
+            },
+            "prompt_contract": {
+              "prompt_contract_version": "phase4.prompt.v1",
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "schema_validation": {
+              "attempts": 1,
+              "errors": [],
+              "output_schema_version": "phase4.incident.v1"
+            },
+            "inference": {
+              "mode": "live",
+              "model_id": "LiquidAI/LFM2.5-VL-450M",
+              "model_revision": "main",
+              "model_ref": "LiquidAI/LFM2.5-VL-450M@main",
+              "auth_configured": true
+            },
+            "imagery_provenance": {
+              "source_chain": [
+                "sentinel_current",
+                "sentinel_historical",
+                "mapbox_context"
+              ],
+              "live_fetch_status": "live",
+              "assets": {
+                "sentinel_current": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-23T10:38:04+00:00",
+                  "cloud_cover": 0.01654457,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/96/96bcae106fc2e0cd9cfcac80fabb7be28be288518a17bf38f4b9dcb2c2e5e706.img"
+                },
+                "sentinel_historical": {
+                  "source": "simsat",
+                  "timestamp_captured": "2026-04-15T10:35:43+00:00",
+                  "cloud_cover": 0.25889117,
+                  "bands": [
+                    "red",
+                    "green",
+                    "blue"
+                  ],
+                  "local_path": "data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img"
+                },
+                "mapbox_context": {
+                  "source": "mapbox",
+                  "timestamp_captured": "2026-04-24T08:05:47+00:00",
+                  "cloud_cover": 0.0,
+                  "bands": [
+                    "RGB"
+                  ],
+                  "local_path": "data/cache/assets/4d/4da96f28003c3fa238d96bd0dae0d258642502878bbc9004bc132d85bfd26d15.img",
+                  "note": "High-resolution context imagery; may be static/non-time-dependent."
+                }
+              }
+            },
+            "ground_truth_hint": {
+              "status": "satellite_only",
+              "message": "No dongle corroboration attached."
+            }
+          }
+        }
+      }
+    },
+    "markdown": {
+      "status_code": 200,
+      "ok": true,
+      "body": "# Incident Export - inc_025\n\n- Site: `LF_REAL_001`\n- Scan: `scan_025`\n- Analysis Time: `2023-10-05T14:30:00Z`\n- Priority: `medium`\n- Severity: `low`\n- Review Status: `needs_review`\n- Confidence: `0.78`\n- Zone: `gas_system`\n- Generation mode: `live`\n\n## Evidence Summary\n\nThe plume is likely originating from the gas system, with a moderate likelihood of origin and a low persistence score.\n\n## Data Source\n\n- source_chain: `['sentinel_current', 'sentinel_historical', 'mapbox_context']`\n- live_fetch_status: `live`\n- sentinel_current_captured_at: `2026-04-23T10:38:04+00:00`\n- sentinel_historical_captured_at: `2026-04-15T10:35:43+00:00`\n- mapbox_context_captured_at: `2026-04-24T08:05:47+00:00`\n\n## Ground Truth Hint\n\n- status: `satellite_only`\n- message: `No dongle corroboration attached.`\n\n## Evidence Panel Paths\n\n- current_rgb_path: `data/cache/assets/96/96bcae106fc2e0cd9cfcac80fabb7be28be288518a17bf38f4b9dcb2c2e5e706.img`\n- spectral_composite_path: `data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img`\n- temporal_diff_path: `data/cache/assets/4e/4e4aac8dd7acb8650a23fd8e25e32d37324e26e94e305fed763da2b44490f10f.img`\n- mapbox_context_path: `data/cache/assets/4d/4da96f28003c3fa238d96bd0dae0d258642502878bbc9004bc132d85bfd26d15.img`\n\n## Recommended Follow-up\n\nMonitor for any changes in plume behavior and assess the risk to the surrounding area.\n"
+    }
+  },
+  "all_incidents_export": {
+    "status_code": 200,
+    "ok": true,
+    "body": {
+      "format": "json",
+      "generated_at": "2026-04-24T08:17:16.038348Z",
+      "incident_count": 34,
+      "incidents": [
+        {
+          "incident_id": "inc_001",
+          "site_id": "LF_REAL_008",
+          "job_id": "scan_001",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a moderate confidence level. The area is within the gas system, and the plume is not currently active.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_002",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_002",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is persistent. No immediate action is required.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the gas system area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_003",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_003",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is persistent. No immediate action is required.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the gas system area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_004",
+          "site_id": "LF_REAL_003",
+          "job_id": "scan_004",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is located in the gas system, likely originating from a nearby gas storage facility. The plume is relatively low in altitude and has a moderate persistence score, indicating it may be a temporary issue.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider contacting the gas storage facility for further investigation.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_005",
+          "site_id": "LF_REAL_004",
+          "job_id": "scan_005",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.08
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the location of the plume within the perimeter area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the landfill site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_006",
+          "site_id": "LF_REAL_005",
+          "job_id": "scan_006",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the location of the plume within the perimeter area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the landfill site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_007",
+          "site_id": "LF_REAL_006",
+          "job_id": "scan_007",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the gas system, as indicated by the high confidence score and the location of the plume within the gas system.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_008",
+          "site_id": "LF_REAL_007",
+          "job_id": "scan_008",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.08
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the location of the plume within the perimeter area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the landfill site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_009",
+          "site_id": "LF_REAL_008",
+          "job_id": "scan_009",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "High-resolution aerial imagery of the Sisto Landfill, showing a plume originating from the gas system. The plume is likely associated with gas leaks or emissions. The area is within the gas system, and the plume is not currently active.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Conduct a follow-up scan in 24 hours to assess the situation.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_010",
+          "site_id": "LF_REAL_009",
+          "job_id": "scan_010",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.05
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.75,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the location of the plume within the perimeter area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the landfill site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_011",
+          "site_id": "LF_REAL_010",
+          "job_id": "scan_011",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "High concentration of gas emissions in the central area of the waste depository.",
+          "recommended_followup": "Monitor for any changes in gas emissions and assess the impact on the waste management system.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_012",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_012",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.05
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is persistent. No immediate action is required.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the gas system area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_013",
+          "site_id": "LF_REAL_002",
+          "job_id": "scan_013",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "High-resolution satellite imagery showing a plume originating from the gas system at the Amager Resource Center Copenhagen. The plume is likely associated with gas leaks or emissions. The area is within the gas system, and the plume is not currently active.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Conduct a follow-up scan in 24 hours to assess the situation.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_014",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_014",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.85,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.78,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is persistent. No immediate action is required.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the gas system area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_015",
+          "site_id": "LF_REAL_002",
+          "job_id": "scan_015",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "High-resolution satellite imagery showing a plume originating from the gas system at the Amager Resource Center Copenhagen. The plume is likely associated with gas leaks or emissions. The area is within the gas system, and the plume is not currently active.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Conduct a follow-up scan in 24 hours to assess the situation.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_016",
+          "site_id": "LF_REAL_003",
+          "job_id": "scan_016",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "Aerial scan of the depot area showing a plume of gas emissions. The plume is located in the central part of the site, near the main road intersection. The plume is relatively small and localized, with no signs of widespread contamination.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Conduct a follow-up scan in 24 hours to assess the effectiveness of the response and ensure no further incidents occur.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_017",
+          "site_id": "LF_REAL_004",
+          "job_id": "scan_017",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "proposed",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the presence of a plume in the area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_018",
+          "site_id": "LF_REAL_006",
+          "job_id": "scan_018",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a moderate confidence level. The area is within the gas system, and the plume is not currently active.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_019",
+          "site_id": "LF_REAL_007",
+          "job_id": "scan_019",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the plume's location and the surrounding urban area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the landfill site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_020",
+          "site_id": "LF_REAL_008",
+          "job_id": "scan_020",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the gas system, as indicated by the high confidence score and the location of the plume within the gas system.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring of the gas system.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_021",
+          "site_id": "LF_REAL_009",
+          "job_id": "scan_021",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "proposed",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the presence of a plume in the area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_022",
+          "site_id": "LF_REAL_010",
+          "job_id": "scan_022",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is not persistent.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_023",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_023",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.08
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "published",
+          "feedback_status": "confirmed",
+          "evidence_summary": "A plume of gas emissions was detected near the Spillepeng Waste Facility in Malmo. The plume is likely originating from the gas system and is currently stable. No immediate action is required.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the vicinity of the facility.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_024",
+          "site_id": "LF_REAL_002",
+          "job_id": "scan_024",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "High-resolution satellite imagery showing a plume originating from the gas system at the Amager Resource Center Copenhagen. The plume is likely associated with gas leaks or emissions. The area is within the gas system, and the plume is not currently active.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Conduct a follow-up scan in 24 hours to assess the situation.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_025",
+          "site_id": "LF_REAL_001",
+          "job_id": "scan_025",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.02,
+            0.05,
+            0.15,
+            0.05
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a moderate likelihood of origin and a low persistence score.",
+          "recommended_followup": "Monitor for any changes in plume behavior and assess the risk to the surrounding area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_026",
+          "site_id": "LF_REAL_002",
+          "job_id": "scan_026",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "High-resolution satellite imagery showing a plume originating from the gas system at the Amager Resource Center Copenhagen. The plume is located in the upper central part of the city, with a cloud cover of 0.02 and a cloud historical of 0.26.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the area.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_027",
+          "site_id": "LF_REAL_003",
+          "job_id": "scan_027",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "Aerial scan of the depot area showing a plume of gas emissions. The plume is located in the central part of the site, near the main road intersection. The plume is relatively small and localized, with no signs of widespread contamination.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Conduct a follow-up scan in 24 hours to assess the effectiveness of the response and to ensure no new contamination has occurred.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_028",
+          "site_id": "LF_REAL_004",
+          "job_id": "scan_028",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the plume's location and the surrounding urban area.",
+          "recommended_followup": "Monitor for any changes in the plume's behavior or location over the next 24 hours.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_029",
+          "site_id": "LF_REAL_005",
+          "job_id": "scan_029",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the plume's location and the surrounding urban area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity of the landfill site.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_030",
+          "site_id": "LF_REAL_006",
+          "job_id": "scan_030",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the gas system, as indicated by the plume likelihood and confidence score. The persistence score suggests the plume may be relatively short-lived.",
+          "recommended_followup": "Monitor for any changes in the plume's behavior or location. Consider additional monitoring if the plume is not expected to dissipate.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_031",
+          "site_id": "LF_REAL_007",
+          "job_id": "scan_031",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "high",
+          "severity_tier": "medium",
+          "review_status": "proposed",
+          "feedback_status": "unresolved",
+          "evidence_summary": "Multiple aerial and satellite imagery showing a plume of solid waste in the Mont Saint Guibert Landfill area. The plume is located in the central part of the site, extending towards the coastline. The plume is likely to persist for several days, as indicated by the persistence score of 0.65.",
+          "recommended_followup": "Monitor the plume for any changes in size or movement. Consider additional monitoring and potential cleanup efforts if the plume persists.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_032",
+          "site_id": "LF_REAL_008",
+          "job_id": "scan_032",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.45,
+            0.35
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "unresolved",
+          "evidence_summary": "No visible plume detected in the image.",
+          "recommended_followup": "Monitor for any changes in plume location or intensity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_033",
+          "site_id": "LF_REAL_009",
+          "job_id": "scan_033",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "perimeter_or_unknown",
+          "persistence_score": 0.65,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "proposed",
+          "feedback_status": "unresolved",
+          "evidence_summary": "The plume is likely originating from the perimeter of the landfill site, as indicated by the high confidence score and the presence of a plume in the area.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity, and consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        },
+        {
+          "incident_id": "inc_034",
+          "site_id": "LF_REAL_010",
+          "job_id": "scan_034",
+          "analysis_time": "2023-10-05T14:30:00Z",
+          "plume_likely": true,
+          "confidence": 0.78,
+          "bbox_norm": [
+            0.15,
+            0.05,
+            0.35,
+            0.2
+          ],
+          "likely_source_zone": "gas_system",
+          "persistence_score": 0.62,
+          "priority_tier": "medium",
+          "severity_tier": "low",
+          "review_status": "needs_review",
+          "feedback_status": "needs_review",
+          "evidence_summary": "The plume is likely originating from the gas system, with a high confidence level. The area is within the gas system, and the plume is not persistent.",
+          "recommended_followup": "Monitor the plume for any changes in size or intensity. Consider additional monitoring in the vicinity.",
+          "model_version": "LiquidAI/LFM2.5-VL-450M@main"
+        }
+      ]
+    }
+  },
+  "totals": {
+    "total_sites_expected": 10,
+    "sites_found": 10,
+    "scans_succeeded": 10,
+    "scans_failed": 0
+  }
+}

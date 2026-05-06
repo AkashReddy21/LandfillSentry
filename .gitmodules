@@ -1,0 +1,4 @@
+[submodule "external/SimSat"]
+	path = external/SimSat
+	url = https://github.com/DPhi-Space/SimSat.git
+	ignore = untracked

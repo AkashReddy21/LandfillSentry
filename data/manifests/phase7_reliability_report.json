@@ -1,0 +1,32 @@
+{
+  "all_passed": true,
+  "empty_candidate": {
+    "handled": true,
+    "name": "empty_candidate",
+    "review_status": "needs_review",
+    "strategy": "skip_model_inference_and_raise_review_flag"
+  },
+  "invalid_json": {
+    "attempts": 2,
+    "errors": [
+      {
+        "attempt": 1,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    ],
+    "handled": true,
+    "name": "invalid_json"
+  },
+  "mapbox_api_failure": {
+    "error": "MAPBOX_TOKEN is required in live mode",
+    "handled": true,
+    "name": "mapbox_api_failure"
+  },
+  "slow_inference": {
+    "elapsed_seconds": 0.3054,
+    "handled": true,
+    "mitigation": "tag_scan_as_slow_and_keep_cached_demo_path_ready",
+    "name": "slow_inference",
+    "threshold_seconds": 0.2
+  }
+}

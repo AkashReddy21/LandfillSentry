@@ -1,0 +1,61 @@
+services:
+  simsat-api:
+    image: simsat-sim:latest
+    build:
+      context: ./external/SimSat
+      dockerfile: Dockerfile.sim
+    container_name: landfillsentry-simsat-api
+    ports:
+      - "9005:8000"
+    environment:
+      MAPBOX_ACCESS_TOKEN: ${MAPBOX_TOKEN:-}
+      MAPBOX_TOKEN: ${MAPBOX_TOKEN:-}
+      SIMSAT_BOOT_LON: ${SIMSAT_BOOT_LON:-6.6322734}
+      SIMSAT_BOOT_LAT: ${SIMSAT_BOOT_LAT:-46.5218266}
+      SIMSAT_BOOT_ALT_KM: ${SIMSAT_BOOT_ALT_KM:-800.0}
+    command: ["python", "bootstrap_api.py", "--host", "0.0.0.0", "--port", "8000"]
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/', timeout=5)\""]
+      interval: 20s
+      timeout: 8s
+      retries: 10
+      start_period: 30s
+
+  landfillsentry-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: landfillsentry-api
+    depends_on:
+      simsat-api:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      LS_DB_PATH: /app/data/processed/landfillsentry.db
+      LS_CACHE_ROOT: /app/data/cache/assets
+      SIMSAT_MODE: ${SIMSAT_MODE:-live}
+      MAPBOX_MODE: ${MAPBOX_MODE:-live}
+      SIMSAT_BASE_URL: http://simsat-api:8000
+      SIMSAT_USE_FOR_MAPBOX: ${SIMSAT_USE_FOR_MAPBOX:-true}
+      MAPBOX_TOKEN: ${MAPBOX_TOKEN:-}
+      HF_TOKEN: ${HF_TOKEN:-}
+      HUGGINGFACE_TOKEN: ${HUGGINGFACE_TOKEN:-}
+      HF_MODEL_ID: ${HF_MODEL_ID:-LiquidAI/LFM2.5-VL-450M}
+      HF_MODEL_REVISION: ${HF_MODEL_REVISION:-main}
+      HF_ADAPTER_ID: ${HF_ADAPTER_ID:-}
+      HF_ADAPTER_REVISION: ${HF_ADAPTER_REVISION:-main}
+      HF_DEVICE_MAP: ${HF_DEVICE_MAP:-auto}
+      HF_DTYPE: ${HF_DTYPE:-bfloat16}
+      HF_MAX_NEW_TOKENS: ${HF_MAX_NEW_TOKENS:-320}
+      HF_TRUST_REMOTE_CODE: ${HF_TRUST_REMOTE_CODE:-false}
+      HF_LOCAL_FILES_ONLY: ${HF_LOCAL_FILES_ONLY:-false}
+      INFERENCE_MODE: ${INFERENCE_MODE:-live}
+      INFERENCE_ALLOW_FALLBACK: ${INFERENCE_ALLOW_FALLBACK:-false}
+      REQUIRE_LIVE_RESULTS: ${REQUIRE_LIVE_RESULTS:-true}
+    volumes:
+      - ./data/processed:/app/data/processed
+      - ./data/cache:/app/data/cache
+      - ./data/logs:/app/data/logs

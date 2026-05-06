@@ -1,0 +1,114 @@
+{
+  "api_health_status": 200,
+  "mode": "force_refresh_true_long_timeout",
+  "success_count": 8,
+  "fail_count": 2,
+  "rows": [
+    {
+      "site_id": "LF_REAL_001",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http",
+      "error": {
+        "detail": {
+          "error": "live_imagery_required",
+          "message": "Strict live mode is enabled and live imagery was unavailable for this scan. No fallback scan was created.",
+          "site_id": "LF_REAL_001",
+          "live_fetch_status": "cached_fallback"
+        }
+      }
+    },
+    {
+      "site_id": "LF_REAL_002",
+      "http_status": 424,
+      "scan_id": null,
+      "incident_id": null,
+      "inference_mode": null,
+      "evidence_http": null,
+      "result": "fail_scan_http",
+      "error": {
+        "detail": {
+          "error": "inference_output_invalid",
+          "message": "incident output validation failed after 1 attempts: unsupported output type: list",
+          "scan_id": "scan_004",
+          "mode_required": "live"
+        }
+      }
+    },
+    {
+      "site_id": "LF_REAL_003",
+      "http_status": 200,
+      "scan_id": "scan_004",
+      "incident_id": "inc_004",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_004",
+      "http_status": 200,
+      "scan_id": "scan_005",
+      "incident_id": "inc_005",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_005",
+      "http_status": 200,
+      "scan_id": "scan_006",
+      "incident_id": "inc_006",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_006",
+      "http_status": 200,
+      "scan_id": "scan_007",
+      "incident_id": "inc_007",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_007",
+      "http_status": 200,
+      "scan_id": "scan_008",
+      "incident_id": "inc_008",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_008",
+      "http_status": 200,
+      "scan_id": "scan_009",
+      "incident_id": "inc_009",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_009",
+      "http_status": 200,
+      "scan_id": "scan_010",
+      "incident_id": "inc_010",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    },
+    {
+      "site_id": "LF_REAL_010",
+      "http_status": 200,
+      "scan_id": "scan_011",
+      "incident_id": "inc_011",
+      "inference_mode": "live",
+      "evidence_http": 200,
+      "result": "success"
+    }
+  ]
+}

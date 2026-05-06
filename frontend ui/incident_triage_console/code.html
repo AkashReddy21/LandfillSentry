@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Incident Triage Console | LandfillSentry Ops</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffddb8",
+                      "on-primary": "#00354a",
+                      "on-surface": "#dae2fd",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "on-secondary": "#003824",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "primary-fixed": "#c4e7ff",
+                      "tertiary-container": "#f59e0b",
+                      "primary-container": "#38bdf8",
+                      "on-tertiary-fixed": "#2a1700",
+                      "on-secondary-container": "#00311f",
+                      "primary": "#8ed5ff",
+                      "secondary-container": "#00a572",
+                      "inverse-surface": "#dae2fd",
+                      "secondary": "#4edea3",
+                      "on-primary-container": "#004965",
+                      "primary-fixed-dim": "#7bd0ff",
+                      "on-primary-fixed": "#001e2c",
+                      "surface-container-highest": "#2d3449",
+                      "surface-variant": "#2d3449",
+                      "error-container": "#93000a",
+                      "on-secondary-fixed": "#002113",
+                      "on-tertiary-container": "#613b00",
+                      "inverse-on-surface": "#283044",
+                      "outline-variant": "#3e484f",
+                      "on-surface-variant": "#bdc8d1",
+                      "tertiary": "#ffc174",
+                      "surface-tint": "#7bd0ff",
+                      "surface-container": "#171f33",
+                      "surface-dim": "#0b1326",
+                      "on-primary-fixed-variant": "#004c69",
+                      "surface-bright": "#31394d",
+                      "on-error": "#690005",
+                      "on-background": "#dae2fd",
+                      "error": "#ffb4ab",
+                      "outline": "#87929a",
+                      "surface-container-high": "#222a3d",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#005236",
+                      "surface-container-low": "#131b2e",
+                      "on-tertiary": "#472a00",
+                      "inverse-primary": "#00668a",
+                      "surface": "#0b1326",
+                      "secondary-fixed": "#6ffbbe",
+                      "surface-container-lowest": "#060e20",
+                      "background": "#0b1326",
+                      "secondary-fixed-dim": "#4edea3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "16px",
+                      "unit": "4px",
+                      "panel-padding": "20px",
+                      "gutter": "16px",
+                      "margin": "24px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "body-base": ["Inter"],
+                      "data-mono": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "display-lg": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-base": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "data-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .plume-overlay {
+            background: radial-gradient(circle at center, rgba(142, 213, 255, 0.4) 0%, rgba(142, 213, 255, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base overflow-hidden">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 h-14 w-full sticky top-0 z-50 bg-slate-950 dark:bg-slate-950 border-b border-slate-800 font-space-grotesk tracking-tight antialiased">
+<div class="flex items-center gap-4">
+<span class="text-lg font-black tracking-tighter text-sky-400">LandfillSentry Ops</span>
+<div class="h-4 w-px bg-slate-800 mx-2"></div>
+<nav class="flex gap-6 text-sm">
+<a class="text-sky-400 border-b-2 border-sky-400 pb-1 transition-all duration-200 ease-in-out active:scale-95" href="#">Live Triage</a>
+<a class="text-slate-500 hover:text-sky-300 transition-all duration-200 ease-in-out active:scale-95" href="#">Methane Map</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-slate-900 px-3 py-1 rounded text-xs border border-slate-800">
+<span class="material-symbols-outlined text-secondary text-sm">sensors</span>
+<span class="text-slate-400">System:</span>
+<span class="text-secondary font-bold">Optimal</span>
+</div>
+<div class="flex items-center gap-4 text-slate-400">
+<span class="material-symbols-outlined hover:text-sky-300 cursor-pointer">notifications</span>
+<span class="material-symbols-outlined hover:text-sky-300 cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<div class="flex h-[calc(100vh-3.5rem)]">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-14 z-40 bg-slate-900 dark:bg-slate-900 w-64 border-r border-slate-800 font-space-grotesk font-medium uppercase text-xs tracking-widest">
+<div class="p-6 border-b border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-on-primary-container font-black">SA</div>
+<div>
+<div class="font-black text-sky-400">OPS_COMMAND</div>
+<div class="text-[10px] text-slate-500 tracking-normal normal-case">Sector-Alpha-Grid</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 py-4">
+<div class="bg-slate-800 text-sky-400 border-l-4 border-sky-400 px-4 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined">radar</span>
+<span>Live Triage</span>
+</div>
+<div class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-colors duration-150 cursor-pointer">
+<span class="material-symbols-outlined">public</span>
+<span>Methane Map</span>
+</div>
+<div class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-colors duration-150 cursor-pointer">
+<span class="material-symbols-outlined">router</span>
+<span>Fleet Health</span>
+</div>
+<div class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-colors duration-150 cursor-pointer">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Data Archives</span>
+</div>
+<div class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-colors duration-150 cursor-pointer">
+<span class="material-symbols-outlined">settings_input_component</span>
+<span>Configuration</span>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-800 space-y-1">
+<div class="text-slate-400 px-2 py-2 flex items-center gap-3 hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">contact_support</span>
+<span>Support</span>
+</div>
+<div class="text-slate-400 px-2 py-2 flex items-center gap-3 hover:text-red-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span>Log Out</span>
+</div>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="ml-64 flex-1 overflow-y-auto bg-surface text-on-surface">
+<div class="p-6">
+<!-- Header / Incident Meta -->
+<div class="flex justify-between items-end mb-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2 py-0.5 bg-error/10 border-l-4 border-error text-error text-[10px] font-bold uppercase tracking-wider">High Severity</span>
+<span class="font-data-mono text-slate-500 text-xs uppercase">Incident #CH4-8842-X</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary">Triage Console: Methane Detection</h1>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 border border-slate-700 bg-slate-800/50 text-slate-300 hover:bg-slate-800 text-sm font-medium transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-base">mark_as_unread</span>
+                            Mark for Review
+                        </button>
+<button class="px-4 py-2 border border-error/50 bg-error/10 text-error hover:bg-error/20 text-sm font-medium transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-base">close</span>
+                            Dismiss as Artifact
+                        </button>
+<button class="px-6 py-2 bg-primary text-on-primary hover:bg-primary/90 text-sm font-bold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Confirm Incident
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-4">
+<!-- Evidence Panel (Satellite Imagery) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container border border-slate-800 rounded-lg overflow-hidden relative min-h-[500px]">
+<div class="absolute top-4 left-4 z-10 flex flex-col gap-2">
+<div class="bg-slate-950/80 backdrop-blur-md border border-slate-700 p-3 rounded flex flex-col gap-1">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Coordinates</span>
+<span class="font-data-mono text-sky-400 text-xs">34.0522° N, 118.2437° W</span>
+</div>
+<div class="bg-slate-950/80 backdrop-blur-md border border-slate-700 p-3 rounded flex flex-col gap-1">
+<span class="text-[10px] text-slate-500 uppercase font-bold">Sensor ID</span>
+<span class="font-data-mono text-sky-400 text-xs">SENS-ALPHA-09</span>
+</div>
+</div>
+<div class="w-full h-full relative">
+<!-- Background Image: Satellite view of a landfill -->
+<img class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="Satellite view of industrial landfill landscape with active excavation areas and textured earth from high altitude overhead perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY9DEagny_lSZ0HI59nYFW5oH7iA-8TNF_-zhnl7tImZIHXjkwttO7aiLbrcEnb2T6Z2qkvZZoWPd9rQke8f4dH34e5rDh5kJ6dhXecWl8BeOZr7Ld8NEUMYKbvt-6r2MOVBqpJvQPTiR5K7PwuejmU8UnpB9OCzetPnHsjKAigaInRnH03OHTLaYqYAB4txc9KQGKgkQc7jZEU_XuB5uL8aiJmmlk4CJ0Ecn5jwPx4xmm6ZFOqDZmoCMcMCtVaDh6YB87V3mai2A"/>
+<!-- Bounding Box Overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-primary border-dashed flex items-center justify-center">
+<div class="absolute -top-6 left-0 bg-primary text-on-primary text-[10px] px-2 py-0.5 font-bold uppercase">Candidate: Plume_01</div>
+<div class="w-full h-full plume-overlay"></div>
+<div class="w-2 h-2 bg-primary absolute top-0 left-0"></div>
+<div class="w-2 h-2 bg-primary absolute top-0 right-0"></div>
+<div class="w-2 h-2 bg-primary absolute bottom-0 left-0"></div>
+<div class="w-2 h-2 bg-primary absolute bottom-0 right-0"></div>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="w-10 h-10 bg-slate-950/80 border border-slate-700 flex items-center justify-center hover:bg-slate-900"><span class="material-symbols-outlined">add</span></button>
+<button class="w-10 h-10 bg-slate-950/80 border border-slate-700 flex items-center justify-center hover:bg-slate-900"><span class="material-symbols-outlined">remove</span></button>
+<button class="w-10 h-10 bg-slate-950/80 border border-slate-700 flex items-center justify-center hover:bg-slate-900"><span class="material-symbols-outlined">layers</span></button>
+</div>
+</div>
+</div>
+<!-- Liquid AI Intelligence -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+<div class="bg-surface-container border border-slate-800 rounded-lg p-panel-padding">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-headline-md text-lg text-white">Liquid AI Analysis</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center p-3 bg-slate-900 border-l-4 border-secondary">
+<span class="text-sm text-slate-400">Plume Likely</span>
+<span class="font-data-mono text-secondary">True</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-slate-900 border-l-4 border-primary">
+<span class="text-sm text-slate-400">Source Zone</span>
+<span class="font-data-mono text-primary">Active Face</span>
+</div>
+<div class="p-3 bg-slate-900 border-l-4 border-tertiary">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-slate-400">Confidence</span>
+<span class="font-data-mono text-tertiary">84%</span>
+</div>
+<div class="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full" style="width: 84%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Evidence Summary -->
+<div class="bg-surface-container border border-slate-800 rounded-lg p-panel-padding flex-1">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Evidence Summary</h3>
+<p class="text-sm text-slate-300 leading-relaxed mb-4">
+                                Thermal anomalies detected at 04:12 UTC correlate with hyperspectral methane absorption peaks (2.3μm). Plume structure exhibits characteristic "V" formation consistent with prevailing NW winds (12km/h). No known venting maintenance scheduled for this grid sector.
+                            </p>
+<div class="pt-4 border-t border-slate-800">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Recommended Follow-up</h3>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-sky-300">
+<span class="material-symbols-outlined text-sm mt-1">arrow_forward</span>
+                                        Dispatch Sector-Alpha field inspector for VOC sniff test.
+                                    </li>
+<li class="flex items-start gap-2 text-sm text-sky-300">
+<span class="material-symbols-outlined text-sm mt-1">arrow_forward</span>
+                                        Deploy thermal drone for high-res source pinpointing.
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Telemetry Data (Dense List) -->
+<div class="col-span-12 bg-surface-container border border-slate-800 rounded-lg overflow-hidden">
+<div class="px-6 py-3 border-b border-slate-800 flex justify-between items-center">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">Real-time Sensor Feed (SENS-ALPHA-GROUP)</h3>
+<span class="text-[10px] font-data-mono text-secondary flex items-center gap-1">
+<span class="w-2 h-2 bg-secondary rounded-full"></span> LIVE
+                            </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-data-mono text-xs">
+<thead class="bg-slate-950 text-slate-500">
+<tr>
+<th class="px-6 py-3 font-medium uppercase">Timestamp</th>
+<th class="px-6 py-3 font-medium uppercase">Sensor ID</th>
+<th class="px-6 py-3 font-medium uppercase">Value (ppm)</th>
+<th class="px-6 py-3 font-medium uppercase">Diff (%)</th>
+<th class="px-6 py-3 font-medium uppercase">Wind Vec</th>
+<th class="px-6 py-3 font-medium uppercase text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-800">
+<tr class="hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-3 text-slate-400">04:12:33</td>
+<td class="px-6 py-3 text-white">SENS-09</td>
+<td class="px-6 py-3 text-primary">482.5</td>
+<td class="px-6 py-3 text-error">+112%</td>
+<td class="px-6 py-3 text-slate-400">NW 12.1</td>
+<td class="px-6 py-3 text-right">
+<span class="px-2 py-0.5 border-l-2 border-error bg-error/10 text-error">CRITICAL</span>
+</td>
+</tr>
+<tr class="bg-slate-900/40 hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-3 text-slate-400">04:12:30</td>
+<td class="px-6 py-3 text-white">SENS-12</td>
+<td class="px-6 py-3 text-primary">210.1</td>
+<td class="px-6 py-3 text-secondary">+5%</td>
+<td class="px-6 py-3 text-slate-400">NW 11.8</td>
+<td class="px-6 py-3 text-right">
+<span class="px-2 py-0.5 border-l-2 border-secondary bg-secondary/10 text-secondary">STABLE</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-3 text-slate-400">04:12:28</td>
+<td class="px-6 py-3 text-white">SENS-04</td>
+<td class="px-6 py-3 text-primary">195.8</td>
+<td class="px-6 py-3 text-secondary">-2%</td>
+<td class="px-6 py-3 text-slate-400">NW 12.4</td>
+<td class="px-6 py-3 text-right">
+<span class="px-2 py-0.5 border-l-2 border-secondary bg-secondary/10 text-secondary">STABLE</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,39 @@
+{
+  "generated_by": "ml/training/modal_lora_train.py",
+  "record_version": "phase6.checkpoint.v1",
+  "result": {
+    "adapter_artifact_ref": "modal-volume://landfillsentry-model-artifacts/lora_run_20260504T181913Z/checkpoint-lora-v1",
+    "artifact_volume": "landfillsentry-model-artifacts",
+    "checkpoint_dir": "data/processed/hf_adapter_trained/lora_run_20260504T181913Z/checkpoint-lora-v1",
+    "local_adapter_dir": "data/processed/hf_adapter_trained/lora_run_20260504T181913Z/checkpoint-lora-v1",
+    "metrics": {
+      "adapter_status": "fine_tuned",
+      "base_model": "LiquidAI/LFM2.5-VL-450M",
+      "base_revision": "main",
+      "completed_steps": 24,
+      "created_at": "2026-05-04T18:19:13.913342+00:00",
+      "dataset_manifest_checksum": "a6738e1af7d89f6fbd0d567c89759f6103beaa81553074a3ad520c6810988b01",
+      "dataset_sample_count": 78,
+      "eval_loss_after": 1.3696070164442062,
+      "eval_loss_before": 2.410613179206848,
+      "eval_loss_delta": 1.041006162762642,
+      "lora_alpha": 16,
+      "lora_dropout": 0.05,
+      "lora_r": 8,
+      "max_steps": 24,
+      "target_modules": [
+        "k_proj",
+        "q_proj",
+        "v_proj"
+      ],
+      "train_loss_mean": 1.8549085905154545,
+      "train_sample_count_used": 49,
+      "validation_sample_count_used": 8
+    },
+    "model_id": "LiquidAI/LFM2.5-VL-450M",
+    "revision": "main",
+    "run_id": "lora_run_20260504T181913Z",
+    "status": "ok",
+    "training_mode": "peft_lora_supervised"
+  }
+}

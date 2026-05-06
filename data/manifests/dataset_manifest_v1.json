@@ -1,0 +1,1965 @@
+{
+  "generated_at": "2026-04-28T16:50:41.753988+00:00",
+  "manifest_checksum": "a6738e1af7d89f6fbd0d567c89759f6103beaa81553074a3ad520c6810988b01",
+  "manifest_version": "phase6.dataset.v1",
+  "sample_count": 78,
+  "samples": [
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/5f/5f0263dd3c2e07e5c94656aa8884b8ffd4670b6677c704c0af87b8240663c4d7.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:22:20.382984+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_001",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_001",
+      "site_id": "LF_REAL_008",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/5e/5e71482ca01d5a6c1f0eaa316bf9960264afd9f123c16179b6aeab6fb7b4e54c.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:23:52.939439+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_002",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_002",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/c3/c35904261876d8a859f766b7eb4f3ec9691ac91fedce4cd803a91e40b26c6ac4.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:29:23.956925+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_003",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_003",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/21/21033b99287d594cca4f84ee6ace3cdb0a38d201072dbec6b995590b92f84c18.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:34:36.304833+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_004",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_004",
+      "site_id": "LF_REAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.08
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/45/45417ae6d50a11e7f3803701c8308da48bdb972461c95c5b9f54337fad22fba0.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:35:43.386460+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_005",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_005",
+      "site_id": "LF_REAL_004",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/f6/f687d1e833ffe506f959a9ecb3f51ee4616764f5a3e2d17597edef47e8c0c4e4.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:36:42.111090+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_006",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_006",
+      "site_id": "LF_REAL_005",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/6c/6c31e3c00878b8d8fea451229ce5611a3d62167e5885afd63830bfc01b1c6e8a.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:37:39.986781+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_007",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_007",
+      "site_id": "LF_REAL_006",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.08
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/6a/6a7d80afd3c857409c3e4b0621959b148b1304f68a8324820f830b99d47831b0.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:38:36.358148+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_008",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_008",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/f7/f7a82f7952ff40caef18e9b0a193b96c6f6101672a9341c6d6a1d80d878dcffb.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:40:13.327222+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_009",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_009",
+      "site_id": "LF_REAL_008",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.05
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/96/96db7884293d894eeeffb85b900918e450dcf0370319b8fc0a868cfbae09523f.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:41:09.086835+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_010",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_010",
+      "site_id": "LF_REAL_009",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/86/86b1fe4ae9aa5a80ebbae4ee509f98413fb221f2de4e0cb2e24e60df0261cf5b.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:42:46.997479+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_011",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_011",
+      "site_id": "LF_REAL_010",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.05
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/23/23d7ce25408cc27457c59f8cc4fefdf2777491a01877669db63e85f6ec307cc4.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:45:01.103195+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_012",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_012",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/f1/f1e5c2ef237649baedc93e2c58fc694fc270ce1f266535644dcc91891d27d22e.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:46:38.971250+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_013",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_013",
+      "site_id": "LF_REAL_002",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/2f/2f49ad5a31b3868f6302a57f4b3f0cbb0805c05e3082d401d7a1aed99df55b6a.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:50:09.509749+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_014",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_014",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/ec/ec2e952dd54235904e20880d7602cc0af577050e8148fb54ca150ab1e59852bb.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:52:02.003010+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_015",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_015",
+      "site_id": "LF_REAL_002",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/b5/b57883664b6b2860a2531a45a2960c9f15ef460b2d571a41206d319875b17f19.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:52:57.682866+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_016",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_016",
+      "site_id": "LF_REAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/9f/9ffd1f32a11ed737b5b3d5665226b43df26b4c40a6df1ce23636af670cfce7a5.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:53:51.208501+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_017",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_017",
+      "site_id": "LF_REAL_004",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/82/829d3979757a289e6ed0a15fef9ed59bbbe02f99eef58d2b448281e9b4442c69.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:55:23.032783+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_018",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_018",
+      "site_id": "LF_REAL_006",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/56/56d129a053d1ade648d639f1bea04a2dd457d8a77555a5751ff6f92a45e55b28.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:56:19.599926+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_019",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_019",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/d2/d2482dc17bbade63d558910f43c01104278e8a47df5a1642c1ffa13a226f3281.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:57:11.894163+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_020",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_020",
+      "site_id": "LF_REAL_008",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/cc/cc3c1ebeb515a36290f502f249815f3ccfd91b0d6c484ce39f5c8b1aba0e0f9a.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:58:12.391157+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_021",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_021",
+      "site_id": "LF_REAL_009",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/1e/1e93359c7efe5ccec86c5e8a1af7d6c2dee7e5fc7e20f11694d0279a41da54f1.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T07:59:18.263316+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_022",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_022",
+      "site_id": "LF_REAL_010",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.08
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/3e/3efddaddaef85cea03d88d3d1a530a8eac23fb8a054b89bed5df6947f2cd180f.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:00:44.351626+00:00",
+        "labeler": "operator_review",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_023",
+        "source_type": "manual"
+      },
+      "sample_id": "live_scan_023",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/de/de23491f80aa3c6d5254dafe691ed5fc09f2c82a8d9b775a21ca47a12ab283e5.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:02:16.455812+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_024",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_024",
+      "site_id": "LF_REAL_002",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.05
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/3b/3ba439acaccfa51714a17882fe09149d46b1181d0316b71e151e0aa7def501db.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:06:30.834881+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_025",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_025",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/ba/babcada26270b44b9d874e0b592b941b542851b83f0d8ae5b92297466f61b247.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:08:20.524471+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_026",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_026",
+      "site_id": "LF_REAL_002",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/b3/b30510955d0e087ebd16f7268cd62c5751e19b07761ee7dab5487ae37efa5eda.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:09:15.283713+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_027",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_027",
+      "site_id": "LF_REAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/a8/a8de1d960fc829729bc4ff75ba24c0b55fbe182c75a966f215bd91c4dd8fc979.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:10:10.560827+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_028",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_028",
+      "site_id": "LF_REAL_004",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/5a/5ac10232526df9398c18f2e4c690977b56627f169a53434dc964fcfc26f0ef47.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:11:09.489426+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_029",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_029",
+      "site_id": "LF_REAL_005",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/4b/4b281c5cbe35df6711d116a901420f370e551c21c16ad3bdde8db7adbd12d704.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:12:03.470663+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_030",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_030",
+      "site_id": "LF_REAL_006",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/bc/bcf0ee7d68fed20859d5b0b3c9eb46f20852668c0210440d3e4db58971b43b5c.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:13:48.794502+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_031",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_031",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.45,
+          0.35
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/9e/9e2171e6c5d69cea815bd6c56232f55ea7b2c0e2cf24051ca218f0cfcb41fab4.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:15:24.192212+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_032",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_032",
+      "site_id": "LF_REAL_008",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/80/80c8ec2b43cc00a03bb7abbc95f38c53ef06d84607cf1a1e3454cf387499865c.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:16:15.454370+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_033",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_033",
+      "site_id": "LF_REAL_009",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/0a/0a52fba723e9bd6f5b7091117c67804fba6ccc9015a08bf61701a30149b3fa7d.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T08:17:15.605009+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_034",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_034",
+      "site_id": "LF_REAL_010",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.32,
+          0.17,
+          0.56,
+          0.32
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/0b/0b429e421204f8203bdf6c1f56f08e4970c5d259179736d1c3fbd33990de9134.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:23:45.233413+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_035",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_035",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.26,
+          0.12,
+          0.47,
+          0.3
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/92/92f6763438699d48eff8d9714acdad24569bbae3db7bd8b324cde2036a6da9da.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:29:52.321126+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_036",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_036",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.34,
+          0.39,
+          0.6,
+          0.58
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/1d/1d633be14cb6bb5f0d7ddf77877b24b68e9f10fd3ec7b864dd024e22922cd329.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:33:25.912870+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_037",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_037",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.31,
+          0.21,
+          0.55,
+          0.38
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/b8/b823bd8ebb14d9ec1a1f1225e3c9534506cd0a7025aed5995adcf8e4b029c35c.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:36:43.710810+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_038",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_038",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/a7/a75ad22cf43c57aa414778ef2fd7e2748adb68396efb428dd1be6e6f5de6454e.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:48:05.607004+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_039",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_039",
+      "site_id": "LF_REAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/ac/acd87359d4bb4ef4cc2c6f033e866da866625309c334972575d0d2a0636705ad.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:52:21.359506+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_040",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_040",
+      "site_id": "LF_REAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.1,
+          0.35,
+          0.35,
+          0.53
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/17/170ada4dcf1a9a46c6a6736b45aa2391b28c1f40d887e38f2745036e155b5173.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T16:57:58.204203+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_041",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_041",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.26,
+          0.25,
+          0.45,
+          0.4
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/b3/b395a90b18727e05c06e7755efbeb2803c0814d8c1bddf359ddb1b8e50cf666f.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:00:56.588886+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_042",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_042",
+      "site_id": "LF_REAL_001",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.25,
+          0.2,
+          0.52,
+          0.42
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/db/dbdc161ceb6a79bc1b0a68a333f6bc82e88021f71a6b2ecb98627c1a8ef21303.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:03:33.107636+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_043",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_043",
+      "site_id": "LF_REAL_002",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/24/24480879e672e42ef425d12b64deb3de23c2f7101f75c39132cf3cde06e5bcb1.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:06:29.368146+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_044",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_044",
+      "site_id": "LF_REAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.33,
+          0.3,
+          0.56,
+          0.5
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/f8/f8ab2f8b463fe3e70341ec4201bb1d3646c301c72e7ad872d63c8dd343c06b92.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:09:28.569756+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_045",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_045",
+      "site_id": "LF_REAL_004",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.2,
+          0.15,
+          0.47,
+          0.35
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/ca/ca334568a5f1bf2ca7588703c40f3d451c919379f51b9cc6973fa2493b87129d.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:11:53.686217+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_046",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_046",
+      "site_id": "LF_REAL_005",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.22,
+          0.16,
+          0.42,
+          0.38
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/28/28f0e947113f32ac31173ad643e33e864a855f25788f0e6bd2226f870344e08e.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:13:56.670176+00:00",
+        "labeler": "operator_review",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_047",
+        "source_type": "manual"
+      },
+      "sample_id": "live_scan_047",
+      "site_id": "LF_REAL_005",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.24,
+          0.33,
+          0.44,
+          0.57
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/75/7536df0f776f7c70a5a74d8926742aa8967c1946cdd1aa116db0af2f79410aba.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:17:11.990141+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_048",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_048",
+      "site_id": "LF_REAL_006",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.3,
+          0.12,
+          0.51,
+          0.33
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/cc/cccef4ec986dc179ed70df9d8362fae9320f32b3094df1451316c3b88978b060.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T17:20:41.597909+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_049",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_049",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.12,
+          0.18,
+          0.32,
+          0.33
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/5f/5f09600edf96f3b1f82e588aa45f7ecfcd4201dbec8173617cbc5b85b3154bfd.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T18:26:38.862193+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_050",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_050",
+      "site_id": "LF_REAL_010",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.26,
+          0.25,
+          0.44,
+          0.46
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/f0/f0996d6b1583517de2e882a9271e438d14ac6b4d9c1ff39b4fa606126fd0e5e9.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T18:28:04.192063+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_051",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_051",
+      "site_id": "LF_REAL_009",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.25,
+          0.12,
+          0.48,
+          0.31
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/d2/d2003dcd1f51c547cd65d1fa9c3ffcb975e4cdf1b764e30bb6ea72f97ff73683.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T18:28:57.009173+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_052",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_052",
+      "site_id": "LF_REAL_010",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.05
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/53/5341dc8a30429f4dd2f41008f3d17da81b138a3ca3a05c282f89b5e3da8f688a.panel.json",
+      "provenance": {
+        "created_at": "2026-04-24T21:51:55.632696+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_053",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_053",
+      "site_id": "LF_REAL_005",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.05
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/0d/0d775b6d6f21185c3a202267ec7471143f05f1ee21ad5fffbbd13ab51085cc8a.panel.json",
+      "provenance": {
+        "created_at": "2026-04-26T07:30:25.389356+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_054",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_054",
+      "site_id": "LF_REAL_005",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.2,
+          0.24,
+          0.43,
+          0.43
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/af/afd298fa9eb83f03f8f57cc0fb5c6cb44a6e44c99c0466f2746c68ca4fe2e145.panel.json",
+      "provenance": {
+        "created_at": "2026-04-26T07:33:31.938612+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_055",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_055",
+      "site_id": "LF_REAL_004",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.05
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/6e/6e710b4514a0cfde3ea82ece6f181c500241fd8db60a39915b4966c21f708927.panel.json",
+      "provenance": {
+        "created_at": "2026-04-26T07:35:53.404130+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_056",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_056",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.15,
+          0.05,
+          0.35,
+          0.05
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/c3/c39c5de3f6596ad736d184737250b52a0d901404eb051dddc85d386829c7487c.panel.json",
+      "provenance": {
+        "created_at": "2026-04-26T07:38:42.291815+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_057",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_057",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.33,
+          0.26,
+          0.54,
+          0.48
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/b5/b5e30c53faf257c547d7f0ddf232185f0a66cfa3147ff71f2979af0021d9b8df.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T14:06:15.197802+00:00",
+        "labeler": "operator_review",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": null,
+        "source_ref": "scan:scan_058",
+        "source_type": "manual"
+      },
+      "sample_id": "live_scan_058",
+      "site_id": "LF_REAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.2,
+          0.5,
+          0.8,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/a8/a8e552a21258a3114e094418fd7c55061b75d772244e08e772d73fb0c0ad9457.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:18:34.437330+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "North America",
+        "source_ref": "scan:scan_059",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_059",
+      "site_id": "LF_GLOBAL_001",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.08
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/71/719af48ee52477a152d32ca6b4e52bcae82356aa799b1f41d6477afae5258762.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:19:32.112167+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "North America",
+        "source_ref": "scan:scan_060",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_060",
+      "site_id": "LF_GLOBAL_002",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.35,
+          0.2
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/48/4827443367addf0a5f9cf94d611cab00517bf40338766932e9adc749418c78fb.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:21:24.632955+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "North America",
+        "source_ref": "scan:scan_061",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_061",
+      "site_id": "LF_GLOBAL_003",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/7a/7a323ea9f8ceffc8abbda7f4046f221b5f3b41927c704d20aa0fc1a5544d23de.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:22:21.235812+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "North America",
+        "source_ref": "scan:scan_062",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_062",
+      "site_id": "LF_GLOBAL_004",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/14/14dcb34b5c9b042b514f19bbb939c7f308f38b892491525e2a1fd19e10a4adea.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:23:25.618412+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "North America",
+        "source_ref": "scan:scan_063",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_063",
+      "site_id": "LF_GLOBAL_005",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/84/8414b0f541c6c1cf7e597169896ec87d2081aa9eca53183ec05e320ac760e012.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:24:59.618603+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Latin America",
+        "source_ref": "scan:scan_064",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_064",
+      "site_id": "LF_GLOBAL_006",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/bd/bd58cf1f9060ef57f6d425566bf47e15d07fe661094601477f17e5a121aacb7d.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:25:57.586511+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Latin America",
+        "source_ref": "scan:scan_065",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_065",
+      "site_id": "LF_GLOBAL_007",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/eb/eb842d34975359a5365da905d61f987d8a101f7ef861ab813bac8a58e214e706.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:27:00.061255+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Latin America",
+        "source_ref": "scan:scan_066",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_066",
+      "site_id": "LF_GLOBAL_008",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/8c/8cfd46db231df1371344c664543f8f0b9391dca445c7b2e1983369e76893b799.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:28:03.650442+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Latin America",
+        "source_ref": "scan:scan_067",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_067",
+      "site_id": "LF_GLOBAL_009",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "high"
+      },
+      "panel_artifact_path": "data/cache/assets/5a/5a9bd74b1500637225ba1e7338425a68937f2f15be764f8e23c80762937a02e6.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:28:57.255602+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Latin America",
+        "source_ref": "scan:scan_068",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_068",
+      "site_id": "LF_GLOBAL_010",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.2,
+          0.5,
+          0.8,
+          0.1
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/a7/a7eb16daf9f3c877be6230d32a757915dbd0474938658cb74d852f337a559619.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:35:28.526774+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Asia",
+        "source_ref": "scan:scan_069",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_069",
+      "site_id": "LF_GLOBAL_011",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.02,
+          0.05,
+          0.15,
+          0.05
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/e3/e3e934e7fc6eb22de42aa7ea630da6583daa141e361aecbe1a195d34e51f9a2e.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:37:29.940561+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Asia",
+        "source_ref": "scan:scan_070",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_070",
+      "site_id": "LF_GLOBAL_012",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/a1/a14f39f8459b55a7e0989396cb13f0e5bb5ef91dc403ce6423bf756c38e04a2d.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:39:20.104632+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Asia",
+        "source_ref": "scan:scan_071",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_071",
+      "site_id": "LF_GLOBAL_014",
+      "split": "validation"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.35,
+          0.25
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/90/9094d7d97537a55f60b23769bd6ba43606f88ae89d593fd71f832051ce394595.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:41:16.629699+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Asia",
+        "source_ref": "scan:scan_072",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_072",
+      "site_id": "LF_GLOBAL_015",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/64/64b814a7513bffae77bea17d3714aed957380ca3da3b1cbc64178c78a8ee6d80.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:42:20.316694+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Asia",
+        "source_ref": "scan:scan_073",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_073",
+      "site_id": "LF_GLOBAL_016",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.35,
+          0.25
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/9b/9b2e65b8700c27a68967aaedcee05a16a561bb304a8ffa8ed76b6a1ca32afb61.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:43:59.554022+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Asia",
+        "source_ref": "scan:scan_074",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_074",
+      "site_id": "LF_GLOBAL_017",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/63/634a160a386ebc015a138d975b49ca648cea2aa4aa1d8dfa9b97c586cdb1ed47.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:45:04.392202+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Africa",
+        "source_ref": "scan:scan_075",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_075",
+      "site_id": "LF_GLOBAL_018",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/f9/f952f7121186ec1bc149a52141ea670faf4343113365e2ea9a37c61404cd266a.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:46:59.483257+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Africa",
+        "source_ref": "scan:scan_076",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_076",
+      "site_id": "LF_GLOBAL_020",
+      "split": "test"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "perimeter_or_unknown",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/20/204a8ff638733bd4d7a19fe0e27d834e3284c627d7ab97aa462309a43347fc2c.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:48:45.146190+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Africa",
+        "source_ref": "scan:scan_077",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_077",
+      "site_id": "LF_GLOBAL_022",
+      "split": "train"
+    },
+    {
+      "annotation": {
+        "bbox_norm": [
+          0.05,
+          0.15,
+          0.25,
+          0.1
+        ],
+        "likely_source_zone": "gas_system",
+        "plume_likely": true,
+        "priority_tier": "medium"
+      },
+      "panel_artifact_path": "data/cache/assets/9b/9bf422da39351eb691de29a0898c0673a5625c6f6e1e595b4d4d7432b43d3a31.panel.json",
+      "provenance": {
+        "created_at": "2026-04-28T16:50:21.382913+00:00",
+        "labeler": "model_bootstrap",
+        "notes": "captured from live scan pipeline; scan_status=live",
+        "region": "Middle East",
+        "source_ref": "scan:scan_078",
+        "source_type": "weak"
+      },
+      "sample_id": "live_scan_078",
+      "site_id": "LF_GLOBAL_023",
+      "split": "train"
+    }
+  ],
+  "source_labels_path": "data/labels/phase6_samples_live_v1.jsonl",
+  "split_counts": {
+    "demo": 0,
+    "test": 9,
+    "train": 49,
+    "validation": 20
+  }
+}

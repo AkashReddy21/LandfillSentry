@@ -1,0 +1,487 @@
+{
+  "criteria": [
+    "actionability",
+    "clarity",
+    "plausibility",
+    "followup_quality",
+    "trustworthiness"
+  ],
+  "generated_at": "2026-04-28T16:51:55.898816+00:00",
+  "model_rows": {
+    "base_model": [
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 1,
+        "normalized": 0.76,
+        "scan_id": "scan_001",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 3
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 2,
+        "normalized": 0.76,
+        "scan_id": "scan_002",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 3
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 3,
+        "normalized": 0.76,
+        "scan_id": "scan_003",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 3
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 4,
+        "normalized": 0.76,
+        "scan_id": "scan_004",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 3
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 1,
+        "normalized": 0.72,
+        "scan_id": "scan_005",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 2,
+        "normalized": 0.72,
+        "scan_id": "scan_006",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 3,
+        "normalized": 0.72,
+        "scan_id": "scan_007",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 4,
+        "normalized": 0.72,
+        "scan_id": "scan_008",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 1,
+        "normalized": 0.72,
+        "scan_id": "scan_009",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 2,
+        "normalized": 0.72,
+        "scan_id": "scan_010",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 3,
+        "normalized": 0.72,
+        "scan_id": "scan_011",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 4,
+        "normalized": 0.72,
+        "scan_id": "scan_012",
+        "scores": {
+          "actionability": 3,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 2,
+          "trustworthiness": 5
+        }
+      }
+    ],
+    "fine_tuned_model": [
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 1,
+        "normalized": 1.0,
+        "scan_id": "scan_013",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 2,
+        "normalized": 1.0,
+        "scan_id": "scan_014",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 3,
+        "normalized": 1.0,
+        "scan_id": "scan_015",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 4,
+        "normalized": 1.0,
+        "scan_id": "scan_016",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 1,
+        "normalized": 0.92,
+        "scan_id": "scan_017",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 2,
+        "normalized": 0.92,
+        "scan_id": "scan_018",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 3,
+        "normalized": 0.92,
+        "scan_id": "scan_019",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 4,
+        "normalized": 0.92,
+        "scan_id": "scan_020",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 1,
+        "normalized": 1.0,
+        "scan_id": "scan_021",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 2,
+        "normalized": 1.0,
+        "scan_id": "scan_022",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 3,
+        "normalized": 1.0,
+        "scan_id": "scan_023",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 4,
+        "normalized": 1.0,
+        "scan_id": "scan_024",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      }
+    ],
+    "heuristic": [
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 1,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_001",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 2,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_002",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 3,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_003",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "positive",
+        "fixture_repeat": 4,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_004",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 1,
+        "normalized": 0.92,
+        "scan_id": "heur_scan_005",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 2,
+        "normalized": 0.92,
+        "scan_id": "heur_scan_006",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 3,
+        "normalized": 0.92,
+        "scan_id": "heur_scan_007",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "negative",
+        "fixture_repeat": 4,
+        "normalized": 0.92,
+        "scan_id": "heur_scan_008",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 3,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 1,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_009",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 2,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_010",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 3,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_011",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      },
+      {
+        "fixture_class": "cloudy",
+        "fixture_repeat": 4,
+        "normalized": 1.0,
+        "scan_id": "heur_scan_012",
+        "scores": {
+          "actionability": 5,
+          "clarity": 5,
+          "followup_quality": 5,
+          "plausibility": 5,
+          "trustworthiness": 5
+        }
+      }
+    ]
+  },
+  "rubric_version": "phase7.human_actionability.v1"
+}

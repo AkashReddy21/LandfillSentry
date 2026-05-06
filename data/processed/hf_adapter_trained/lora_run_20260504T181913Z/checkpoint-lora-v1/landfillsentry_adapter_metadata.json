@@ -1,0 +1,24 @@
+{
+  "adapter_status": "fine_tuned",
+  "base_model": "LiquidAI/LFM2.5-VL-450M",
+  "base_revision": "main",
+  "completed_steps": 24,
+  "created_at": "2026-05-04T18:19:13.913342+00:00",
+  "dataset_manifest_checksum": "a6738e1af7d89f6fbd0d567c89759f6103beaa81553074a3ad520c6810988b01",
+  "dataset_sample_count": 78,
+  "eval_loss_after": 1.3696070164442062,
+  "eval_loss_before": 2.410613179206848,
+  "eval_loss_delta": 1.041006162762642,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "lora_r": 8,
+  "max_steps": 24,
+  "target_modules": [
+    "k_proj",
+    "q_proj",
+    "v_proj"
+  ],
+  "train_loss_mean": 1.8549085905154545,
+  "train_sample_count_used": 49,
+  "validation_sample_count_used": 8
+}

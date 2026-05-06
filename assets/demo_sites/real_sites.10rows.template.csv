@@ -1,0 +1,11 @@
+site_id,name,lat,lon,country,operator,watchlist_enabled,fixture_class,metadata_json,polygon_geojson
+LF_REAL_001,Spillepeng Waste Facility Malmo,55.6342,13.0187,Sweden,VA SYD,true,,,
+LF_REAL_002,Amager Resource Center Copenhagen,55.6507,12.6236,Denmark,ARC,true,,,
+LF_REAL_003,Deponie Ihlenberg Selmsdorf,53.8732,10.8335,Germany,IHU,true,,,
+LF_REAL_004,Schoteroog Landfill Haarlem,52.4106,4.6498,Netherlands,Gemeente Haarlem,true,,,
+LF_REAL_005,Belvedere Landfill London,51.4916,0.1507,United Kingdom,Cory,true,,,
+LF_REAL_006,Valdemingomez Landfill Madrid,40.3397,-3.5859,Spain,Ayuntamiento de Madrid,true,,,
+LF_REAL_007,Mont Saint Guibert Landfill,50.6284,4.6089,Belgium,In BW,true,,,
+LF_REAL_008,Sisto Landfill Rome,41.7812,12.4543,Italy,AMA Roma,true,,,
+LF_REAL_009,Smat Nords Landfill Stockholm,59.3828,17.8269,Sweden,SMT,true,,,
+LF_REAL_010,Sillamäe Waste Depository,59.3946,27.7635,Estonia,Enefit Power,true,,,
