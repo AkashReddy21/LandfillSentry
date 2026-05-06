@@ -963,25 +963,37 @@ function renderAnalysis() {
     : '<div class="timeline-row">No recent activity.</div>';
 }
 
+function applyRuntimeStatus(runtime) {
+  state.runtime = runtime;
+  if (runtime?.require_live_results && !runtime.live_modes_ready) {
+    setScanDependencyIssue("Strict live scan mode is enabled, but one or more runtime modes are not configured for live scans.");
+  } else if (runtime?.require_live_results && runtime.live_scan_available === false) {
+    setScanDependencyIssue("Strict live scan mode is enabled, but the live SimSat imagery service is not reachable. Existing evidence remains available.");
+  } else {
+    setScanDependencyIssue(null);
+  }
+}
+
+async function refreshRuntimeStatus() {
+  try {
+    applyRuntimeStatus(await api("/runtime/status"));
+  } catch {
+    state.runtime = null;
+  } finally {
+    updateScanControls();
+  }
+}
+
 async function loadWatchlist() {
   els.watchlist.innerHTML = skeletonRows(4);
   setButtonBusy(els.refreshBtn, true, "Refreshing");
   try {
-    const [health, runtime, payload] = await Promise.all([
+    const [health, payload] = await Promise.all([
       api("/health").catch(() => null),
-      api("/runtime/status").catch(() => null),
       api("/watchlist?include_summary=true&page_size=200"),
     ]);
     els.healthBadge.textContent = health?.status === "ok" ? "API Online" : "API Unknown";
     els.healthBadge.classList.toggle("ok", health?.status === "ok");
-    state.runtime = runtime;
-    if (runtime?.require_live_results && !runtime.live_modes_ready) {
-      setScanDependencyIssue("Strict live scan mode is enabled, but one or more runtime modes are not configured for live scans.");
-    } else if (runtime?.require_live_results && runtime.live_scan_available === false) {
-      setScanDependencyIssue("Strict live scan mode is enabled, but the live SimSat imagery service is not reachable. Existing evidence remains available.");
-    } else {
-      setScanDependencyIssue(null);
-    }
     state.items = payload.items || [];
     renderSummary(payload.summary);
     if (!state.selectedSiteId && state.items.length) {
@@ -991,6 +1003,7 @@ async function loadWatchlist() {
     renderWatchlist();
     if (state.view === "map") renderMap();
     if (state.view === "analysis") renderAnalysis();
+    refreshRuntimeStatus();
   } catch (error) {
     els.watchlist.innerHTML = `<div class="error-state">${escapeHtml(error.message)}</div>`;
     els.healthBadge.textContent = "API Error";

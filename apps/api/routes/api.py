@@ -57,6 +57,8 @@ from ..services.panel_service import PanelBuildError
 router = APIRouter()
 
 _SCAN_PROGRESS: Dict[str, Dict[str, Any]] = {}
+_SIMSAT_REACHABILITY_CACHE: Dict[str, Any] = {}
+_SIMSAT_REACHABILITY_TTL_SECONDS = 15
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DPHI_SIMSAT_REPOSITORY = "https://github.com/DPhi-Space/SimSat"
 DPHI_SIMSAT_ENDPOINTS = [
@@ -318,12 +320,24 @@ def _sla_status(assignment: IncidentAssignment | None) -> str:
 def _check_simsat_reachable(base_url: str) -> tuple[bool, str | None]:
     if not base_url:
         return False, "SIMSAT_BASE_URL is not configured"
+    now = datetime.now(timezone.utc)
+    cached = _SIMSAT_REACHABILITY_CACHE.get(base_url)
+    if cached:
+        age_seconds = (now - cached["checked_at"]).total_seconds()
+        if age_seconds < _SIMSAT_REACHABILITY_TTL_SECONDS:
+            return bool(cached["reachable"]), cached.get("error")
     try:
         req = urllib.request.Request(base_url)
         with urllib.request.urlopen(req, timeout=2) as resp:  # nosec B310 - trusted configured endpoint
-            return 200 <= int(resp.status) < 500, None
+            result = (200 <= int(resp.status) < 500, None)
     except Exception as exc:  # pragma: no cover - environment-dependent network check
-        return False, str(exc)
+        result = (False, str(exc))
+    _SIMSAT_REACHABILITY_CACHE[base_url] = {
+        "checked_at": now,
+        "reachable": result[0],
+        "error": result[1],
+    }
+    return result
 
 
 def _query_float(request: Request, name: str, default: float | None = None) -> float:
