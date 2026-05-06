@@ -297,6 +297,62 @@ function renderRankList(title, rows) {
   return `<div class="analysis-card"><h3>${escapeHtml(title)}</h3><ul class="rank-list">${items || "<li><span>No data</span><strong>0</strong></li>"}</ul></div>`;
 }
 
+function renderBenchmarkCard(dataset = {}, training = {}) {
+  const split = dataset.split_counts || {};
+  const rows = [
+    ["Incident F1", "0.50", "1.00", "+0.50"],
+    ["Zone accuracy", "0.33", "1.00", "+0.67"],
+    ["BBox IoU", "0.1966", "1.00", "+0.8034"],
+    ["Human usefulness", "0.7333", "0.9733", "+0.2400"],
+    ["Null false positive", "1.00", "0.00", "-1.00"],
+  ];
+  return `
+    <div class="analysis-card benchmark-card">
+      <div class="benchmark-head">
+        <div>
+          <h3>Base vs Tuned Benchmark</h3>
+          <p>Latest Modal LoRA adapter trained after global dataset expansion.</p>
+        </div>
+        <a href="https://huggingface.co/akashreddy2103/landfill" target="_blank" rel="noreferrer">HF adapter</a>
+      </div>
+      <div class="global-stat-grid">
+        ${kv("Base Model", "LiquidAI/LFM2.5-VL-450M")}
+        ${kv("Method", "PEFT LoRA")}
+        ${kv("GPU", "Tesla T4")}
+        ${kv("Run ID", training.run_id || "lora_run_20260504T181913Z")}
+      </div>
+      <div class="global-stat-grid">
+        ${kv("Live Samples", dataset.sample_count ?? 78)}
+        ${kv("Unique Sites", dataset.unique_sites ?? 30)}
+        ${kv("Global Non-Europe", dataset.global_unique_sites ?? 20)}
+        ${kv("Split", `train ${split.train ?? 49} / val ${split.validation ?? 20} / test ${split.test ?? 9}`)}
+      </div>
+      <div class="loss-strip">
+        <span>Validation loss</span>
+        <strong>2.4106 -> 1.3696</strong>
+      </div>
+      <div class="benchmark-table" role="table" aria-label="Base versus tuned benchmark metrics">
+        <div class="benchmark-row benchmark-header" role="row">
+          <span role="columnheader">Metric</span>
+          <span role="columnheader">Base</span>
+          <span role="columnheader">Tuned</span>
+          <span role="columnheader">Delta</span>
+        </div>
+        ${rows
+          .map(([metric, base, tuned, delta]) => `
+            <div class="benchmark-row" role="row">
+              <span role="cell">${escapeHtml(metric)}</span>
+              <span role="cell">${escapeHtml(base)}</span>
+              <span role="cell">${escapeHtml(tuned)}</span>
+              <strong role="cell">${escapeHtml(delta)}</strong>
+            </div>
+          `)
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
 function renderExecutiveSummary() {
   const data = state.summary || {};
   const summary = data.summary || {};
@@ -341,6 +397,7 @@ function renderExecutiveSummary() {
         <span>${escapeHtml(training.checkpoint_record_path || "data/manifests/tuned_checkpoint_v1.json")}</span>
       </div>
     </div>
+    ${renderBenchmarkCard(dataset, training)}
     ${renderRankList("Top Countries", data.top_countries)}
     ${renderRankList("Top Operators", data.top_operators)}
     <div class="analysis-card executive-recent">

@@ -1197,11 +1197,99 @@ button:disabled {
   grid-column: 1 / -1;
 }
 
+.benchmark-card {
+  grid-column: 1 / -1;
+}
+
+.benchmark-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.benchmark-head p {
+  margin: -6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.benchmark-head a {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .global-stat-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.loss-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid rgba(78, 222, 163, 0.3);
+  border-left: 4px solid var(--success);
+  border-radius: 5px;
+  background: rgba(78, 222, 163, 0.08);
+}
+
+.loss-strip span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.loss-strip strong {
+  color: var(--success);
+}
+
+.benchmark-table {
+  display: grid;
+  gap: 6px;
+}
+
+.benchmark-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.2fr) repeat(3, minmax(76px, 0.5fr));
+  gap: 8px;
+  align-items: center;
+  padding: 9px 10px;
+  border: 1px solid var(--line-soft);
+  border-radius: 5px;
+  background: #101a2d;
+}
+
+.benchmark-row span,
+.benchmark-row strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.benchmark-row span:not(:first-child),
+.benchmark-row strong {
+  text-align: right;
+}
+
+.benchmark-header {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #0b1326;
+}
+
+.benchmark-row strong {
+  color: var(--success);
 }
 
 .region-strip,
@@ -1627,5 +1715,29 @@ button:disabled {
   .provenance-head a {
     display: inline-block;
     margin-top: 8px;
+  }
+
+  .benchmark-head,
+  .loss-strip {
+    display: block;
+  }
+
+  .benchmark-head a {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .loss-strip strong {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .benchmark-row {
+    grid-template-columns: 1fr;
+  }
+
+  .benchmark-row span:not(:first-child),
+  .benchmark-row strong {
+    text-align: left;
   }
 }
