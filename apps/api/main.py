@@ -29,7 +29,13 @@ def root() -> RedirectResponse:
 
 @app.get("/ops")
 def ops_console() -> FileResponse:
-    return FileResponse(WEB_ROOT / "ops.html")
+    return FileResponse(
+        WEB_ROOT / "ops.html",
+        headers={
+            "Cache-Control": "no-store, max-age=0",
+            "Pragma": "no-cache",
+        },
+    )
 
 
 DESIGN_PAGES = {
