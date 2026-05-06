@@ -18,6 +18,19 @@ This repository is prepared for hackathon judging with:
 - a public LoRA adapter path: `akashreddy2103/landfill`,
 - reproducible smoke checks, live proof artifacts, and benchmark documentation.
 
+## Latest Fine-Tuned Adapter
+
+- Hugging Face adapter: https://huggingface.co/akashreddy2103/landfill
+- Base model: `LiquidAI/LFM2.5-VL-450M`
+- Training method: PEFT LoRA
+- Dataset: 78 live-scan samples
+- Unique sites: 30
+- Global non-Europe successful sites: 20
+- Site-based split: train 49 / validation 20 / test 9
+- Modal GPU: Tesla T4
+- Latest run ID: `lora_run_20260504T181913Z`
+- Validation loss: 2.4106 -> 1.3696
+
 ## Judging Criteria Alignment
 
 | Criterion | Evidence |

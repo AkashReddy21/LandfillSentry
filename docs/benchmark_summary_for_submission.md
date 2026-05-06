@@ -95,24 +95,24 @@ The same scan is archived at:
 
 ## Modal LoRA Run
 
-`python scripts/train_lora.py` completed successfully on Modal after the global expansion:
-- GPU smoke: CUDA available
-- dataset source: `live_scans`
-- sample count: `78`
-- unique sites: `30`
-- global non-Europe sites with successful live scans: `20`
-- regions represented: Europe/legacy, North America, Latin America, Asia, Africa, Middle East
-- site-based splits: train `49`, validation `20`, test `9`
-- manifest checksum: `a6738e1af7d89f6fbd0d567c89759f6103beaa81553074a3ad520c6810988b01`
-- run id: `lora_run_20260504T181913Z`
-- adapter ref: `modal-volume://landfillsentry-model-artifacts/lora_run_20260504T181913Z/checkpoint-lora-v1`
-- public adapter repo: `akashreddy2103/landfill`
-- training mode: `peft_lora_supervised`
-- completed optimizer steps: `24`
-- LoRA rank/alpha/dropout: `8` / `16` / `0.05`
-- validation loss before/after: `2.410613179206848` -> `1.3696070164442062`
-- validation-loss delta: `+1.041006162762642`
-- checkpoint record: `data/manifests/tuned_checkpoint_v1.json`
+The latest LoRA adapter was trained on Modal after global dataset expansion.
+
+- Base model: `LiquidAI/LFM2.5-VL-450M`
+- Training method: PEFT LoRA
+- Dataset source: live_scans
+- Sample count: 78
+- Unique sites: 30
+- Global non-Europe successful sites: 20
+- Site-based splits: train 49, validation 20, test 9
+- GPU: Tesla T4
+- Hugging Face adapter: `akashreddy2103/landfill`
+- Latest run ID: `lora_run_20260504T181913Z`
+- Validation loss: 2.4106 -> 1.3696
+- Manifest checksum: `a6738e1af7d89f6fbd0d567c89759f6103beaa81553074a3ad520c6810988b01`
+- Adapter ref: `modal-volume://landfillsentry-model-artifacts/lora_run_20260504T181913Z/checkpoint-lora-v1`
+- Completed optimizer steps: 24
+- LoRA rank/alpha/dropout: 8 / 16 / 0.05
+- Checkpoint record: `data/manifests/tuned_checkpoint_v1.json`
 
 ## Metrics Table
 
